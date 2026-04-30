@@ -1,0 +1,9 @@
+{
+  "topology": "nsfnet",
+  "num_steps": 36,
+  "history_window": 4,
+  "train_steps": 22,
+  "seed": 13,
+  "output_subdir": "nsfnet",
+  "enable_lstm": true
+}

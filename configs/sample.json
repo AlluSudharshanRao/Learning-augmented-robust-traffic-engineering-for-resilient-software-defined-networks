@@ -1,0 +1,9 @@
+{
+  "topology": "sample",
+  "num_steps": 30,
+  "history_window": 4,
+  "train_steps": 18,
+  "seed": 7,
+  "output_subdir": "sample",
+  "enable_lstm": true
+}
