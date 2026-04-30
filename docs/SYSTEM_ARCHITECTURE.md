@@ -16,6 +16,22 @@ The project follows this pipeline:
    - record disruption and path-level details
 5. Aggregate results into CSV summaries and plots.
 
+```mermaid
+flowchart LR
+    A["Topology Loader"] --> B["Traffic Generator"]
+    B --> C["Training / History Windows"]
+    C --> D["Predictors<br/>Moving Average / Linear AR / LSTM"]
+    D --> E["Demand Estimate"]
+    E --> F["Routing Optimizer<br/>LP / Robust LP"]
+    F --> G["Nominal Evaluation"]
+    F --> H["Failure Evaluation"]
+    H --> I["Commodity Disruption Analysis"]
+    I --> J["Path Decomposition"]
+    G --> K["CSV + Plot Outputs"]
+    H --> K
+    J --> K
+```
+
 ## Directory Structure
 
 - `src/teproject/`
@@ -25,9 +41,31 @@ The project follows this pipeline:
 - `outputs/`
   - experiment result folders
 - `docs/`
-  - course files plus implementation documentation
+  - implementation documentation only
 - `.venv/`
   - dedicated project environment
+
+## Repository Layout Diagram
+
+```mermaid
+flowchart TD
+    ROOT["Project Root"] --> SRC["src/teproject"]
+    ROOT --> CFG["configs"]
+    ROOT --> OUT["outputs"]
+    ROOT --> DOC["docs"]
+    ROOT --> RUN["run_experiment.py"]
+    ROOT --> ENV[".venv"]
+
+    SRC --> TOPO["topology.py"]
+    SRC --> TRAF["traffic.py"]
+    SRC --> PRED["predictors.py"]
+    SRC --> OPT["optimizer.py"]
+    SRC --> FAIL["failure.py"]
+    SRC --> PATHS["paths.py"]
+    SRC --> MET["metrics.py"]
+    SRC --> EXP["experiment.py"]
+    SRC --> CONF["config.py"]
+```
 
 ## Module Responsibilities
 
@@ -127,6 +165,27 @@ Responsibilities:
 - add the robust routing baseline
 - generate disruption and path tables
 - generate summary charts
+
+## Control Flow by Evaluation Step
+
+```mermaid
+sequenceDiagram
+    participant C as Config
+    participant T as Topology
+    participant G as Traffic Generator
+    participant P as Predictor
+    participant O as Optimizer
+    participant F as Failure Evaluator
+    participant R as Result Writer
+
+    C->>T: select topology
+    T->>G: provide node count
+    G->>P: create training + history data
+    P->>O: predicted next demand
+    O->>F: routing solution
+    F->>R: disruption + path diagnostics
+    O->>R: nominal / robust metrics
+```
 
 ## Data Flow
 

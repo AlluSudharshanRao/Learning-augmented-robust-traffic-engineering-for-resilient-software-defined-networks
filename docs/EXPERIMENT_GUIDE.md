@@ -42,6 +42,18 @@ Or run commands directly:
 
 ## What Each Run Produces
 
+```mermaid
+flowchart LR
+    A["Config JSON"] --> B["run_experiment.py"]
+    B --> C["Experiment Loop"]
+    C --> D["experiment_results.csv"]
+    C --> E["summary_results.csv"]
+    C --> F["failure_disruptions.csv"]
+    C --> G["failure_paths.csv"]
+    C --> H["nominal_utilization_by_method.png"]
+    C --> I["worst_failure_case.png"]
+```
+
 ### `experiment_results.csv`
 
 Per-time-step metrics for each method, including:
@@ -122,10 +134,16 @@ Network visualization of the most severe disrupted commodity case.
 
 ## Notes for the Final Report
 
-The best story is not only “which method has the lowest average congestion.”
+The best story is not only "which method has the lowest average congestion."
 It is also:
 
 - which method is most resilient after failures
 - which commodities are vulnerable
 - why the vulnerable routes failed
 - whether the robust LP changes that behavior
+
+## GitHub Rendering Note
+
+The equations in this repo are written in plain-text code blocks rather than
+LaTeX-heavy Markdown so they remain readable in GitHub without relying on math
+rendering support.

@@ -3,13 +3,28 @@
 This project implements an end-to-end research prototype for traffic
 engineering under dynamic demand and link failures.
 
+## Architecture Overview
+
+```mermaid
+flowchart LR
+    A["Topology"] --> B["Traffic Generator"]
+    B --> C["Predictors"]
+    C --> D["Demand Estimate"]
+    D --> E["LP / Robust LP Optimizer"]
+    E --> F["Nominal Metrics"]
+    E --> G["Failure Analysis"]
+    G --> H["Commodity + Path Diagnostics"]
+    F --> I["CSV / Plot Outputs"]
+    H --> I
+```
+
 ## Project Structure
 
 - `src/teproject/`: core source code
 - `run_experiment.py`: end-to-end experiment entry point
 - `configs/`: JSON experiment configurations
 - `outputs/`: generated CSV summaries and plots
-- `docs/`: proposal, methodology, course references, and document builders
+- `docs/`: implementation documentation
 - `.venv/`: dedicated virtual environment for this project
 
 ## Dedicated Environment

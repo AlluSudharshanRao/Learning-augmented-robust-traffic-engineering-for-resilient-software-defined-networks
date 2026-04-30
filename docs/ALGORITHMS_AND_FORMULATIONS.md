@@ -17,15 +17,15 @@ Use:
 
 The linear autoregressive predictor fits a least-squares model:
 
-\[
-\hat{x}_{t+1} = b + A x_t
-\]
+```text
+x_hat(t+1) = b + A * x(t)
+```
 
 where:
 
-- \(x_t\) is the flattened current traffic matrix
-- \(A\) is the learned linear transformation
-- \(b\) is the intercept
+- `x(t)` is the flattened current traffic matrix
+- `A` is the learned linear transformation
+- `b` is the intercept
 
 Use:
 
@@ -37,7 +37,7 @@ Use:
 The LSTM predictor uses a sequence of recent traffic matrices as input and
 predicts the next traffic matrix.
 
-Input shape:
+Input:
 
 - batch size
 - history window
@@ -52,56 +52,66 @@ Use:
 - model temporal dependence
 - capture bursty or delayed demand effects
 
+```mermaid
+flowchart LR
+    H1["TM(t-w+1)"] --> L["LSTM Encoder"]
+    H2["TM(t-w+2)"] --> L
+    H3["..."] --> L
+    H4["TM(t)"] --> L
+    L --> FC["Linear Head"]
+    FC --> OUT["Predicted TM(t+1)"]
+```
+
 ## 2. Standard Routing Optimization
 
 ### Design formulation
 
 The network is modeled as a directed graph:
 
-\[
-G = (V,E)
-\]
+```text
+G = (V, E)
+```
 
-Each source-destination pair defines a commodity \(k\), and each link
-\((i,j)\) has capacity \(c_{ij}\).
+Each source-destination pair defines a commodity `k`, and each link `(i, j)`
+has capacity `c(i,j)`.
 
 Decision variable:
 
-\[
-f_{ij}^k
-\]
+```text
+f_k(i,j)
+```
 
-which represents the amount of commodity \(k\) routed on link \((i,j)\).
+which represents the amount of commodity `k` routed on link `(i, j)`.
 
 ### Constraints
 
 #### Flow conservation
 
-For each commodity:
+For each commodity `k` and node `v`:
 
-- source injects demand
-- destination absorbs demand
-- intermediate nodes preserve balance
+- if `v` is the source: outgoing - incoming = demand
+- if `v` is the destination: outgoing - incoming = -demand
+- otherwise: outgoing - incoming = 0
 
 #### Capacity constraints
 
-\[
-\sum_k f_{ij}^k \le U c_{ij}
-\]
+```text
+sum over k of f_k(i,j) <= U * c(i,j)
+```
 
-where \(U\) is the maximum link utilization.
+where `U` is the maximum link utilization.
 
 #### Nonnegativity
 
-\[
-f_{ij}^k \ge 0
-\]
+```text
+f_k(i,j) >= 0
+```
 
 ### Objective
 
-\[
-\min U
-\]
+```text
+minimize U
+```
 
 This is the classic min-max-utilization traffic engineering objective.
 
@@ -119,9 +129,14 @@ It introduces:
 
 and optimizes a weighted combination:
 
-\[
-\min \alpha U_{\text{nominal}} + (1-\alpha) U_{\text{worst}}
-\]
+```text
+minimize alpha * U_nominal + (1 - alpha) * U_worst
+```
+
+In the current code:
+
+- `alpha = 0.35` on the nominal term
+- `0.65` is placed on the worst-case term
 
 In the current implementation:
 
@@ -169,7 +184,22 @@ This allows us to show:
 - exact vulnerable route sequences
 - whether the failed link bundle belonged to those paths
 
-## 7. Why These Algorithms Fit the Project
+## 7. Algorithm Relationships
+
+```mermaid
+flowchart TD
+    A["Traffic History"] --> B["Prediction Model"]
+    B --> C["Predicted Demand Matrix"]
+    C --> D["Standard LP"]
+    C --> E["Robust LP"]
+    D --> F["Nominal Routing"]
+    E --> G["Failure-Aware Routing"]
+    F --> H["Failure Analysis"]
+    G --> H
+    H --> I["Disruption + Path Outputs"]
+```
+
+## 8. Why These Algorithms Fit the Project
 
 These methods line up well with the project goals:
 
