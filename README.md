@@ -55,6 +55,24 @@ Run a benchmark topology:
 .\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet.json
 ```
 
+Run a sweep:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_sweep.py --topologies abilene nsfnet --load-scales 0.8 1.0 1.2 --seeds 7 11
+```
+
+Generate clean summary plots from an aggregated sweep:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_full\aggregated_summary.csv --output-dir .\outputs\sweeps_full\plots
+```
+
+Prepare report-ready tables and presentation figures from the final sweep:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_report
+```
+
 ## Current MVP
 
 The current implementation includes:
@@ -70,6 +88,8 @@ The current implementation includes:
 - CSV and plot output for comparisons
 - config-driven topology selection across synthetic and benchmark networks
 - benchmark topology loading via TopoHub / Internet Topology Zoo
+- multi-run experiment sweeps across topologies, seeds, and load scales
+- fairness metrics for failure-side service distribution
 
 ## Current Outputs
 
@@ -83,17 +103,31 @@ The experiment writes per-config outputs such as:
 - `worst_failure_case.png` for a topology-level visualization of the most severe fixed-failure case
 - matching `experiment_results.csv` and plot files in each folder
 
+Sweep runs write aggregate outputs such as:
+
+- `outputs/sweeps/all_run_summaries.csv`
+- `outputs/sweeps/aggregated_summary.csv`
+- `outputs/sweeps/run_index.csv`
+- `outputs/sweeps/plots/summary_nominal_utilization.png`
+- `outputs/sweeps/plots/summary_critical_fixed_disruption.png`
+- `outputs/sweeps/plots/summary_critical_fixed_fairness.png`
+- `outputs/sweeps/plots/abilene_robust_vs_standard_lp.png`
+- `outputs/sweeps/plots/nsfnet_robust_vs_standard_lp.png`
+- `outputs/sweeps/plots/robust_lp_comparison.csv`
+- `outputs/sweeps_report/report_assets/`
+
 The result tables now include both:
 
 - `*_reopt_*` metrics for failure scenarios where the controller re-optimizes after a failed link
 - `*_fixed_*` metrics for stress tests where the original routing plan is held fixed after failure
 - per-commodity disruption details for the top disrupted source-destination flows under each fixed-failure scenario
 - path-level decomposition for the disrupted commodities so vulnerable routes can be inspected directly
+- fairness metrics for served-ratio distribution under fixed-failure scenarios
 
 The experiment also includes `robust_current_demand_lp`, a scenario-based robust routing baseline that optimizes over the nominal case plus selected failure scenarios.
 
 ## Next Implementation Steps
 
-- strengthen failure evaluation with fixed-routing stress tests
-- compare robust optimization variants
-- add richer benchmark and demand-scaling studies
+- improve robust LP tuning and scenario weighting
+- run larger sweeps across more seeds and load scales
+- add richer result visualizations and report-ready summaries

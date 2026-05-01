@@ -86,6 +86,9 @@ def solve_failure_aware_min_max_utilization(
     graph: nx.DiGraph,
     demand_matrix: np.ndarray,
     failure_scenarios: list[tuple[tuple[object, object], ...]],
+    *,
+    nominal_weight: float = 0.5,
+    worst_case_weight: float = 0.5,
 ) -> RoutingResult:
     nodes = list(graph.nodes())
     edges = list(graph.edges())
@@ -116,7 +119,7 @@ def solve_failure_aware_min_max_utilization(
                     lowBound=0.0,
                 )
 
-    problem += 0.35 * nominal_utilization + 0.65 * worst_utilization
+    problem += nominal_weight * nominal_utilization + worst_case_weight * worst_utilization
 
     for scenario_name, failed_edges in scenarios:
         available_edges = [edge for edge in edges if edge not in failed_edges]
@@ -194,6 +197,8 @@ def solve_failure_aware_min_max_utilization(
         metadata={
             "nominal_utilization": float(nominal_utilization.value() or 0.0),
             "worst_case_utilization": float(worst_utilization.value() or 0.0),
+            "nominal_weight": nominal_weight,
+            "worst_case_weight": worst_case_weight,
             "scenario_utilizations": scenario_utilizations,
             "failure_scenarios": [
                 " & ".join(f"{u}->{v}" for u, v in scenario)

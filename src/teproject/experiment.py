@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Any
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -16,6 +17,7 @@ from teproject.failure import (
 )
 from teproject.metrics import (
     average_link_utilization,
+    fairness_of_served_ratios,
     maximum_link_utilization,
     mean_absolute_error,
     root_mean_squared_error,
@@ -27,13 +29,15 @@ from teproject.topology import load_topology
 from teproject.traffic import generate_dynamic_traffic
 
 
-def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = None) -> None:
+def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = None) -> dict[str, Any]:
     config = config or ExperimentConfig()
+    output_dir.mkdir(parents=True, exist_ok=True)
     topology = load_topology(config.topology)
     traffic = generate_dynamic_traffic(
         num_nodes=topology.graph.number_of_nodes(),
         num_steps=config.num_steps,
         seed=config.seed,
+        load_scale=config.load_scale,
     )
     node_order = list(topology.graph.nodes())
     node_to_index = {node: idx for idx, node in enumerate(node_order)}
@@ -64,13 +68,22 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
             baselines.append((predictor.name, predicted))
 
         for method_name, optimized_demand in baselines:
-            if method_name == "current_demand_lp":
+            if method_name == "current_demand_lp" and config.enable_robust_baseline:
                 routing = solve_min_max_utilization(topology.graph, optimized_demand)
-                robust_scenarios = select_robust_failure_scenarios(topology.graph, seed=t)
+                robust_scenarios = select_robust_failure_scenarios(
+                    topology.graph,
+                    seed=t,
+                    routing=routing,
+                    max_scenarios=config.robust_max_scenarios,
+                    num_central_scenarios=config.robust_num_central_scenarios,
+                    include_random_scenario=config.robust_include_random_scenario,
+                )
                 robust_routing = solve_failure_aware_min_max_utilization(
                     topology.graph,
                     optimized_demand,
                     failure_scenarios=robust_scenarios,
+                    nominal_weight=config.robust_nominal_weight,
+                    worst_case_weight=config.robust_worst_case_weight,
                 )
                 candidate_routings = [
                     (method_name, routing),
@@ -93,6 +106,7 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
                     optimized_demand=optimized_demand,
                     actual_next=actual_next,
                     seed=t,
+                    config=config,
                 )
 
     df = pd.DataFrame(rows)
@@ -119,6 +133,8 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
                 "random_failure_fixed_served_fraction",
                 "critical_failure_fixed_disrupted_fraction",
                 "random_failure_fixed_disrupted_fraction",
+                "critical_failure_fixed_fairness",
+                "random_failure_fixed_fairness",
                 "robust_nominal_utilization",
                 "robust_worst_case_utilization",
             ]
@@ -143,6 +159,13 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
     print("Topology:", topology.name, f"({topology.source})")
     print()
     print(summary.round(4).to_string())
+    return {
+        "detailed": df,
+        "disruptions": disruption_df,
+        "paths": path_df,
+        "summary": summary.reset_index(),
+        "output_dir": output_dir,
+    }
 
 
 def _record_method_result(
@@ -158,6 +181,7 @@ def _record_method_result(
     optimized_demand,
     actual_next,
     seed: int,
+    config: ExperimentConfig,
 ) -> None:
     critical_links = pick_critical_link_bundle(topology.graph, routing)
     random_links = pick_random_link_bundle(topology.graph, seed=seed)
@@ -173,6 +197,16 @@ def _record_method_result(
     )
     fixed_critical = evaluate_fixed_routing_after_failure(routing, optimized_demand, critical_links)
     fixed_random = evaluate_fixed_routing_after_failure(routing, optimized_demand, random_links)
+    critical_failure_fairness = fairness_of_served_ratios(
+        optimized_demand,
+        fixed_critical.per_commodity_disruption,
+        list(topology.graph.nodes()),
+    )
+    random_failure_fairness = fairness_of_served_ratios(
+        optimized_demand,
+        fixed_random.per_commodity_disruption,
+        list(topology.graph.nodes()),
+    )
 
     prediction_mae = mean_absolute_error(actual_next, optimized_demand)
     prediction_rmse = root_mean_squared_error(actual_next, optimized_demand)
@@ -181,6 +215,9 @@ def _record_method_result(
         {
             "time_step": time_step,
             "topology": topology.name,
+            "topology_source": topology.source,
+            "seed": config.seed,
+            "load_scale": config.load_scale,
             "method": method_name,
             "solver_status": routing.status,
             "prediction_mae": prediction_mae,
@@ -193,6 +230,8 @@ def _record_method_result(
             "critical_failure_fixed_disrupted_fraction": fixed_critical.disrupted_fraction,
             "random_failure_fixed_served_fraction": fixed_random.served_fraction,
             "random_failure_fixed_disrupted_fraction": fixed_random.disrupted_fraction,
+            "critical_failure_fixed_fairness": critical_failure_fairness,
+            "random_failure_fixed_fairness": random_failure_fairness,
             "robust_nominal_utilization": (
                 float(routing.metadata.get("nominal_utilization"))
                 if routing.metadata and "nominal_utilization" in routing.metadata
@@ -220,6 +259,8 @@ def _record_method_result(
                 {
                     "time_step": time_step,
                     "topology": topology.name,
+                    "seed": config.seed,
+                    "load_scale": config.load_scale,
                     "method": method_name,
                     "scenario": scenario_name,
                     "failed_link": _format_failure_bundle(evaluation.failed_links),
@@ -242,6 +283,8 @@ def _record_method_result(
                     {
                         "time_step": time_step,
                         "topology": topology.name,
+                        "seed": config.seed,
+                        "load_scale": config.load_scale,
                         "method": method_name,
                         "scenario": scenario_name,
                         "failed_link": _format_failure_bundle(evaluation.failed_links),

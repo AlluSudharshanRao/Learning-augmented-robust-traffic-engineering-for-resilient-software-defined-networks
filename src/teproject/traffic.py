@@ -23,12 +23,18 @@ def generate_dynamic_traffic(
     num_steps: int,
     seed: int = 7,
     base_scale: float = 4.0,
+    load_scale: float = 1.0,
 ) -> TrafficDataset:
     rng = np.random.default_rng(seed)
-    base = rng.uniform(0.6, 1.4, size=(num_nodes, num_nodes)) * base_scale
+    base = rng.uniform(0.6, 1.4, size=(num_nodes, num_nodes)) * base_scale * load_scale
     np.fill_diagonal(base, 0.0)
 
-    hotspot_pairs = [(0, 3), (2, 5), (1, 4)]
+    hotspot_pairs = [
+        (0, min(3, num_nodes - 1)),
+        (min(2, num_nodes - 1), min(5, num_nodes - 1)),
+        (min(1, num_nodes - 1), min(4, num_nodes - 1)),
+    ]
+    hotspot_pairs = [(src, dst) for src, dst in hotspot_pairs if src != dst]
     matrices = []
 
     for t in range(num_steps):

@@ -40,6 +40,12 @@ Or run commands directly:
 .\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet.json
 ```
 
+### Multi-run sweep
+
+```powershell
+.\.venv\Scripts\python.exe .\run_sweep.py --topologies abilene nsfnet --load-scales 0.8 1.0 1.2 --seeds 7 11
+```
+
 ## What Each Run Produces
 
 ```mermaid
@@ -72,6 +78,49 @@ Use this file for:
 
 - comparison tables in the report
 - quick ranking of methods
+
+### Sweep aggregate outputs
+
+The sweep runner creates:
+
+- `all_run_summaries.csv`
+  one summary row per method per run
+- `aggregated_summary.csv`
+  averages grouped by topology, load scale, and method
+- `run_index.csv`
+  mapping from each sweep run to its output subfolder
+
+### Aggregated plot outputs
+
+Generate clean summary figures from a completed sweep with:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_full\aggregated_summary.csv --output-dir .\outputs\sweeps_full\plots
+```
+
+This produces:
+
+- `summary_nominal_utilization.png`
+- `summary_critical_fixed_disruption.png`
+- `summary_critical_fixed_fairness.png`
+- `abilene_robust_vs_standard_lp.png`
+- `nsfnet_robust_vs_standard_lp.png`
+- `robust_lp_comparison.csv`
+
+## Preparing Report Assets
+
+After the final sweep is complete, prepare a clean set of tables and
+presentation figures with:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_report
+```
+
+This writes:
+
+- `report_assets/figures/`
+- `report_assets/tables/`
+- `report_assets/PRESENTATION_FIGURES.md`
 
 ### `failure_disruptions.csv`
 
@@ -117,6 +166,14 @@ Network visualization of the most severe disrupted commodity case.
 - higher `*_fixed_served_fraction` is better
 - lower `*_fixed_disrupted_fraction` is better
 
+### Fairness metrics
+
+- higher `critical_failure_fixed_fairness` is better
+- higher `random_failure_fixed_fairness` is better
+
+These use Jain's fairness index over commodity served ratios after a fixed
+failure event.
+
 ### Robust LP metadata
 
 - `robust_nominal_utilization` = nominal scenario objective value for the robust LP
@@ -128,9 +185,10 @@ Network visualization of the most severe disrupted commodity case.
 1. Compare nominal utilization across methods.
 2. Compare re-optimization behavior after failures.
 3. Compare fixed-routing disruption fractions.
-4. Open `failure_disruptions.csv` to find the most fragile commodities.
-5. Open `failure_paths.csv` to inspect the actual vulnerable routes.
-6. Use `worst_failure_case.png` as a presentation figure.
+4. Compare fixed-failure fairness values.
+5. Open `failure_disruptions.csv` to find the most fragile commodities.
+6. Open `failure_paths.csv` to inspect the actual vulnerable routes.
+7. Use `worst_failure_case.png` as a presentation figure.
 
 ## Notes for the Final Report
 

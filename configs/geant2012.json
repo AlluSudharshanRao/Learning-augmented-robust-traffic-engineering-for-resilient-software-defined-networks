@@ -1,0 +1,12 @@
+{
+  "topology": "geant2012",
+  "num_steps": 14,
+  "history_window": 3,
+  "train_steps": 8,
+  "seed": 17,
+  "load_scale": 0.5,
+  "output_subdir": "geant2012",
+  "enable_lstm": false,
+  "enable_robust_baseline": false,
+  "robust_max_scenarios": 1
+}

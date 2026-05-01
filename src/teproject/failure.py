@@ -78,7 +78,10 @@ def unique_failure_bundles(graph: nx.DiGraph) -> list[tuple[tuple[object, object
 def select_robust_failure_scenarios(
     graph: nx.DiGraph,
     seed: int,
+    routing: RoutingResult | None = None,
     max_scenarios: int = 3,
+    num_central_scenarios: int = 1,
+    include_random_scenario: bool = False,
 ) -> list[tuple[tuple[object, object], ...]]:
     undirected = nx.Graph()
     undirected.add_nodes_from(graph.nodes())
@@ -87,14 +90,20 @@ def select_robust_failure_scenarios(
     ranked = sorted(betweenness.items(), key=lambda item: item[1], reverse=True)
 
     scenarios: list[tuple[tuple[object, object], ...]] = []
-    for edge, _ in ranked[:2]:
+    for edge, _ in ranked[: max(0, num_central_scenarios)]:
         bundle = get_failure_bundle(graph, edge)
         if bundle not in scenarios:
             scenarios.append(bundle)
 
-    random_bundle = pick_random_link_bundle(graph, seed=seed)
-    if random_bundle not in scenarios:
-        scenarios.append(random_bundle)
+    if routing is not None:
+        loaded_bundle = pick_critical_link_bundle(graph, routing)
+        if loaded_bundle not in scenarios:
+            scenarios.append(loaded_bundle)
+
+    if include_random_scenario:
+        random_bundle = pick_random_link_bundle(graph, seed=seed)
+        if random_bundle not in scenarios:
+            scenarios.append(random_bundle)
 
     return scenarios[:max_scenarios]
 
