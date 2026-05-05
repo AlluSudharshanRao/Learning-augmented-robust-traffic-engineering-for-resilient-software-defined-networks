@@ -19,6 +19,8 @@ Or run commands directly:
 - `configs/sample.json`
 - `configs/abilene.json`
 - `configs/nsfnet.json`
+- `configs/nsfnet_uncertainty_0p25.json`
+- `configs/abilene_uncertainty_0p25.json`
 
 ## Example Commands
 
@@ -38,6 +40,12 @@ Or run commands directly:
 
 ```powershell
 .\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet.json
+```
+
+### Uncertainty-aware NSFNET benchmark
+
+```powershell
+.\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet_uncertainty_0p25.json
 ```
 
 ### Multi-run sweep
@@ -95,7 +103,7 @@ The sweep runner creates:
 Generate clean summary figures from a completed sweep with:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_full\aggregated_summary.csv --output-dir .\outputs\sweeps_full\plots
+.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_advanced\aggregated_summary.csv --output-dir .\outputs\sweeps_advanced\plots
 ```
 
 This produces:
@@ -103,8 +111,8 @@ This produces:
 - `summary_nominal_utilization.png`
 - `summary_critical_fixed_disruption.png`
 - `summary_critical_fixed_fairness.png`
-- `abilene_robust_vs_standard_lp.png`
-- `nsfnet_robust_vs_standard_lp.png`
+- `abilene_lp_family_comparison.png`
+- `nsfnet_lp_family_comparison.png`
 - `robust_lp_comparison.csv`
 
 ## Preparing Report Assets
@@ -113,7 +121,7 @@ After the final sweep is complete, prepare a clean set of tables and
 presentation figures with:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_report
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_advanced
 ```
 
 This writes:
@@ -179,6 +187,12 @@ failure event.
 - `robust_nominal_utilization` = nominal scenario objective value for the robust LP
 - `robust_worst_case_utilization` = optimized worst-case value across selected robust scenarios
 - `robust_failure_scenarios` = scenario set used for that robust optimization run
+
+### Uncertainty-aware metadata
+
+- `uncertainty_mean` = average residual-based uncertainty used for demand inflation
+- `uncertainty_max` = largest uncertainty entry in the matrix
+- `routing_demand_inflation_ratio` = ratio between inflated routing demand and base prediction demand
 
 ## Suggested Analysis Flow
 

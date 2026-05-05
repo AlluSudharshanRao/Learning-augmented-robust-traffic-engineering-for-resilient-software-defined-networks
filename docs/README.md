@@ -11,6 +11,7 @@ This folder contains only repository-related implementation documentation.
 - [EXPERIMENT_GUIDE.md](C:/Users/sudha/OneDrive/Desktop/networks/docs/EXPERIMENT_GUIDE.md)
 - [RESULTS_SUMMARY.md](C:/Users/sudha/OneDrive/Desktop/networks/docs/RESULTS_SUMMARY.md)
 - [DISCUSSION_OF_RESULTS.md](C:/Users/sudha/OneDrive/Desktop/networks/docs/DISCUSSION_OF_RESULTS.md)
+- [TEAM_HANDOFF.md](C:/Users/sudha/OneDrive/Desktop/networks/docs/TEAM_HANDOFF.md)
 
 ## Recommended Reading Order
 
@@ -21,6 +22,7 @@ This folder contains only repository-related implementation documentation.
 5. `EXPERIMENT_GUIDE.md`
 6. `RESULTS_SUMMARY.md`
 7. `DISCUSSION_OF_RESULTS.md`
+8. `TEAM_HANDOFF.md`
 
 ## Purpose of Each Document
 
@@ -38,3 +40,5 @@ This folder contains only repository-related implementation documentation.
   Findings from the full sweep and what they imply for the final report.
 - `DISCUSSION_OF_RESULTS.md`
   Report-ready interpretation of the final experimental findings.
+- `TEAM_HANDOFF.md`
+  Short teammate-oriented entrypoint to the latest code, results, and next steps.

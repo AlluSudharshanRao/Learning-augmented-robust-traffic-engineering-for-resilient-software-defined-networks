@@ -1,0 +1,19 @@
+{
+  "topology": "nsfnet",
+  "num_steps": 36,
+  "history_window": 4,
+  "train_steps": 22,
+  "seed": 13,
+  "load_scale": 1.0,
+  "output_subdir": "nsfnet_uncertainty",
+  "enable_lstm": true,
+  "enable_robust_baseline": true,
+  "enable_uncertainty_aware_method": true,
+  "robust_max_scenarios": 3,
+  "robust_num_central_scenarios": 1,
+  "robust_include_random_scenario": false,
+  "robust_nominal_weight": 0.5,
+  "robust_worst_case_weight": 0.5,
+  "uncertainty_multiplier": 1.0,
+  "uncertainty_predictor_name": "lstm"
+}

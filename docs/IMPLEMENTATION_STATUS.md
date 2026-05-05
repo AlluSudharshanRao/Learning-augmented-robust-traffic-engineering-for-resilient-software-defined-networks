@@ -16,6 +16,7 @@ The prototype combines:
 - fixed-routing disruption analysis
 - path-level disruption analysis
 - a scenario-based robust routing baseline
+- an uncertainty-aware robust routing extension
 
 ## What Is Already Implemented
 
@@ -47,6 +48,7 @@ The prototype combines:
 
 - Standard min-max-utilization multi-commodity flow LP
 - Scenario-based robust LP baseline over nominal plus selected failure scenarios
+- Uncertainty-aware robust LP using residual-based demand inflation
 
 ### Failure modeling and resilience evaluation
 

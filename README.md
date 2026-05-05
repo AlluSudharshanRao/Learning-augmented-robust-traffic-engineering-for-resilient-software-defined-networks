@@ -70,10 +70,10 @@ Generate clean summary plots from an aggregated sweep:
 Prepare report-ready tables and presentation figures from the final sweep:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_report
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_advanced
 ```
 
-## Current MVP
+## Current Advanced Prototype
 
 The current implementation includes:
 
@@ -83,6 +83,7 @@ The current implementation includes:
 - LSTM traffic prediction
 - LP-based multi-commodity flow routing
 - scenario-based robust LP routing over nominal and selected failure cases
+- uncertainty-aware robust LP routing using LSTM residual uncertainty
 - random and critical link-failure evaluation
 - fixed-routing failure stress evaluation without immediate rerouting
 - CSV and plot output for comparisons
@@ -111,10 +112,10 @@ Sweep runs write aggregate outputs such as:
 - `outputs/sweeps/plots/summary_nominal_utilization.png`
 - `outputs/sweeps/plots/summary_critical_fixed_disruption.png`
 - `outputs/sweeps/plots/summary_critical_fixed_fairness.png`
-- `outputs/sweeps/plots/abilene_robust_vs_standard_lp.png`
-- `outputs/sweeps/plots/nsfnet_robust_vs_standard_lp.png`
+- `outputs/sweeps/plots/abilene_lp_family_comparison.png`
+- `outputs/sweeps/plots/nsfnet_lp_family_comparison.png`
 - `outputs/sweeps/plots/robust_lp_comparison.csv`
-- `outputs/sweeps_report/report_assets/`
+- `outputs/sweeps_advanced/report_assets/`
 
 The result tables now include both:
 
@@ -124,10 +125,21 @@ The result tables now include both:
 - path-level decomposition for the disrupted commodities so vulnerable routes can be inspected directly
 - fairness metrics for served-ratio distribution under fixed-failure scenarios
 
-The experiment also includes `robust_current_demand_lp`, a scenario-based robust routing baseline that optimizes over the nominal case plus selected failure scenarios.
+The experiment also includes:
 
-## Next Implementation Steps
+- `robust_current_demand_lp`
+  a scenario-based robust routing baseline that optimizes over the nominal case plus selected failure scenarios
+- `uncertainty_aware_lstm_robust_lp`
+  an advanced method that inflates the LSTM-predicted demand with residual-based uncertainty before robust routing
 
-- improve robust LP tuning and scenario weighting
-- run larger sweeps across more seeds and load scales
-- add richer result visualizations and report-ready summaries
+## Latest Final Results
+
+The latest advanced evaluation lives under:
+
+- `outputs/sweeps_advanced/`
+
+The strongest current story is:
+
+- `lstm` is the best pure nominal-routing method
+- `robust_current_demand_lp` is a meaningful resilience baseline
+- `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family extension, especially on NSFNET

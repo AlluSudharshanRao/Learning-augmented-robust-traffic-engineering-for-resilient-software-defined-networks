@@ -1,112 +1,94 @@
 # Discussion of Results
 
-## Core Interpretation
+## Why the Advanced Extension Matters
 
-The final results support two main claims.
+The uncertainty-aware routing upgrade is the first step that clearly moves the
+project beyond a standard course-project baseline and into a more research-like
+direction.
 
-First, the project's learning-augmented traffic-engineering idea works well for
-nominal routing. Across all evaluated topologies and load levels, the LSTM-based
-method gives the lowest nominal maximum link utilization.
+Instead of treating the LSTM prediction as a single exact demand estimate, the
+advanced method acknowledges that prediction error exists and uses a residual-
+based uncertainty estimate to inflate the routing demand conservatively before
+robust optimization.
 
-Second, robust optimization is useful, but only in a topology-dependent way.
-The robust LP is not uniformly better than the standard LP. Instead, its
-benefit depends on whether the network structure makes failure-side service
-preservation an important challenge.
+That makes the final project story stronger because it combines:
 
-That means the results are strong precisely because they are not artificially
-perfect. They show where each method helps and where its impact is limited.
+- predictive modeling
+- uncertainty handling
+- robust optimization
+- and failure-aware evaluation
 
-## Why LSTM Wins Nominal Routing
+## What Stayed the Same
 
-An interesting outcome of the project is that the LSTM is not the best method
-for prediction RMSE, but it is still the best method for nominal routing.
+The advanced results do not overturn the earlier core finding:
 
-The most reasonable interpretation is:
+- `lstm` is still the best pure nominal-routing method
 
-- the LSTM does not need the most accurate pointwise prediction of every demand
-  entry
-- it only needs to estimate the traffic pattern well enough for the optimizer
-  to spread traffic more effectively
+This is important because it means the project now has two complementary
+messages rather than one:
 
-This matters because the downstream optimization problem is congestion-focused,
-not prediction-error-focused. In other words, the model that best supports the
-routing objective is not necessarily the model with the lowest forecasting
-error.
+- `lstm` is best for nominal traffic engineering
+- uncertainty-aware robust LP is best when we want a more resilience-oriented
+  LP-family controller
 
-That is one of the clearest contributions of the project.
+## Why the Uncertainty-Aware Method Is Worth Keeping
 
-## Why Robustness Helps More on NSFNET Than on Abilene
+The uncertainty-aware method is not just an inflated-demand version of the
+robust LP. In the advanced sweep, it produces meaningful improvements:
 
-The benchmark comparison shows a clear difference between Abilene and NSFNET.
+- better LP-family nominal utilization on Abilene and NSFNET
+- better LP-family re-optimization behavior on Abilene and NSFNET
+- better LP-family fairness on Abilene and NSFNET
+- stronger resilience-side behavior than standard LP across all three
+  topologies
+
+It does not dominate every metric in every topology, but it improves the
+overall tradeoff enough to justify its inclusion in the final project.
+
+## Why Abilene and NSFNET Behave Differently
+
+The advanced results still show topology dependence.
 
 On Abilene:
 
-- the robust LP leaves nominal utilization unchanged
-- changes in re-optimization utilization are small and mixed
-- fixed-failure disruption and fairness change only slightly
-
-This suggests that the current failure-scenario design does not meaningfully
-reshape the routing solution on Abilene. The network may already be structured
-so that the standard LP can find a solution with limited room for robust
-improvement.
+- the uncertainty-aware method improves the LP-family nominal tradeoff
+- it improves fairness
+- but disruption improvements are small and mixed
 
 On NSFNET:
 
-- the robust LP leaves nominal utilization unchanged
-- fixed-failure disrupted demand decreases by about `0.018`
-- fixed-failure fairness increases by about `0.016`
+- the uncertainty-aware method improves nominal LP-family behavior
+- it improves critical-failure re-optimization behavior
+- it stays very close to the robust LP on disruption
+- it slightly improves fairness over the robust LP
 
-That is a meaningful and consistent resilience improvement. The likely
-interpretation is that NSFNET offers more routing diversity, so the robust LP
-can exploit alternate structure to protect commodities against critical
-failures.
+This suggests that NSFNET offers richer structure for uncertainty-aware routing
+to exploit, while Abilene remains a more constrained benchmark where the gains
+are narrower.
 
-## Re-Optimization Versus Fixed-Routing Resilience
+## Why This Is Better Than Only Adding Another ML Model
 
-The project evaluates failures in two different ways:
+A newer predictor such as a Transformer or GNN could still be interesting, but
+the uncertainty-aware extension is more valuable at this stage because it
+improves the actual end-to-end control logic rather than only changing the
+forecasting component.
 
-- re-optimization after a failure
-- fixed-routing stress without immediate rerouting
+The project now demonstrates that:
 
-This distinction is important.
+- the LSTM forecast can be used not only directly
+- but also through an uncertainty-aware decision layer
 
-If a controller is allowed to reroute immediately after failure, then a network
-may appear resilient even if the original routing plan was fragile. By contrast,
-the fixed-routing evaluation shows how much demand is disrupted before recovery
-actions can help.
+That is a stronger integration of ML and optimization than a simple model swap.
 
-That makes the fixed-routing metrics especially valuable for the final report,
-because they capture the inherent vulnerability of the pre-failure routing
-decision.
+## Final Interpretation
 
-The robust LP is most convincing on exactly those fixed-routing metrics for
-NSFNET.
+The final project now has a layered conclusion:
 
-## What the Mixed Results Mean Academically
+1. `lstm` is the best nominal-routing method.
+2. `robust_current_demand_lp` is a meaningful resilience baseline.
+3. `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family
+   extension and makes the final project more novel and more complete.
 
-The mixed topology-dependent results are not a weakness. They make the project
-more believable.
-
-If every method improvement had been uniformly positive across all networks and
-all metrics, the final story would be less convincing. Instead, the project now
-shows:
-
-- a consistently strong predictive-routing result through LSTM
-- a selective but real robustness benefit on NSFNET
-- a clear explanation of where the robust LP still needs refinement
-
-That is a strong course-project outcome because it combines implementation,
-evaluation, and honest interpretation.
-
-## Final Takeaway
-
-The final takeaway can be stated simply:
-
-- use `lstm` when the primary goal is nominal traffic engineering quality
-- use `robust_current_demand_lp` when failure-side service preservation matters
-  and the topology supports meaningful robust rerouting structure
-- evaluate both prediction quality and routing quality, because they are not the
-  same thing
-
-This gives the project a balanced conclusion rather than a one-method-fits-all
-claim.
+That gives the project a cleaner final message than before, because we can now
+argue that the advanced extension adds real value rather than just extra
+implementation complexity.

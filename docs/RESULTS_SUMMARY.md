@@ -2,9 +2,9 @@
 
 ## Scope
 
-The final consolidated evaluation for the report is stored under:
+The latest advanced evaluation is stored under:
 
-- `outputs/sweeps_report/`
+- `outputs/sweeps_advanced/`
 
 The sweep covers:
 
@@ -22,85 +22,72 @@ The sweep covers:
 
 Key aggregate files:
 
-- `outputs/sweeps_report/all_run_summaries.csv`
-- `outputs/sweeps_report/aggregated_summary.csv`
-- `outputs/sweeps_report/run_index.csv`
+- `outputs/sweeps_advanced/all_run_summaries.csv`
+- `outputs/sweeps_advanced/aggregated_summary.csv`
+- `outputs/sweeps_advanced/run_index.csv`
 
-Report-ready assets:
+Advanced report assets:
 
-- `outputs/sweeps_report/report_assets/figures/summary_nominal_utilization.png`
-- `outputs/sweeps_report/report_assets/figures/summary_critical_fixed_disruption.png`
-- `outputs/sweeps_report/report_assets/figures/summary_critical_fixed_fairness.png`
-- `outputs/sweeps_report/report_assets/figures/abilene_robust_vs_standard_lp.png`
-- `outputs/sweeps_report/report_assets/figures/nsfnet_robust_vs_standard_lp.png`
-- `outputs/sweeps_report/report_assets/tables/main_results_load1p0.csv`
-- `outputs/sweeps_report/report_assets/tables/robust_lp_direct_comparison.csv`
+- `outputs/sweeps_advanced/report_assets/figures/summary_nominal_utilization.png`
+- `outputs/sweeps_advanced/report_assets/figures/summary_critical_fixed_disruption.png`
+- `outputs/sweeps_advanced/report_assets/figures/summary_critical_fixed_fairness.png`
+- `outputs/sweeps_advanced/report_assets/figures/abilene_lp_family_comparison.png`
+- `outputs/sweeps_advanced/report_assets/figures/nsfnet_lp_family_comparison.png`
+- `outputs/sweeps_advanced/report_assets/tables/main_results_load1p0.csv`
+- `outputs/sweeps_advanced/report_assets/tables/robust_lp_direct_comparison.csv`
 
 ## Important Limitation
 
-`GEANT2012` remains supported by the topology loader, but it is not part of the
-final sweep because the current LP formulation is too expensive on that graph
-for the chosen method set and time budget.
-
-That should be stated clearly in the report:
-
-- GEANT2012 support exists
-- the final evaluation is focused on the tractable topologies:
-  - `sample`
-  - `abilene`
-  - `nsfnet`
+`GEANT2012` is still supported by the topology loader, but it is not part of
+the advanced sweep because the current LP formulation remains too expensive on
+that graph for the chosen time budget.
 
 ## Methods Compared
 
-The final sweep compares:
+The advanced sweep compares:
 
 - `moving_average`
 - `linear_autoregressive`
 - `lstm`
 - `current_demand_lp`
 - `robust_current_demand_lp`
+- `uncertainty_aware_lstm_robust_lp`
 
 ## Main Findings
 
-### 1. LSTM is the strongest nominal-routing method
+### 1. LSTM remains the best pure nominal-routing method
 
-Across all three topologies and all load levels, `lstm` is the best method for
-`nominal_max_utilization`.
+Across all three topologies and all load levels, `lstm` is still the best
+method for `nominal_max_utilization`.
 
-This is one of the strongest findings in the project because it is consistent
-and easy to communicate:
+That means the advanced uncertainty-aware extension does not replace the
+original LSTM result. Instead, it adds a stronger resilience-oriented method to
+the project.
 
-- the LSTM is not the best forecasting model by RMSE
-- but it is the best downstream routing model for nominal congestion
+### 2. Prediction RMSE and routing quality are still not the same thing
 
-That supports the core project claim that traffic prediction should be judged
-through the routing objective, not only through forecasting error.
+The advanced results preserve the earlier core finding:
 
-### 2. Better prediction RMSE does not guarantee better traffic engineering
+- `lstm` does not have the best forecasting RMSE
+- but it remains the strongest nominal-routing model
 
-`current_demand_lp` and `linear_autoregressive` often have lower
-`prediction_rmse` than `lstm`, especially on Abilene and NSFNET.
+That is still one of the most important conclusions in the project.
 
-However, `lstm` still gives the best nominal congestion.
+### 3. The uncertainty-aware LP is a meaningful advanced addition
 
-This is a valuable result, not a weakness:
+The new uncertainty-aware method uses:
 
-- forecasting quality and routing quality are related
-- but they are not identical
+- the LSTM forecast
+- a residual-based uncertainty estimate
+- and a conservative demand inflation step before robust routing
 
-That helps justify the learning-augmented traffic-engineering framing of the
-project.
+This method gives a stronger LP-family comparison than before:
 
-### 3. The robust LP is topology-dependent
-
-The final tuned robust LP has a cleaner and more believable pattern than the
-earlier version:
-
-- on `sample`, it behaves almost like the standard LP
-- on `abilene`, it is mostly neutral to slightly mixed
-- on `nsfnet`, it clearly improves fixed-failure resilience and fairness
-
-This is exactly the kind of nuanced result that makes the project stronger.
+- on `sample`, it improves resilience-side metrics substantially
+- on `abilene`, it improves nominal LP-family behavior and fairness, while
+  remaining mixed on disruption
+- on `nsfnet`, it improves nominal LP-family behavior, re-optimization
+  behavior, and fairness, while staying close to the robust LP on disruption
 
 ## Topology-Specific Findings
 
@@ -108,89 +95,91 @@ This is exactly the kind of nuanced result that makes the project stronger.
 
 Main pattern:
 
-- `lstm` is best for nominal utilization
-- robust and standard LP are nearly identical
+- `lstm` is still best nominally
+- uncertainty-aware robust routing becomes the best LP-family resilience method
+- it also improves fairness relative to both standard LP and robust LP
 
 Interpretation:
 
-- the synthetic sample network is mainly a sanity-check environment
-- it is too small and symmetric to highlight the benefit of the robust design
+- even on the synthetic network, uncertainty-aware routing is not just adding
+  complexity
+- it produces a real resilience-side gain
 
 ### Abilene
 
 Main pattern:
 
-- `lstm` is best for nominal utilization at every load level
-- robust LP leaves nominal utilization unchanged relative to standard LP
-- robust LP is mostly neutral, with only small changes on failure metrics
+- `lstm` remains the best nominal method overall
+- uncertainty-aware robust LP is better than both LP baselines on nominal
+  utilization
+- uncertainty-aware robust LP improves LP-family fairness clearly
+- disruption remains mixed
 
-Direct LP comparison:
+At load `1.0`:
 
-- nominal utilization delta is effectively `0.0`
-- critical-failure re-optimization utilization changes by about `-0.008` to
-  `+0.042`
-- fixed-routing disrupted fraction changes by about `+0.002` to `+0.004`
-- fairness changes are very small, around `0.0` to `+0.002`
+- `current_demand_lp` nominal utilization: `1.0232`
+- `robust_current_demand_lp` nominal utilization: `1.0232`
+- `uncertainty_aware_lstm_robust_lp` nominal utilization: `0.9999`
+
+- `current_demand_lp` critical fixed disruption: `0.3219`
+- `robust_current_demand_lp` critical fixed disruption: `0.3254`
+- `uncertainty_aware_lstm_robust_lp` critical fixed disruption: `0.3233`
+
+- `current_demand_lp` critical fixed fairness: `0.6891`
+- `robust_current_demand_lp` critical fixed fairness: `0.6892`
+- `uncertainty_aware_lstm_robust_lp` critical fixed fairness: `0.6927`
 
 Interpretation:
 
-- Abilene does not provide strong evidence for the current robust objective
-- but the result is still useful because it shows robustness is not universally
-  beneficial
+- on Abilene, the uncertainty-aware method gives a more convincing advanced
+  result than the older robust LP alone
+- but LSTM is still the strongest single method if the goal is pure nominal
+  congestion minimization
 
 ### NSFNET
 
 Main pattern:
 
-- `lstm` is best for nominal utilization at every load level
-- robust LP leaves nominal utilization unchanged relative to standard LP
-- robust LP clearly improves fixed-failure disruption and fairness
+- `lstm` remains the best nominal method overall
+- uncertainty-aware robust LP becomes the strongest advanced LP-family method
+- it improves over both LP baselines on nominal utilization, re-optimization,
+  and fairness
 
-Direct LP comparison:
+At load `1.0`:
 
-- nominal utilization delta is effectively `0.0`
-- critical-failure re-optimization utilization is unchanged
-- fixed-routing disrupted fraction improves by about `0.018`
-- fairness improves by about `0.016`
+- `current_demand_lp` nominal utilization: `1.1255`
+- `robust_current_demand_lp` nominal utilization: `1.1255`
+- `uncertainty_aware_lstm_robust_lp` nominal utilization: `1.0976`
+
+- `current_demand_lp` critical failure reopt utilization: `1.5696`
+- `robust_current_demand_lp` critical failure reopt utilization: `1.5696`
+- `uncertainty_aware_lstm_robust_lp` critical failure reopt utilization: `1.5304`
+
+- `current_demand_lp` critical fixed disruption: `0.2521`
+- `robust_current_demand_lp` critical fixed disruption: `0.2342`
+- `uncertainty_aware_lstm_robust_lp` critical fixed disruption: `0.2351`
+
+- `current_demand_lp` critical fixed fairness: `0.7428`
+- `robust_current_demand_lp` critical fixed fairness: `0.7584`
+- `uncertainty_aware_lstm_robust_lp` critical fixed fairness: `0.7587`
 
 Interpretation:
 
-- NSFNET is the clearest case where explicit robust optimization helps
-- the benefit appears on fixed-failure service preservation rather than nominal
-  congestion
+- on NSFNET, the uncertainty-aware method is strong enough to keep in the final
+  project
+- it is the best advanced LP-family tradeoff overall
 
-## Fairness Findings
+## Best Final Narrative
 
-The final fairness metrics are:
+The strongest final storyline is now:
 
-- `critical_failure_fixed_fairness`
-- `random_failure_fixed_fairness`
-
-These are Jain's fairness indices computed from the served-ratio distribution
-after fixed failures.
-
-Observed pattern:
-
-- fairness differences are small on `sample`
-- fairness differences are also small on `abilene`
-- fairness improves clearly on `nsfnet` under the robust LP
-
-This is useful because it connects:
-
-- resilient routing
-- service continuity
-- fair demand treatment under failures
-
-## Best Report Narrative
-
-The strongest final storyline is:
-
-1. `lstm` is the best nominal-routing method across all evaluated topologies.
+1. `lstm` is the best method for nominal traffic engineering.
 2. Prediction RMSE alone does not explain routing performance.
-3. The robust LP is not a universal winner, but it helps when the topology and
-   failure structure make failure-side service preservation important.
-4. In the final results, NSFNET is the clearest benchmark showing that robust
-   routing improves resilience and fairness without hurting nominal congestion.
+3. `robust_current_demand_lp` improves resilience on some topologies, but is not
+   always enough.
+4. `uncertainty_aware_lstm_robust_lp` is a meaningful advanced extension that
+   improves the LP-family tradeoff, especially on NSFNET and partially on
+   Abilene.
 
 ## Suggested Final Figures
 
@@ -199,9 +188,9 @@ Use these as the main report figures:
 - `report_assets/figures/summary_nominal_utilization.png`
 - `report_assets/figures/summary_critical_fixed_disruption.png`
 - `report_assets/figures/summary_critical_fixed_fairness.png`
-- `report_assets/figures/nsfnet_robust_vs_standard_lp.png`
-- `report_assets/figures/abilene_robust_vs_standard_lp.png`
-- one representative `worst_failure_case.png` from NSFNET
+- `report_assets/figures/nsfnet_lp_family_comparison.png`
+- `report_assets/figures/abilene_lp_family_comparison.png`
+- one representative `worst_failure_case.png`
 
 ## Suggested Final Tables
 

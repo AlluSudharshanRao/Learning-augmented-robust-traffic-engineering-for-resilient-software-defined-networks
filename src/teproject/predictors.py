@@ -18,12 +18,23 @@ def reshape_vector(vector: np.ndarray, num_nodes: int) -> np.ndarray:
 
 class BasePredictor:
     name = "base"
+    residual_scale: np.ndarray | None = None
 
     def fit(self, matrices: np.ndarray) -> None:
         return None
 
     def predict_next(self, history: np.ndarray) -> np.ndarray:
         raise NotImplementedError
+
+    def predict_with_uncertainty(self, history: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+        prediction = self.predict_next(history)
+        if self.residual_scale is not None:
+            uncertainty = self.residual_scale.copy()
+        else:
+            uncertainty = history.std(axis=0)
+        uncertainty = np.clip(uncertainty, 0.0, None)
+        np.fill_diagonal(uncertainty, 0.0)
+        return prediction, uncertainty
 
 
 class MovingAveragePredictor(BasePredictor):
@@ -51,6 +62,12 @@ class LinearAutoRegressivePredictor(BasePredictor):
         beta, _, _, _ = np.linalg.lstsq(x_aug, y, rcond=None)
         self.intercept = beta[0]
         self.coefficients = beta[1:]
+        training_predictions = x @ self.coefficients + self.intercept
+        residuals = y - training_predictions
+        num_nodes = matrices.shape[1]
+        residual_scale = residuals.std(axis=0).reshape(num_nodes, num_nodes)
+        self.residual_scale = np.clip(residual_scale, 0.0, None)
+        np.fill_diagonal(self.residual_scale, 0.0)
 
     def predict_next(self, history: np.ndarray) -> np.ndarray:
         if self.coefficients is None or self.intercept is None:
@@ -121,6 +138,14 @@ class LSTMPredictor(BasePredictor):
                 loss = loss_fn(predictions, batch_y)
                 loss.backward()
                 optimizer.step()
+
+        self.model.eval()
+        with torch.no_grad():
+            training_predictions = self.model(x_tensor).cpu().numpy()
+        residuals = y_tensor.cpu().numpy() - training_predictions
+        residual_scale = residuals.std(axis=0).reshape(self.num_nodes, self.num_nodes)
+        self.residual_scale = np.clip(residual_scale, 0.0, None)
+        np.fill_diagonal(self.residual_scale, 0.0)
 
     def predict_next(self, history: np.ndarray) -> np.ndarray:
         if self.model is None or self.num_nodes is None:

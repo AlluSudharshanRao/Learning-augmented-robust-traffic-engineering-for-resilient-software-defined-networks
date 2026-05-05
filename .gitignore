@@ -1,4 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
-outputs/
+outputs/*
+!outputs/sweeps_advanced/
+!outputs/sweeps_advanced/**

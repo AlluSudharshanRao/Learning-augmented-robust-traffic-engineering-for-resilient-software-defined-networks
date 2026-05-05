@@ -5,6 +5,7 @@ from typing import Any
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import numpy as np
 import pandas as pd
 
 from teproject.config import ExperimentConfig
@@ -62,12 +63,26 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
         current_matrix = traffic.matrices[t]
         actual_next = traffic.matrices[t + 1]
 
-        baselines = [("current_demand_lp", current_matrix)]
+        baselines = [("current_demand_lp", current_matrix, current_matrix, None)]
         for predictor in predictors:
-            predicted = predictor.predict_next(history)
-            baselines.append((predictor.name, predicted))
+            predicted, uncertainty = predictor.predict_with_uncertainty(history)
+            baselines.append((predictor.name, predicted, predicted, None))
+            if config.enable_uncertainty_aware_method and predictor.name == config.uncertainty_predictor_name:
+                inflated_demand = _inflate_demand_with_uncertainty(
+                    predicted,
+                    uncertainty,
+                    multiplier=config.uncertainty_multiplier,
+                )
+                baselines.append(
+                    (
+                        f"uncertainty_aware_{predictor.name}_robust_lp",
+                        inflated_demand,
+                        predicted,
+                        uncertainty,
+                    )
+                )
 
-        for method_name, optimized_demand in baselines:
+        for method_name, optimized_demand, prediction_reference_demand, uncertainty_matrix in baselines:
             if method_name == "current_demand_lp" and config.enable_robust_baseline:
                 routing = solve_min_max_utilization(topology.graph, optimized_demand)
                 robust_scenarios = select_robust_failure_scenarios(
@@ -89,6 +104,24 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
                     (method_name, routing),
                     ("robust_current_demand_lp", robust_routing),
                 ]
+            elif method_name.startswith("uncertainty_aware_"):
+                routing = solve_min_max_utilization(topology.graph, optimized_demand)
+                robust_scenarios = select_robust_failure_scenarios(
+                    topology.graph,
+                    seed=t,
+                    routing=routing,
+                    max_scenarios=config.robust_max_scenarios,
+                    num_central_scenarios=config.robust_num_central_scenarios,
+                    include_random_scenario=config.robust_include_random_scenario,
+                )
+                uncertainty_aware_routing = solve_failure_aware_min_max_utilization(
+                    topology.graph,
+                    optimized_demand,
+                    failure_scenarios=robust_scenarios,
+                    nominal_weight=config.robust_nominal_weight,
+                    worst_case_weight=config.robust_worst_case_weight,
+                )
+                candidate_routings = [(method_name, uncertainty_aware_routing)]
             else:
                 routing = solve_min_max_utilization(topology.graph, optimized_demand)
                 candidate_routings = [(method_name, routing)]
@@ -104,7 +137,9 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
                     method_name=active_method_name,
                     routing=active_routing,
                     optimized_demand=optimized_demand,
+                    prediction_reference_demand=prediction_reference_demand,
                     actual_next=actual_next,
+                    uncertainty_matrix=uncertainty_matrix,
                     seed=t,
                     config=config,
                 )
@@ -135,6 +170,9 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
                 "random_failure_fixed_disrupted_fraction",
                 "critical_failure_fixed_fairness",
                 "random_failure_fixed_fairness",
+                "uncertainty_mean",
+                "uncertainty_max",
+                "routing_demand_inflation_ratio",
                 "robust_nominal_utilization",
                 "robust_worst_case_utilization",
             ]
@@ -179,7 +217,9 @@ def _record_method_result(
     method_name: str,
     routing,
     optimized_demand,
+    prediction_reference_demand,
     actual_next,
+    uncertainty_matrix,
     seed: int,
     config: ExperimentConfig,
 ) -> None:
@@ -208,8 +248,15 @@ def _record_method_result(
         list(topology.graph.nodes()),
     )
 
-    prediction_mae = mean_absolute_error(actual_next, optimized_demand)
-    prediction_rmse = root_mean_squared_error(actual_next, optimized_demand)
+    prediction_mae = mean_absolute_error(actual_next, prediction_reference_demand)
+    prediction_rmse = root_mean_squared_error(actual_next, prediction_reference_demand)
+    optimized_demand_sum = float(optimized_demand.sum())
+    prediction_reference_sum = float(prediction_reference_demand.sum())
+    inflation_ratio = (
+        (optimized_demand_sum / prediction_reference_sum)
+        if prediction_reference_sum > 1e-9
+        else 1.0
+    )
 
     rows.append(
         {
@@ -232,6 +279,21 @@ def _record_method_result(
             "random_failure_fixed_disrupted_fraction": fixed_random.disrupted_fraction,
             "critical_failure_fixed_fairness": critical_failure_fairness,
             "random_failure_fixed_fairness": random_failure_fairness,
+            "uncertainty_mean": (
+                float(uncertainty_matrix.mean())
+                if uncertainty_matrix is not None
+                else None
+            ),
+            "uncertainty_max": (
+                float(uncertainty_matrix.max())
+                if uncertainty_matrix is not None
+                else None
+            ),
+            "routing_demand_inflation_ratio": (
+                float(inflation_ratio)
+                if uncertainty_matrix is not None
+                else None
+            ),
             "robust_nominal_utilization": (
                 float(routing.metadata.get("nominal_utilization"))
                 if routing.metadata and "nominal_utilization" in routing.metadata
@@ -399,3 +461,16 @@ def _plot_worst_failure_case(
 
 def _format_failure_bundle(failed_links: tuple[tuple[object, object], ...]) -> str:
     return " & ".join(f"{u} -> {v}" for u, v in failed_links)
+
+
+def _inflate_demand_with_uncertainty(
+    prediction: Any,
+    uncertainty: Any,
+    *,
+    multiplier: float,
+):
+    inflated = np.array(prediction + multiplier * uncertainty, dtype=float, copy=True)
+    inflated = np.clip(inflated, 0.0, None)
+    for idx in range(inflated.shape[0]):
+        inflated[idx, idx] = 0.0
+    return inflated

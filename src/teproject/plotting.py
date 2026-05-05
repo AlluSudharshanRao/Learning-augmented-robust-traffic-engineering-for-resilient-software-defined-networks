@@ -9,6 +9,7 @@ import pandas as pd
 METHOD_LABELS = {
     "current_demand_lp": "Current-Demand LP",
     "robust_current_demand_lp": "Robust LP",
+    "uncertainty_aware_lstm_robust_lp": "Uncertainty-Aware Robust LP",
     "linear_autoregressive": "Linear AR",
     "moving_average": "Moving Average",
     "lstm": "LSTM",
@@ -17,6 +18,7 @@ METHOD_LABELS = {
 METHOD_COLORS = {
     "current_demand_lp": "#1f77b4",
     "robust_current_demand_lp": "#d62728",
+    "uncertainty_aware_lstm_robust_lp": "#8c564b",
     "linear_autoregressive": "#2ca02c",
     "moving_average": "#ff7f0e",
     "lstm": "#6f42c1",
@@ -91,7 +93,11 @@ def _plot_robust_lp_comparison(
     topology: str,
     output_path: Path,
 ) -> None:
-    methods = ["current_demand_lp", "robust_current_demand_lp"]
+    methods = [
+        "current_demand_lp",
+        "robust_current_demand_lp",
+        "uncertainty_aware_lstm_robust_lp",
+    ]
     metrics = [
         ("nominal_max_utilization_mean", "Nominal Max Utilization"),
         ("critical_failure_reopt_max_utilization_mean", "Critical Failure Reopt Utilization"),
@@ -134,7 +140,13 @@ def _plot_robust_lp_comparison(
 def _build_robust_comparison_table(df: pd.DataFrame) -> pd.DataFrame:
     target = df[
         df["topology"].isin(["abilene", "nsfnet"])
-        & df["method"].isin(["current_demand_lp", "robust_current_demand_lp"])
+        & df["method"].isin(
+            [
+                "current_demand_lp",
+                "robust_current_demand_lp",
+                "uncertainty_aware_lstm_robust_lp",
+            ]
+        )
     ].copy()
     pivot = target.pivot_table(
         index=["topology", "load_scale"],
@@ -152,22 +164,28 @@ def _build_robust_comparison_table(df: pd.DataFrame) -> pd.DataFrame:
     pivot.columns = [f"{metric}__{method}" for metric, method in pivot.columns]
     comparison = pivot.reset_index()
 
-    comparison["nominal_utilization_delta"] = (
-        comparison["nominal_max_utilization_mean__robust_current_demand_lp"]
-        - comparison["nominal_max_utilization_mean__current_demand_lp"]
-    )
-    comparison["critical_reopt_delta"] = (
-        comparison["critical_failure_reopt_max_utilization_mean__robust_current_demand_lp"]
-        - comparison["critical_failure_reopt_max_utilization_mean__current_demand_lp"]
-    )
-    comparison["critical_fixed_disruption_delta"] = (
-        comparison["critical_failure_fixed_disrupted_fraction_mean__robust_current_demand_lp"]
-        - comparison["critical_failure_fixed_disrupted_fraction_mean__current_demand_lp"]
-    )
-    comparison["critical_fixed_fairness_delta"] = (
-        comparison["critical_failure_fixed_fairness_mean__robust_current_demand_lp"]
-        - comparison["critical_failure_fixed_fairness_mean__current_demand_lp"]
-    )
+    for compare_method, prefix in (
+        ("robust_current_demand_lp", "robust"),
+        ("uncertainty_aware_lstm_robust_lp", "uncertainty"),
+    ):
+        if f"nominal_max_utilization_mean__{compare_method}" not in comparison.columns:
+            continue
+        comparison[f"{prefix}_nominal_utilization_delta"] = (
+            comparison[f"nominal_max_utilization_mean__{compare_method}"]
+            - comparison["nominal_max_utilization_mean__current_demand_lp"]
+        )
+        comparison[f"{prefix}_critical_reopt_delta"] = (
+            comparison[f"critical_failure_reopt_max_utilization_mean__{compare_method}"]
+            - comparison["critical_failure_reopt_max_utilization_mean__current_demand_lp"]
+        )
+        comparison[f"{prefix}_critical_fixed_disruption_delta"] = (
+            comparison[f"critical_failure_fixed_disrupted_fraction_mean__{compare_method}"]
+            - comparison["critical_failure_fixed_disrupted_fraction_mean__current_demand_lp"]
+        )
+        comparison[f"{prefix}_critical_fixed_fairness_delta"] = (
+            comparison[f"critical_failure_fixed_fairness_mean__{compare_method}"]
+            - comparison["critical_failure_fixed_fairness_mean__current_demand_lp"]
+        )
     return comparison
 
 
@@ -179,6 +197,7 @@ def generate_summary_plots(aggregated_summary_path: Path, output_dir: Path) -> d
     all_methods = [
         "current_demand_lp",
         "robust_current_demand_lp",
+        "uncertainty_aware_lstm_robust_lp",
         "linear_autoregressive",
         "moving_average",
         "lstm",
@@ -218,9 +237,9 @@ def generate_summary_plots(aggregated_summary_path: Path, output_dir: Path) -> d
     created["summary_critical_fixed_fairness"] = fairness_plot
 
     for topology in ["abilene", "nsfnet"]:
-        robust_plot = output_dir / f"{topology}_robust_vs_standard_lp.png"
+        robust_plot = output_dir / f"{topology}_lp_family_comparison.png"
         _plot_robust_lp_comparison(df, topology=topology, output_path=robust_plot)
-        created[f"{topology}_robust_vs_standard_lp"] = robust_plot
+        created[f"{topology}_lp_family_comparison"] = robust_plot
 
     comparison = _build_robust_comparison_table(df)
     comparison_path = output_dir / "robust_lp_comparison.csv"

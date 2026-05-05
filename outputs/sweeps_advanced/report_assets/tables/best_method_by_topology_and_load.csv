@@ -1,0 +1,10 @@
+topology,load_scale,best_nominal_method,best_nominal_utilization,best_resilience_method,best_fixed_disruption,best_fairness_method,best_fixed_fairness
+abilene,0.8,LSTM,0.7591,LSTM,0.3203,Uncertainty-Aware Robust LP,0.695
+abilene,1.0,LSTM,0.9519,LSTM,0.3202,Uncertainty-Aware Robust LP,0.6927
+abilene,1.2,LSTM,1.1444,LSTM,0.3197,LSTM,0.6899
+nsfnet,0.8,LSTM,0.8392,Robust LP,0.2344,Uncertainty-Aware Robust LP,0.7589
+nsfnet,1.0,LSTM,1.0465,Robust LP,0.2342,Uncertainty-Aware Robust LP,0.7587
+nsfnet,1.2,LSTM,1.2514,Robust LP,0.2344,Uncertainty-Aware Robust LP,0.7585
+sample,0.8,LSTM,0.3158,Robust LP,0.2666,Uncertainty-Aware Robust LP,0.7787
+sample,1.0,LSTM,0.3799,Uncertainty-Aware Robust LP,0.2661,Uncertainty-Aware Robust LP,0.7786
+sample,1.2,LSTM,0.4573,Uncertainty-Aware Robust LP,0.2665,Uncertainty-Aware Robust LP,0.7774

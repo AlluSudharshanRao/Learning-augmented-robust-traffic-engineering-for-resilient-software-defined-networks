@@ -11,6 +11,7 @@ from teproject.plotting import generate_summary_plots
 METHOD_ORDER = [
     "current_demand_lp",
     "robust_current_demand_lp",
+    "uncertainty_aware_lstm_robust_lp",
     "linear_autoregressive",
     "moving_average",
     "lstm",
@@ -19,6 +20,7 @@ METHOD_ORDER = [
 METHOD_LABELS = {
     "current_demand_lp": "Current-Demand LP",
     "robust_current_demand_lp": "Robust LP",
+    "uncertainty_aware_lstm_robust_lp": "Uncertainty-Aware Robust LP",
     "linear_autoregressive": "Linear AR",
     "moving_average": "Moving Average",
     "lstm": "LSTM",
@@ -70,7 +72,13 @@ def _prepare_nominal_pivot_table(aggregated: pd.DataFrame) -> pd.DataFrame:
 def _prepare_robust_comparison_table(aggregated: pd.DataFrame) -> pd.DataFrame:
     focus = aggregated[
         aggregated["topology"].isin(["abilene", "nsfnet"])
-        & aggregated["method"].isin(["current_demand_lp", "robust_current_demand_lp"])
+        & aggregated["method"].isin(
+            [
+                "current_demand_lp",
+                "robust_current_demand_lp",
+                "uncertainty_aware_lstm_robust_lp",
+            ]
+        )
     ].copy()
     pivot = focus.pivot_table(
         index=["topology", "load_scale"],
@@ -85,22 +93,28 @@ def _prepare_robust_comparison_table(aggregated: pd.DataFrame) -> pd.DataFrame:
     )
     pivot.columns = [f"{metric}__{method}" for metric, method in pivot.columns]
     result = pivot.reset_index()
-    result["nominal_delta"] = (
-        result["nominal_max_utilization_mean__robust_current_demand_lp"]
-        - result["nominal_max_utilization_mean__current_demand_lp"]
-    )
-    result["critical_reopt_delta"] = (
-        result["critical_failure_reopt_max_utilization_mean__robust_current_demand_lp"]
-        - result["critical_failure_reopt_max_utilization_mean__current_demand_lp"]
-    )
-    result["critical_fixed_disruption_delta"] = (
-        result["critical_failure_fixed_disrupted_fraction_mean__robust_current_demand_lp"]
-        - result["critical_failure_fixed_disrupted_fraction_mean__current_demand_lp"]
-    )
-    result["critical_fixed_fairness_delta"] = (
-        result["critical_failure_fixed_fairness_mean__robust_current_demand_lp"]
-        - result["critical_failure_fixed_fairness_mean__current_demand_lp"]
-    )
+    for compare_method, prefix in (
+        ("robust_current_demand_lp", "robust"),
+        ("uncertainty_aware_lstm_robust_lp", "uncertainty"),
+    ):
+        if f"nominal_max_utilization_mean__{compare_method}" not in result.columns:
+            continue
+        result[f"{prefix}_nominal_delta"] = (
+            result[f"nominal_max_utilization_mean__{compare_method}"]
+            - result["nominal_max_utilization_mean__current_demand_lp"]
+        )
+        result[f"{prefix}_critical_reopt_delta"] = (
+            result[f"critical_failure_reopt_max_utilization_mean__{compare_method}"]
+            - result["critical_failure_reopt_max_utilization_mean__current_demand_lp"]
+        )
+        result[f"{prefix}_critical_fixed_disruption_delta"] = (
+            result[f"critical_failure_fixed_disrupted_fraction_mean__{compare_method}"]
+            - result["critical_failure_fixed_disrupted_fraction_mean__current_demand_lp"]
+        )
+        result[f"{prefix}_critical_fixed_fairness_delta"] = (
+            result[f"critical_failure_fixed_fairness_mean__{compare_method}"]
+            - result["critical_failure_fixed_fairness_mean__current_demand_lp"]
+        )
     return _rounded(result)
 
 
@@ -179,8 +193,8 @@ def prepare_report_assets(sweep_dir: Path) -> dict[str, Path]:
         "- `summary_nominal_utilization.png`",
         "- `summary_critical_fixed_disruption.png`",
         "- `summary_critical_fixed_fairness.png`",
-        "- `abilene_robust_vs_standard_lp.png`",
-        "- `nsfnet_robust_vs_standard_lp.png`",
+        "- `abilene_lp_family_comparison.png`",
+        "- `nsfnet_lp_family_comparison.png`",
         "",
         "## Example failure visuals",
         "",

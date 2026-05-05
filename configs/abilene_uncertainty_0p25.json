@@ -1,0 +1,19 @@
+{
+  "topology": "abilene",
+  "num_steps": 36,
+  "history_window": 4,
+  "train_steps": 22,
+  "seed": 11,
+  "load_scale": 1.0,
+  "output_subdir": "abilene_uncertainty_0p25",
+  "enable_lstm": true,
+  "enable_robust_baseline": true,
+  "enable_uncertainty_aware_method": true,
+  "robust_max_scenarios": 3,
+  "robust_num_central_scenarios": 1,
+  "robust_include_random_scenario": false,
+  "robust_nominal_weight": 0.5,
+  "robust_worst_case_weight": 0.5,
+  "uncertainty_multiplier": 0.25,
+  "uncertainty_predictor_name": "lstm"
+}

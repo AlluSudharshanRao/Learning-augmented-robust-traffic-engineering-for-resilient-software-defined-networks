@@ -1,0 +1,986 @@
+time_step,topology,seed,load_scale,method,scenario,failed_link,commodity_rank,source,destination,path_rank,path_flow,path_nodes,path_edges,contains_failed_link
+22,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.0526387,2 | 3 | 5,2->3 | 3->5,1
+22,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,2.9938198,3 | 2 | 0,3->2 | 2->0,1
+22,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.9911704,2 | 3,2->3,1
+22,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.7059521,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.3266431,3 | 2,3->2,1
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,4.1403845,4 | 3,4->3,1
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,2,3,4,1,2.8660776,3 | 4,3->4,1
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,1,1.8429808,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,2,0.13391239999999982,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,3,1.898644,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,2,4,1,2.253143,2 | 4,2->4,0
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,2,4,2,1.65624,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,1,2.3787356,4 | 2 | 1,4->2 | 2->1,0
+22,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,2,0.19556663,4 | 3 | 1,4->3 | 3->1,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.8755372,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.35449901,2 | 4,2->4,0
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,3.5548839,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.9938198,3 | 2 | 0,3->2 | 2->0,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,2.9911704,2 | 3,2->3,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,2.7059521,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,4.1403845,4 | 3,4->3,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,2,2,4,1,0.35449901,2 | 4,2->4,0
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,2,2,4,2,3.5548839,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,3,3,4,1,2.8660776,3 | 4,3->4,1
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,4,0,1,1.4402864,4 | 2 | 0,4->2 | 2->0,0
+22,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,4,0,2,0.19556660000000003,4 | 3 | 2 | 0,4->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.4474022,2 | 3 | 5,2->3 | 3->5,1
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.0046131,2 | 3,2->3,1
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.065028586,3 | 1 | 0,3->1 | 1->0,0
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,2.8466317,3 | 2 | 0,3->2 | 2->0,1
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.6514156,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.1281302,3 | 2,3->2,1
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,3.7229572,4 | 3,4->3,1
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,2,3,4,1,2.9796052,3 | 4,3->4,1
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,3,2,4,1,2.0863685,2 | 4,2->4,0
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,3,2,4,2,1.6736738,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,4,0,5,1,1.8453851,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,4,0,5,2,0.08141580000000004,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,4,0,5,3,1.6485041,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,1,2.2477164,4 | 2 | 1,4->2 | 2->1,0
+22,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,2,0.65384597,4 | 3 | 1,4->3 | 3->1,1
+22,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.6060286,2 | 3 | 5,2->3 | 3->5,1
+22,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,3.9586278,0 | 2 | 3,0->2 | 2->3,1
+22,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.5404084,2 | 3,2->3,1
+22,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.2280383,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.1964708,3 | 2,3->2,1
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,2.6862624,4 | 3,4->3,1
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,2,4,1,1,2.2380048,4 | 3 | 1,4->3 | 3->1,1
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,3,3,4,1,2.2364729,3 | 4,3->4,1
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,4,1,4,1,1.5648987,1 | 2 | 4,1->2 | 2->4,0
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,4,1,4,2,2.1454401,1 | 3 | 4,1->3 | 3->4,1
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,5,2,4,1,3.5192036,2 | 4,2->4,0
+22,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 4 & 4 -> 3,5,2,4,2,0.19123415,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.1486974,2 | 3 | 5,2->3 | 3->5,1
+22,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.1381631,2 | 3,2->3,1
+22,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,3.1277401,3 | 2 | 0,3->2 | 2->0,1
+22,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.8659134,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.5951796,0 | 2 | 3,0->2 | 2->3,1
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,3.8806286,4 | 3,4->3,1
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,2,3,4,1,3.0807078,3 | 4,3->4,1
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,1,1.8188469,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,2,0.11331329999999995,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,3,0,5,3,1.7161922,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,4,2,4,1,2.7774737,2 | 4,2->4,0
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,4,2,4,2,1.4567058,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,1,1.9381319,4 | 2 | 1,4->2 | 2->1,0
+22,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,1,2,1.0265976,4 | 3 | 1,4->3 | 3->1,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.7393434,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.2158296,2 | 3,2->3,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,1.1219901,2 | 4,2->4,0
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,3.2136093,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.9477901,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.5681366,2 | 3 | 5,2->3 | 3->5,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.7871066,2 | 4 | 5,2->4 | 4->5,0
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,1,4,3,1,3.9910645,4 | 3,4->3,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,2,2,4,1,1.1219901,2 | 4,2->4,0
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,2,2,4,2,3.2136093,2 | 3 | 4,2->3 | 3->4,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,3,3,4,1,3.1814032,3 | 4,3->4,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,1,4,1,2.4095518,1 | 2 | 4,1->2 | 2->4,0
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,4,1,4,2,0.4750956,1 | 3 | 4,1->3 | 3->4,1
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,0,1,1.6892192,4 | 2 | 0,4->2 | 2->0,0
+22,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 4 & 4 -> 3,5,4,0,2,0.1861606,4 | 3 | 2 | 0,4->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.9947323,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.5361129,2 | 3,2->3,1
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.4169585,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.63280867,3 | 1 | 0,3->1 | 1->0,0
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.3330006,3 | 2 | 0,3->2 | 2->0,1
+23,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.803583,0 | 2 | 3,0->2 | 2->3,1
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.2031592,0 | 1,0->1,1
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,1,0,1,1.867006,1 | 0,1->0,1
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,1,1.6663115,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,2,0.7149717,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,3,1.3470727,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.63280867,3 | 1 | 0,3->1 | 1->0,1
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.3330006,3 | 2 | 0,3->2 | 2->0,0
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,4,1,2.2835854,0 | 2 | 4,0->2 | 2->4,0
+23,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,4,2,0.28733639,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.728356,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.5361129,2 | 3,2->3,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.4169585,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,4,1,1.2618979,2 | 4,2->4,0
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,4,2,3.2779156,2 | 3 | 4,2->3 | 3->4,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.6476595,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.3470728,2 | 4 | 5,2->4 | 4->5,0
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.2031592,0 | 1,0->1,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,1,0,1,1.867006,1 | 0,1->0,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,3,1,1.6663115,0 | 1 | 3,0->1 | 1->3,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,3,2,1.1372715,0 | 2 | 3,0->2 | 2->3,0
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.4153396,3 | 1 | 0,3->1 | 1->0,1
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,2.5504697,3 | 2 | 0,3->2 | 2->0,0
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,1,3.7069184,0 | 2,0->2,0
+23,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,2,0.28733639,0 | 1 | 2,0->1 | 1->2,1
+23,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.5300706,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,3.1117031,3 | 2 | 0,3->2 | 2->0,1
+23,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.108939,2 | 3,2->3,1
+23,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.6901262,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.3630983,0 | 2 | 3,0->2 | 2->3,1
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,3.8269675,0 | 1,0->1,1
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,1.7208943,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.25271739999999987,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.5734608,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.6914932,1 | 0,1->0,1
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,1,2.2265718,0 | 2 | 4,0->2 | 2->4,0
+23,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,2,0.020486068,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.9416452,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.9550185,2 | 3,2->3,1
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.4920752,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.5427929,3 | 1 | 0,3->1 | 1->0,0
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.4189984,3 | 2 | 0,3->2 | 2->0,1
+23,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3536491,0 | 2 | 3,0->2 | 2->3,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.7967723,0 | 1,0->1,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.371046,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.055873199999999734,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,2.0649385,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.962068,1 | 0,1->0,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.5427929,3 | 1 | 0,3->1 | 1->0,1
+23,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.4189984,3 | 2 | 0,3->2 | 2->0,0
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.572567,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.5270553,2 | 3,2->3,1
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.13898418,3 | 1 | 0,3->1 | 1->0,0
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.5064342,3 | 2 | 0,3->2 | 2->0,1
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.2807751,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.9690921,0 | 2 | 3,0->2 | 2->3,1
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.3407869,0 | 1,0->1,1
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.1443994,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.1811811999999997,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.8496938,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.0629423,1 | 0,1->0,1
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.13898418,3 | 1 | 0,3->1 | 1->0,1
+23,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.5064342,3 | 2 | 0,3->2 | 2->0,0
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.2662654,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.2086462,2 | 4,2->4,0
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,3.6676927,2 | 3 | 4,2->3 | 3->4,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.6047218,2 | 3,2->3,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.3626518,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.8585046,2 | 3 | 5,2->3 | 3->5,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.9206083,2 | 4 | 5,2->4 | 4->5,0
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.4333534,0 | 1,0->1,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,2.1896753,0 | 1 | 3,0->1 | 1->3,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,0.96052458,0 | 2 | 3,0->2 | 2->3,0
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.1117845,1 | 0,1->0,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.1299953,3 | 1 | 0,3->1 | 1->0,1
+23,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,2.6011854,3 | 2 | 0,3->2 | 2->0,0
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.5505376,2 | 3 | 5,2->3 | 3->5,1
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.9067813,2 | 3,2->3,1
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.30767353,3 | 1 | 0,3->1 | 1->0,0
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.8540317,3 | 2 | 0,3->2 | 2->0,1
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,0,3,1,3.3765738,0 | 2 | 3,0->2 | 2->3,1
+24,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.3240172,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,1,4.9890799,3 | 1,3->1,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,3,1,3.2558056,1 | 3,1->3,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,3,5,1,1,3.2346414,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,4,1,5,1,3.015441,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,1,2.878277,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,2,0.006665999999999617,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+24,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,3,2.0798481,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.9647911,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.66882998,2 | 4,2->4,0
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.6539146,2 | 3 | 4,2->3 | 3->4,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9067813,2 | 3,2->3,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.3240172,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.9324683,3 | 1 | 0,3->1 | 1->0,0
+24,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.2292369,3 | 2 | 0,3->2 | 2->0,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,1,4.9890799,3 | 1,3->1,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,3,1,3.2558056,1 | 3,1->3,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,3,5,1,1,3.2346414,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,4,1,5,1,3.015441,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,3,1,2.884943,0 | 1 | 3,0->1 | 1->3,1
+24,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,3,2,0.49163079,0 | 2 | 3,0->2 | 2->3,0
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.7429986,2 | 3 | 5,2->3 | 3->5,1
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.3778208,2 | 3,2->3,1
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.37847689,3 | 1 | 0,3->1 | 1->0,0
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.1559794,3 | 2 | 0,3->2 | 2->0,1
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.9788184,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.5390277,0 | 2 | 3,0->2 | 2->3,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,1,4.1381906,3 | 1,3->1,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,2,0.033390598,3 | 2 | 1,3->2 | 2->1,0
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,3,1,2.9961655,1 | 3,1->3,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,3,1,5,1,2.5852887,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,4,5,1,1,2.5469164,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,1,1.9540541,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,2,0.3662016000000001,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+24,sample_backbone,7,0.8,moving_average,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,3,1.6077647999999998,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,1.0257986,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,2,1.6128273000000002,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,3,2.8814577999999997,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,4.3220077,2 | 3,2->3,1
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.8575953,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,2,0.3039116,5 | 4 | 2 | 0,5->4 | 4->2 | 2->0,0
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,5,1,3.8082967,2 | 3 | 5,2->3 | 3->5,1
+24,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.9479629,3 | 2,3->2,1
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,1,1,3,1,4.2174684,1 | 3,1->3,1
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,5,1,3.9599481,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,3,5,1,1,2.8112134,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,4,3,1,1,2.7172263,3 | 1,3->1,1
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,4,3,1,2,2.339895,3 | 2 | 1,3->2 | 2->1,0
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,5,4,1,1,2.5160345,4 | 2 | 1,4->2 | 2->1,0
+24,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,1 -> 3 & 3 -> 1,5,4,1,2,1.9243162,4 | 3 | 1,4->3 | 3->1,1
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.8554111,2 | 3 | 5,2->3 | 3->5,1
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.7968054,2 | 3,2->3,1
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.33893191,3 | 1 | 0,3->1 | 1->0,0
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.6627957,3 | 2 | 0,3->2 | 2->0,1
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.5642409,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.2202117,0 | 2 | 3,0->2 | 2->3,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,1,5.0723906,3 | 1,3->1,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,3,1,3.4844792,1 | 3,1->3,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,3,5,1,1,2.8415313,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,4,1,5,1,2.7757709,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,1,2.3603421,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,2,0.2250371000000002,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+24,sample_backbone,7,0.8,lstm,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,5,3,1.9503692,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.6267395,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.263948,2 | 4,2->4,0
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,3.9820295,2 | 3 | 4,2->3 | 3->4,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.8744719,2 | 3,2->3,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6461177,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,3.0406731,2 | 3 | 5,2->3 | 3->5,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,2.0212837,2 | 4 | 5,2->4 | 4->5,0
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,1,3,1,1,5.16535,3 | 1,3->1,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,2,1,3,1,3.566469,1 | 3,1->3,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,3,5,1,1,2.9004924,5 | 3 | 1,5->3 | 3->1,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,4,1,5,1,2.851615,1 | 3 | 5,1->3 | 3->5,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,3,1,2.4056181,0 | 1 | 3,0->1 | 1->3,1
+24,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,1 -> 3 & 3 -> 1,5,0,3,2,0.99570144,0 | 2 | 3,0->2 | 2->3,0
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.140045,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,5,0,1,4.3087576,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.1915094,2 | 3,2->3,1
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.78378258,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.9619501,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.5135497,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.140045,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,5,0,1,4.3087576,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.1915094,2 | 3,2->3,1
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.78378258,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.9619501,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.5135497,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,5.4548904,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.81487357,2 | 4,2->4,0
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,5.2188638,2 | 3 | 4,2->3 | 3->4,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.3087576,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.1915094,2 | 3,2->3,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.78378258,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.9619501,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,5.4548904,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.81487357,2 | 4,2->4,0
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,5.2188638,2 | 3 | 4,2->3 | 3->4,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.3087576,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.1915094,2 | 3,2->3,1
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.78378258,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.9619501,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.1844884,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.6563935,2 | 3,2->3,1
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40341389,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.5633528,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.4389213,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.9469223,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.1844884,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.6563935,2 | 3,2->3,1
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40341389,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.5633528,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.4389213,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.9469223,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.0560158,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,4.2070141,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9193717,2 | 3,2->3,1
+25,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,3.8321321,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.5060462,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.0560158,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,4.2070141,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9193717,2 | 3,2->3,1
+25,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,3.8321321,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.5060462,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.9469419,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.8878965,2 | 3,2->3,1
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40950753,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.7116663,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6585479,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3019876,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.9469419,2 | 3 | 5,2->3 | 3->5,1
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.8878965,2 | 3,2->3,1
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40950753,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.7116663,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6585479,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3019876,0 | 2 | 3,0->2 | 2->3,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.7467918,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.28034,2 | 4,2->4,0
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.0886475,2 | 3 | 4,2->3 | 3->4,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9655631,2 | 3,2->3,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.7404246,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.1014708,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1054651,3 | 2 | 0,3->2 | 2->0,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.7467918,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.28034,2 | 4,2->4,0
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.0886475,2 | 3 | 4,2->3 | 3->4,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9655631,2 | 3,2->3,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.7404246,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.1014708,3 | 1 | 0,3->1 | 1->0,0
+25,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1054651,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.4050121,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,4.8487233,2 | 3,2->3,1
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.485409,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.86579165,3 | 1 | 0,3->1 | 1->0,0
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,4.1060371,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,3.3113793,3 | 2,3->2,1
+26,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,5.4050121,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,4.485409,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,3.6121574,1 | 3 | 5,1->3 | 3->5,1
+26,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,3,1,3.4088941,5 | 3,5->3,1
+26,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,3.4048951,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,5.655805,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.62026479,2 | 4,2->4,0
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,5.5263093,2 | 3 | 4,2->3 | 3->4,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.8487233,2 | 3,2->3,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,4.485409,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.86579165,3 | 1 | 0,3->1 | 1->0,0
+26,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,4.1060371,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,5.655805,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,4.485409,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,3.6121574,1 | 3 | 5,1->3 | 3->5,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,3,1,3.4088941,5 | 3,5->3,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,3.3156503,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,2,0.0892447999999999,5 | 3 | 2 | 1,5->3 | 3->2 | 2->1,1
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.7725818,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,4.1207817,2 | 3,2->3,1
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.8837856,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.64751411,3 | 1 | 0,3->1 | 1->0,0
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.8137549,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.2166905,0 | 2 | 3,0->2 | 2->3,1
+26,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,4.7725818,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,3.8837856,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,3.184062,1 | 3 | 5,1->3 | 3->5,1
+26,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,3.1072967,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,3,1,2.9280794,5 | 3,5->3,1
+26,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,7.8440431,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,6.3202985,0 | 2 | 3,0->2 | 2->3,1
+26,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,5.1085202,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.937433,2 | 3,2->3,1
+26,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.9943129,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,7.8440431,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,3.9943129,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,1,2.4009862,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,2,1.168764,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,3,1.0636481,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,3.2833322,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,5,3,5,1,2.8296517,3 | 5,3->5,1
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.9618659,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.9026642,2 | 3,2->3,1
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.42092686,3 | 1 | 0,3->1 | 1->0,0
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.7197334,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6738493,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3153851,0 | 2 | 3,0->2 | 2->3,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,4.9618659,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,3.6738493,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,3,5,1,1,2.9370651,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,4,1,5,1,2.8527987,1 | 3 | 5,1->3 | 3->5,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,5,0,5,1,2.4411655,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,5,0,5,2,0.24043980000000031,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,5,0,5,3,1.9936513999999996,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.7662477,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.2832044,2 | 4,2->4,0
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.1057874,2 | 3 | 4,2->3 | 3->4,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9803307,2 | 3,2->3,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.7557261,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.1000541,3 | 1 | 0,3->1 | 1->0,0
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1263682,3 | 2 | 0,3->2 | 2->0,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,4.7662477,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,3.7557261,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,2,5,1,3.1038458,2 | 3 | 5,2->3 | 3->5,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,2,5,2,2.0645659,2 | 4 | 5,2->4 | 4->5,0
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,2.9960263,5 | 3 | 1,5->3 | 3->1,1
+26,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,1,5,1,2.9286427,1 | 3 | 5,1->3 | 3->5,1
+27,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,8.9094295,2 | 3 | 5,2->3 | 3->5,1
+27,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,6.2405144,0 | 2 | 3,0->2 | 2->3,1
+27,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,4.6149942,3 | 2 | 0,3->2 | 2->0,1
+27,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.1764629,2 | 3,2->3,1
+27,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,4.1698559,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,5.7346204,0 | 1,0->1,1
+27,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.756316,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+27,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.3856809000000001,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+27,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,2.5328752,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+27,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.2210754,1 | 0,1->0,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.9908734,2 | 3 | 5,2->3 | 3->5,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,2,2.9185561,2 | 4 | 5,2->4 | 4->5,0
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,1,5.6748721,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,1.6942501,2 | 4,2->4,0
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,4.2172768,2 | 3 | 4,2->3 | 3->4,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.1764629,2 | 3,2->3,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,4.1698559,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,5.7346204,0 | 1,0->1,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,3.1419969,0 | 1 | 3,0->1 | 1->3,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,3.0985175,0 | 2 | 3,0->2 | 2->3,0
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,3,0,1,2.6364907,3 | 1 | 0,3->1 | 1->0,1
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,3,0,2,1.9785035,3 | 2 | 0,3->2 | 2->0,0
+27,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,1,0,1,2.2210754,1 | 0,1->0,1
+27,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.0012561,2 | 3 | 5,2->3 | 3->5,1
+27,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,4.6235652,3 | 2 | 0,3->2 | 2->0,1
+27,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.2808692,2 | 3,2->3,1
+27,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,0,3,1,4.0759234,0 | 2 | 3,0->2 | 2->3,1
+27,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,4.0720099,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,5.3601688,0 | 1,0->1,1
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.8695157,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.5267607999999999,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,2.0413132,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.3947766,1 | 0,1->0,1
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,1,3.4738068,0 | 2 | 4,0->2 | 2->4,0
+27,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,2,0.040481367,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+27,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.313779,2 | 3 | 5,2->3 | 3->5,1
+27,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,4.4996692,3 | 2 | 0,3->2 | 2->0,1
+27,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,0,3,1,4.312884,0 | 2 | 3,0->2 | 2->3,1
+27,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.2915216,2 | 3,2->3,1
+27,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.811259,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,5.6242129,0 | 1,0->1,1
+27,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.7302868,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+27,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,1.1126090999999998,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+27,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,0.8335694000000002,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+27,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.683259,1 | 0,1->0,1
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.945857,2 | 3 | 5,2->3 | 3->5,1
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.8864322,2 | 3,2->3,1
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40768951,3 | 1 | 0,3->1 | 1->0,0
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.7113991,3 | 2 | 0,3->2 | 2->0,1
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6566169,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3009205,0 | 2 | 3,0->2 | 2->3,1
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.8087544,0 | 1,0->1,1
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.4276938,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.24056679999999986,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.9851279,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.2624795,1 | 0,1->0,1
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.40768951,3 | 1 | 0,3->1 | 1->0,1
+27,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.7113991,3 | 2 | 0,3->2 | 2->0,0
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.7443795,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.2830378,2 | 4,2->4,0
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.0841201,2 | 3 | 4,2->3 | 3->4,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9640987,2 | 3,2->3,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.7384937,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.102909,3 | 1 | 0,3->1 | 1->0,0
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1019416,3 | 2 | 0,3->2 | 2->0,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.9013209,0 | 1,0->1,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,2.4729699,0 | 1 | 3,0->1 | 1->3,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,1.0090586,0 | 2 | 3,0->2 | 2->3,0
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.3113217,1 | 0,1->0,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.102909,3 | 1 | 0,3->1 | 1->0,1
+27,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.1019416,3 | 2 | 0,3->2 | 2->0,0
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.380726,2 | 3 | 5,2->3 | 3->5,1
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,5,0,1,4.4637789,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.1913238,2 | 3,2->3,1
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.57570085,3 | 1 | 0,3->1 | 1->0,0
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.9246621,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.1771504,0 | 2 | 3,0->2 | 2->3,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,1,4,2,1,4.5387267,4 | 2,4->2,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,2,2,4,1,3.5228675,2 | 4,2->4,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,2,2,4,2,2.5419502,2 | 3 | 4,2->3 | 3->4,0
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,3,0,4,1,2.7504145,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,3,0,4,2,0.56731565,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,4,1,4,1,3.2481165,1 | 2 | 4,1->2 | 2->4,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,4,1,1,3.0771746,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,4,1,2,1.2777758,4 | 3 | 1,4->3 | 3->1,0
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,5.3689034,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.82734937,2 | 4,2->4,0
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,5.2374683,2 | 3 | 4,2->3 | 3->4,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.4637789,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.1913238,2 | 3,2->3,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.3935032,3 | 1 | 0,3->1 | 1->0,0
+28,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1068597,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,1,4,2,1,4.5387267,4 | 2,4->2,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,2,4,1,1,4.3549504,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,3,0,4,1,3.3177302,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,4,1,4,1,3.2481165,1 | 2 | 4,1->2 | 2->4,1
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,2,5,1,2.6852079,2 | 3 | 5,2->3 | 3->5,0
+28,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,2,5,2,2.6955181,2 | 4 | 5,2->4 | 4->5,1
+28,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.2088032,2 | 3 | 5,2->3 | 3->5,1
+28,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,4.7082296,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.3569504,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,4.3520049,2 | 3,2->3,1
+28,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,4.0260675,0 | 2 | 3,0->2 | 2->3,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,1,4,2,1,4.4000879,4 | 2,4->2,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,2,1,4,1,4.0666744,1 | 2 | 4,1->2 | 2->4,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,2,1,4,2,0.0038084324,1 | 3 | 4,1->3 | 3->4,0
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,3,0,4,1,3.5844971,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,4,2,4,1,3.2486515,2 | 4,2->4,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,4,2,4,2,2.7905125,2 | 3 | 4,2->3 | 3->4,0
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,5,4,1,1,3.1951431,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 4 & 4 -> 2,5,4,1,2,1.3447325,4 | 3 | 1,4->3 | 3->1,0
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.4429173,2 | 3 | 5,2->3 | 3->5,1
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,4.5956464,2 | 3,2->3,1
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.2246933,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,1.397151,3 | 1 | 0,3->1 | 1->0,0
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.4184505,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.2651643,0 | 2 | 3,0->2 | 2->3,1
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,1,2,4,1,4.4919274,2 | 4,2->4,1
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,1,2,4,2,1.4306619,2 | 3 | 4,2->3 | 3->4,0
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,2,4,1,1,3.8672426,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,2,4,1,2,1.0103565,4 | 3 | 1,4->3 | 3->1,0
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,3,4,2,1,3.3038553,4 | 2,4->2,1
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,4,4,0,1,2.9819301,4 | 2 | 0,4->2 | 2->0,1
+28,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 4 & 4 -> 2,5,0,4,1,2.9764342,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.9486885,2 | 3 | 5,2->3 | 3->5,1
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.8881626,2 | 3,2->3,1
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.40855711,3 | 1 | 0,3->1 | 1->0,0
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.713343,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6591277,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.3033793,0 | 2 | 3,0->2 | 2->3,1
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,1,4,2,1,3.6664543,4 | 2,4->2,1
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,2,2,4,1,3.2076116,2 | 4,2->4,1
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,2,2,4,2,2.0610547,2 | 3 | 4,2->3 | 3->4,0
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,3,4,1,1,3.1183222,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,3,4,1,2,0.61908854,4 | 3 | 1,4->3 | 3->1,0
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,4,1,4,1,3.0934253,1 | 2 | 4,1->2 | 2->4,1
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,4,1,4,2,0.27364295,1 | 3 | 4,1->3 | 3->4,0
+28,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 4 & 4 -> 2,5,0,4,1,2.8250885,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.7474651,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.2824389,2 | 4,2->4,0
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.0876473,2 | 3 | 4,2->3 | 3->4,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.9658291,2 | 3,2->3,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.7410045,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,1.1033248,3 | 1 | 0,3->1 | 1->0,0
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.1043373,3 | 2 | 0,3->2 | 2->0,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,1,4,1,1,3.8176427,4 | 2 | 1,4->2 | 2->1,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,2,4,2,1,3.7661514,4 | 2,4->2,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,3,1,4,1,3.1653455,1 | 2 | 4,1->2 | 2->4,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,3,1,4,2,0.33766216,1 | 3 | 4,1->3 | 3->4,0
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,4,0,4,1,2.8886743,0 | 2 | 4,0->2 | 2->4,1
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,2,5,1,3.0984386,2 | 3 | 5,2->3 | 3->5,0
+28,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 4 & 4 -> 2,5,2,5,2,2.0567958,2 | 4 | 5,2->4 | 4->5,1
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.445289,2 | 3 | 5,2->3 | 3->5,1
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,4.0979629,2 | 3,2->3,1
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.6308698,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.98543172,3 | 1 | 0,3->1 | 1->0,0
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.6298403,3 | 2 | 0,3->2 | 2->0,1
+29,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.8608627,0 | 2 | 3,0->2 | 2->3,1
+29,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,4.0907555,5 | 4,5->4,1
+29,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,3.9682267,4 | 5,4->5,1
+29,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,1,2.3377647,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+29,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,2,0.2638156999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+29,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,3,2.3236449,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.9252253,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.6126352,2 | 4,2->4,0
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,4.6968338,2 | 3 | 4,2->3 | 3->4,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.0979629,2 | 3,2->3,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6308698,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.98543172,3 | 1 | 0,3->1 | 1->0,0
+29,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,3.6298403,3 | 2 | 0,3->2 | 2->0,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,4.0907555,5 | 4,5->4,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,3.9682267,4 | 5,4->5,1
+29,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,2,5,1,2.1216441,2 | 3 | 5,2->3 | 3->5,0
+29,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,2,5,2,2.3236449,2 | 4 | 5,2->4 | 4->5,1
+29,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,6.0351142,2 | 3 | 5,2->3 | 3->5,1
+29,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,4.6756145,3 | 2 | 0,3->2 | 2->0,1
+29,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,4.3286182,2 | 3,2->3,1
+29,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,4.1874784,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.8628958,0 | 2 | 3,0->2 | 2->3,1
+29,sample_backbone,7,0.8,moving_average,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,4.7823897,5 | 4,5->4,1
+29,sample_backbone,7,0.8,moving_average,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,4.3651992,4 | 5,4->5,1
+29,sample_backbone,7,0.8,moving_average,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,1,2.7477109,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+29,sample_backbone,7,0.8,moving_average,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,2,0.3642829999999999,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+29,sample_backbone,7,0.8,moving_average,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,3,2.2942075,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.8385599,2 | 3 | 5,2->3 | 3->5,1
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.9114655,2 | 3,2->3,1
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,2.8935772,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.51009573,3 | 1 | 0,3->1 | 1->0,0
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,2.7261595,3 | 2 | 0,3->2 | 2->0,1
+29,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.5861368,0 | 2 | 3,0->2 | 2->3,1
+29,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,3.6967526,5 | 4,5->4,1
+29,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,2.081002,4 | 5,4->5,1
+29,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,1,1.2746293,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+29,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,2,1.8987938,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+29,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,3,0.4831965,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.8652587,2 | 3 | 5,2->3 | 3->5,1
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.7976217,2 | 3,2->3,1
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.33164268,3 | 1 | 0,3->1 | 1->0,0
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,3.6720933,3 | 2 | 0,3->2 | 2->0,1
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.5666208,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.2271714,0 | 2 | 3,0->2 | 2->3,1
+29,sample_backbone,7,0.8,lstm,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,3.9006257,5 | 4,5->4,1
+29,sample_backbone,7,0.8,lstm,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,3.5441875,4 | 5,4->5,1
+29,sample_backbone,7,0.8,lstm,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,1,2.3639997,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+29,sample_backbone,7,0.8,lstm,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,2,0.2362728999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+29,sample_backbone,7,0.8,lstm,random_failure_fixed,4 -> 5 & 5 -> 4,3,0,5,3,1.9384218,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.6296854,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,1.277363,2 | 4,2->4,0
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,3.9739278,2 | 3 | 4,2->3 | 3->4,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.8752882,2 | 3,2->3,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.6484976,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,3.0624683,2 | 3 | 5,2->3 | 3->5,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,2.0093362,2 | 4 | 5,2->4 | 4->5,0
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,4 -> 5 & 5 -> 4,1,5,4,1,3.9611771,5 | 4,5->4,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,4 -> 5 & 5 -> 4,2,4,5,1,3.641017,4 | 5,4->5,1
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,2,5,1,3.0624683,2 | 3 | 5,2->3 | 3->5,0
+29,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,4 -> 5 & 5 -> 4,3,2,5,2,2.0093362,2 | 4 | 5,2->4 | 4->5,1
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.7538048,2 | 3 | 5,2->3 | 3->5,1
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,5,0,1,3.571247,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,5,0,2,0.23393423,5 | 4 | 2 | 0,5->4 | 4->2 | 2->0,0
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.1574925,2 | 3,2->3,1
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,2.9446483,3 | 2 | 0,3->2 | 2->0,1
+30,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.5855531,0 | 2 | 3,0->2 | 2->3,1
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.3083486,0 | 1,0->1,1
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,1.9122376,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.6292282999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.5829989,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.8565276,1 | 0,1->0,1
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,1,2.1055796,0 | 2 | 4,0->2 | 2->4,0
+30,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,2,0.5976400000000002,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.1244648,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.82042513,2 | 4,2->4,0
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,3.9335884,2 | 3 | 4,2->3 | 3->4,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.571247,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,2,0.23393423,5 | 4 | 3 | 2 | 0,5->4 | 4->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,3.1574925,2 | 3,2->3,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.66415628,3 | 1 | 0,3->1 | 1->0,0
+30,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,2.2804921,3 | 2 | 0,3->2 | 2->0,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.3083486,0 | 1,0->1,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,1.9122376,0 | 1 | 3,0->1 | 1->3,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,0.67331557,0 | 2 | 3,0->2 | 2->3,0
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.8565276,1 | 0,1->0,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.66415628,3 | 1 | 0,3->1 | 1->0,1
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,2.2804921,3 | 2 | 0,3->2 | 2->0,0
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,1,3.4342967,0 | 2,0->2,0
+30,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,2,0.59764003,0 | 1 | 2,0->1 | 1->2,1
+30,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,5.6223123,2 | 3 | 5,2->3 | 3->5,1
+30,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,4.1688194,3 | 2 | 0,3->2 | 2->0,1
+30,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,4.0174215,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,2,3,1,3.9058105,2 | 3,2->3,1
+30,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,3.7160202,0 | 2 | 3,0->2 | 2->3,1
+30,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,5.033713,0 | 1,0->1,1
+30,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,2.6431869,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+30,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.22133700000000012,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+30,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,2.1588425,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+30,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.1168311,1 | 0,1->0,1
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.932794,2 | 3 | 5,2->3 | 3->5,1
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,3,1,4.0692076,0 | 2 | 3,0->2 | 2->3,1
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.5909894,2 | 3,2->3,1
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.50982009,3 | 1 | 0,3->1 | 1->0,0
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.3399448,3 | 2 | 0,3->2 | 2->0,1
+30,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,3.116631,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.7124958,0 | 1,0->1,1
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,1,0,1,2.2477968,1 | 0,1->0,1
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,1,1.5687482,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,2,1.3726415000000003,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,3,0.27586129999999964,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.50982009,3 | 1 | 0,3->1 | 1->0,1
+30,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,3.3399448,3 | 2 | 0,3->2 | 2->0,0
+30,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.4006844,2 | 3 | 5,2->3 | 3->5,1
+30,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,3.3658009,3 | 2 | 0,3->2 | 2->0,1
+30,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.3130984,2 | 3,2->3,1
+30,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.0633488,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.8053544,0 | 2 | 3,0->2 | 2->3,1
+30,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.0674839,0 | 1,0->1,1
+30,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,1.9872406,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+30,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.21726369999999995,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+30,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.6943886,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+30,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.9791209,1 | 0,1->0,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.9898839,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.390765,2 | 3,2->3,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,1.2482558,2 | 4,2->4,0
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,3.3583964,2 | 3 | 4,2->3 | 3->4,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,3.1452255,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.841927,2 | 3 | 5,2->3 | 3->5,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.7653032,2 | 4 | 5,2->4 | 4->5,0
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,4.1600504,0 | 1,0->1,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,2.0325165,0 | 1 | 3,0->1 | 1->3,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,0.95394559,0 | 2 | 3,0->2 | 2->3,0
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,2.0279629,1 | 0,1->0,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.2089935,3 | 1 | 0,3->1 | 1->0,1
+30,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,2.2425696,3 | 2 | 0,3->2 | 2->0,0
+31,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.0675494,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.940588,2 | 3,2->3,1
+31,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.8611605,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.482525,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.2042649,3 | 2,3->2,1
+31,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.0675494,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.940588,2 | 3,2->3,1
+31,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.8611605,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.482525,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.2042649,3 | 2,3->2,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.0808296,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.940588,2 | 3,2->3,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,0.84702439,2 | 4,2->4,0
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,2.9225137,2 | 3 | 4,2->3 | 3->4,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.482525,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.2042649,3 | 2,3->2,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,4.0808296,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.940588,2 | 3,2->3,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,0.84702439,2 | 4,2->4,0
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,2.9225137,2 | 3 | 4,2->3 | 3->4,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.482525,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.2042649,3 | 2,3->2,1
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.1618423,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.5968418,2 | 3,2->3,1
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.5955887,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.19605209,3 | 1 | 0,3->1 | 1->0,0
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.5343089,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.6769644,0 | 2 | 3,0->2 | 2->3,1
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,4.1618423,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,3.5968418,2 | 3,2->3,1
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,3.5955887,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,0.19605209,3 | 1 | 0,3->1 | 1->0,0
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,2,3.5343089,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,moving_average,random_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.6769644,0 | 2 | 3,0->2 | 2->3,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,0.6507226,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,2,0.7701725999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,3,1.5695431,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.0156292,2 | 3,2->3,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,1.7957268,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,1,1,1.0224448,3 | 1,3->1,0
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,1,2,1.7410109,3 | 2 | 1,3->2 | 2->1,1
+31,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,1.5704345,3 | 2,3->2,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,0.6507226,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,2,0.7701725999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,3,1.5695431,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.0156292,2 | 3,2->3,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,1.7957268,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,1,1,1.0224448,3 | 1,3->1,0
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,4,3,1,2,1.7410109,3 | 2 | 1,3->2 | 2->1,1
+31,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,1.5704345,3 | 2,3->2,1
+31,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.9519622,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.9055328,2 | 3,2->3,1
+31,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.8202724,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.6242056,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.4090118,0 | 2 | 3,0->2 | 2->3,1
+31,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.9519622,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.9055328,2 | 3,2->3,1
+31,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.8202724,3 | 2 | 0,3->2 | 2->0,1
+31,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.6242056,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,lstm,random_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.4090118,0 | 2 | 3,0->2 | 2->3,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.4326937,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.9831994,2 | 3,2->3,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,1.1679647,2 | 4,2->4,0
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,2.8697722,2 | 3 | 4,2->3 | 3->4,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.7060823,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.5366585,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.6218498,2 | 4 | 5,2->4 | 4->5,0
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.4326937,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.9831994,2 | 3,2->3,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,1.1679647,2 | 4,2->4,0
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,2.8697722,2 | 3 | 4,2->3 | 3->4,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.7060823,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.5366585,2 | 3 | 5,2->3 | 3->5,1
+31,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.6218498,2 | 4 | 5,2->4 | 4->5,0
+32,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,2.426742,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,2.3231858,3 | 2 | 0,3->2 | 2->0,1
+32,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.2857558,2 | 3,2->3,1
+32,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,2,1,2.013063,3 | 2,3->2,1
+32,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,1.9694967,0 | 2 | 3,0->2 | 2->3,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,2.426742,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,0,5,1,1.1278153,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,0,5,2,0.9944321,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,0,5,3,0.76584907,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,5,0,1,1.9390018,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,1,5,1,1.8645184,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,1.6354898,5 | 3 | 1,5->3 | 3->1,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,2.8880965,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.74371157,2 | 4,2->4,0
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,2.4025405,2 | 3 | 4,2->3 | 3->4,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.2857558,2 | 3,2->3,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,2,1,2.013063,3 | 2,3->2,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,5,0,1,1.9390018,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,2.8880965,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,1.9390018,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,1.8645184,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,2,5,1,1.660893,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,2,5,2,0.76584907,2 | 4 | 5,2->4 | 4->5,0
+32,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,1.6354898,5 | 3 | 1,5->3 | 3->1,1
+32,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.4233463,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,3,0,1,3.1860667,3 | 2 | 0,3->2 | 2->0,1
+32,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,3.1204498,2 | 3,2->3,1
+32,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.9643945,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.375051,0 | 2 | 3,0->2 | 2->3,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,3.4233463,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.9643945,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,1,1.8215466,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,2,0.7473412000000001,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,3,1.4357661999999998,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,2.3799438,5 | 3 | 1,5->3 | 3->1,1
+32,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,5,1,5,1,2.3779281,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,3,1,1.9567244,2 | 3,2->3,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,1,0.49548375,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,2,1.43508095,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,3,0.42350929,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,1.5412927,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,2,1,1.3654629,3 | 2,3->2,1
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,1,1,0.78987464,3 | 1,3->1,0
+32,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,1,2,1.3203632,3 | 2 | 1,3->2 | 2->1,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,0.49548375,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,2,1.43508095,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,3,0.42350929,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,3,1,1.5494114,5 | 3,5->3,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,3,5,0,1,1.5412927,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,1.3980212,5 | 3 | 1,5->3 | 3->1,1
+32,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,5,1,5,1,1.3666516,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.6628635,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.7157578,2 | 3,2->3,1
+32,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.5660162,3 | 2 | 0,3->2 | 2->0,1
+32,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.4123604,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.1707218,0 | 2 | 3,0->2 | 2->3,1
+32,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,3.6628635,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.4123604,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,2.0106115,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,1.9207252,5 | 3 | 1,5->3 | 3->1,1
+32,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,3,1,1.7728447,5 | 3,5->3,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.1626749,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.7934244,2 | 3,2->3,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,1,0.98482419,2 | 4,2->4,0
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,4,2,2.7541191,2 | 3 | 4,2->3 | 3->4,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.4942372,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.1859846,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.6834247,2 | 4 | 5,2->4 | 4->5,0
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,3.1626749,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.4942372,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,2,5,1,2.1859846,2 | 3 | 5,2->3 | 3->5,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,2,5,2,1.6834247,2 | 4 | 5,2->4 | 4->5,0
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,1,5,1,2.0864556,1 | 3 | 5,1->3 | 3->5,1
+32,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,1.9796864,5 | 3 | 1,5->3 | 3->1,1
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,2.875568,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.315742,2 | 3,2->3,1
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,2.1897446,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,2,1,2.0178855,3 | 2,3->2,1
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,1,0.36446117,3 | 1 | 0,3->1 | 1->0,0
+33,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,0,2,1.9006296,3 | 2 | 0,3->2 | 2->0,1
+33,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,2.875568,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.1897446,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,2.105622,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,2.0101385,5 | 3 | 1,5->3 | 3->1,1
+33,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,3,5,1,1.5943622,3 | 5,3->5,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,4,1,0.0042800621,2 | 4,2->4,0
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,4,2,2.8958335,2 | 3 | 4,2->3 | 3->4,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,1,2.7022468,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.315742,2 | 3,2->3,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.1897446,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.0178855,3 | 2,3->2,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,2.7022468,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.1897446,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,2.105622,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,2.0101385,5 | 3 | 1,5->3 | 3->1,1
+33,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,3,5,1,1.5943622,3 | 5,3->5,1
+33,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.030916,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.6748946,2 | 3,2->3,1
+33,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,2.6041132,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,0,1,2.5985214,3 | 2 | 0,3->2 | 2->0,1
+33,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.0557932,0 | 2 | 3,0->2 | 2->3,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,3.030916,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.6041132,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,1,1.4684918,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,2,0.7047554999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,3,0,5,3,1.2756621,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,2.1639566,5 | 3 | 1,5->3 | 3->1,1
+33,sample_backbone,7,0.8,moving_average,random_failure_fixed,3 -> 5 & 5 -> 3,5,1,5,1,2.126838,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,3,0,1,0.077051982,3 | 1 | 0,3->1 | 1->0,0
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,1,3,0,2,2.4259641,3 | 2 | 0,3->2 | 2->0,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.138876,2 | 3,2->3,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,0,5,1,0.74239881,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,0,5,2,1.6144176899999998,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,3,0,5,3,0.3605061,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,1.7373951,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,1.6540511,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,0.74239881,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,2,1.6144176899999998,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,3,0.3605061,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,3,1,2.2661483,5 | 3,5->3,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,1.959796,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,0,1,1.7373951,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,3 -> 5 & 5 -> 3,5,2,5,1,1.6540511,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.5209825,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.6249595,2 | 3,2->3,1
+33,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.4461112,3 | 2 | 0,3->2 | 2->0,1
+33,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.3134141,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.0554216,0 | 2 | 3,0->2 | 2->3,1
+33,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,1,2,5,1,3.5209825,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.3134141,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,1.9681219,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,4,5,1,1,1.866609,5 | 3 | 1,5->3 | 3->1,1
+33,sample_backbone,7,0.8,lstm,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,3,1,1.7278615,5 | 3,5->3,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.0361366,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.87758083,2 | 4,2->4,0
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,2.716796,2 | 3 | 4,2->3 | 3->4,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.702626,2 | 3,2->3,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.3952909,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,2.001754,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.7257744,2 | 4 | 5,2->4 | 4->5,0
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,1,0,5,1,3.0361366,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,2,5,0,1,2.3952909,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,3,1,5,1,2.0439661,1 | 3 | 5,1->3 | 3->5,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,2,5,1,2.001754,2 | 3 | 5,2->3 | 3->5,1
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,4,2,5,2,1.7257744,2 | 4 | 5,2->4 | 4->5,0
+33,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,3 -> 5 & 5 -> 3,5,5,1,1,1.9255701,5 | 3 | 1,5->3 | 3->1,1
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,2.8726544,2 | 3 | 5,2->3 | 3->5,1
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.261764,2 | 3,2->3,1
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,5,0,1,1.8046414,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,3,2,1,1.76681,3 | 2,3->2,1
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,4,1,1.3322587,2 | 4,2->4,0
+34,sample_backbone,7,0.8,current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,4,2,1.6822804,2 | 3 | 4,2->3 | 3->4,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,2.9341203,0 | 1,0->1,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,1.2391413,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.30537839999999994,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.1670597,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.0873437,1 | 0,1->0,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.0028217,3 | 1 | 0,3->1 | 1->0,1
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,1.6153893,3 | 2 | 0,3->2 | 2->0,0
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,4,1,1.9344628,0 | 2 | 4,0->2 | 2->4,0
+34,sample_backbone,7,0.8,current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,4,2,0.0958903000000002,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,4,1,3.0145391,2 | 3 | 4,2->3 | 3->4,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,0,5,1,2.7115794,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.261764,2 | 3,2->3,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,1.8046414,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,1.76681,3 | 2,3->2,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,2.9341203,0 | 1,0->1,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,1,1.4043403,0 | 1 | 3,0->1 | 1->3,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,3,2,0.12131898,0 | 2 | 3,0->2 | 2->3,0
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.0873437,1 | 0,1->0,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.0028217,3 | 1 | 0,3->1 | 1->0,1
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,1.6153893,3 | 2 | 0,3->2 | 2->0,0
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,1,2.5329624,0 | 2,0->2,0
+34,sample_backbone,7,0.8,robust_current_demand_lp,random_failure_fixed,0 -> 1 & 1 -> 0,5,0,2,2,0.23606966,0 | 1 | 2,0->1 | 1->2,1
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,2.8106285,2 | 3 | 5,2->3 | 3->5,1
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.4509624,2 | 3,2->3,1
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,0.098079058,3 | 1 | 0,3->1 | 1->0,0
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,2,2.418833,3 | 2 | 0,3->2 | 2->0,1
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.1039782,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,moving_average,critical_failure_fixed,2 -> 3 & 3 -> 2,5,3,2,1,2.0005058,3 | 2,3->2,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,3.1008791,0 | 1,0->1,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,1,1.3765623,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,2,0.4711038999999999,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,5,3,1.2480219,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,3,1,0,1,1.3751008,1 | 0,1->0,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,1,1.6440593,0 | 2 | 4,0->2 | 2->4,0
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,4,0,4,2,0.38630830000000005,0 | 1 | 2 | 4,0->1 | 1->2 | 2->4,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,5,3,0,1,0.098079058,3 | 1 | 0,3->1 | 1->0,1
+34,sample_backbone,7,0.8,moving_average,random_failure_fixed,0 -> 1 & 1 -> 0,5,3,0,2,2.418833,3 | 2 | 0,3->2 | 2->0,0
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,1,0,5,1,0.7786792,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,0
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,1,0,5,2,1.4894883,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,1,0,5,3,0.37160669999999985,0 | 2 | 4 | 5,0->2 | 2->4 | 4->5,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,2,2,0,1,1.1346359,2 | 0,2->0,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,3,5,0,1,1.1074237,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,4,0,4,1,0.94111804,0 | 2 | 4,0->2 | 2->4,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,4,0,4,2,0.11708856,0 | 2 | 3 | 4,0->2 | 2->3 | 3->4,1
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,5,3,0,1,0.29115145,3 | 1 | 0,3->1 | 1->0,0
+34,sample_backbone,7,0.8,linear_autoregressive,critical_failure_fixed,0 -> 2 & 2 -> 0,5,3,0,2,1.018577,3 | 2 | 0,3->2 | 2->0,1
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,1,1,0,1,1.6103208,1 | 0,1->0,1
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,2,0,1,1,0.94379062,0 | 1,0->1,1
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,1,0.7786792,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,2,1.4894883,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,0
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,3,0.37160669999999985,0 | 2 | 4 | 5,0->2 | 2->4 | 4->5,0
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,0.29115145,3 | 1 | 0,3->1 | 1->0,1
+34,sample_backbone,7,0.8,linear_autoregressive,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,1.018577,3 | 2 | 0,3->2 | 2->0,0
+34,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,1,2,5,1,3.5343859,2 | 3 | 5,2->3 | 3->5,1
+34,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,3,1,2.6456304,2 | 3,2->3,1
+34,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,3,3,0,1,2.4734895,3 | 2 | 0,3->2 | 2->0,1
+34,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.3341472,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,lstm,critical_failure_fixed,2 -> 3 & 3 -> 2,5,0,3,1,2.0686882,0 | 2 | 3,0->2 | 2->3,1
+34,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,3.1585977,0 | 1,0->1,1
+34,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,2,1,0,1,1.5024892,1 | 0,1->0,1
+34,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,1,1.2955799,0 | 1 | 3 | 5,0->1 | 1->3 | 3->5,1
+34,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,2,0.09718280000000012,0 | 1 | 3 | 4 | 5,0->1 | 1->3 | 3->4 | 4->5,1
+34,sample_backbone,7,0.8,lstm,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,5,3,1.5785993999999999,0 | 2 | 3 | 4 | 5,0->2 | 2->3 | 3->4 | 4->5,0
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,1,0,5,1,3.0623531,0 | 2 | 3 | 5,0->2 | 2->3 | 3->5,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,1,0.86777772,2 | 4,2->4,0
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,2,2,4,2,2.7516531,2 | 3 | 4,2->3 | 3->4,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,3,2,3,1,2.7232969,2 | 3,2->3,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,4,5,0,1,2.416024,5 | 3 | 2 | 0,5->3 | 3->2 | 2->0,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,1,1.994235,2 | 3 | 5,2->3 | 3->5,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,critical_failure_fixed,2 -> 3 & 3 -> 2,5,2,5,2,1.7466968,2 | 4 | 5,2->4 | 4->5,0
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,1,0,1,1,3.2511644,0 | 1,0->1,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,2,1,0,1,1.5513314,1 | 0,1->0,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,3,1,1.4380385,0 | 1 | 3,0->1 | 1->3,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,3,0,3,2,0.81175738,0 | 2 | 3,0->2 | 2->3,0
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,1,1.0492755,3 | 1 | 0,3->1 | 1->0,1
+34,sample_backbone,7,0.8,uncertainty_aware_lstm_robust_lp,random_failure_fixed,0 -> 1 & 1 -> 0,4,3,0,2,1.5099762,3 | 2 | 0,3->2 | 2->0,0
