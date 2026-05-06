@@ -1,0 +1,22 @@
+topology,method,prediction_rmse_mean,nominal_max_utilization_mean,critical_failure_reopt_max_utilization_mean,critical_failure_fixed_disrupted_fraction_mean,critical_failure_fixed_fairness_mean
+abilene,Current-Demand LP,0.6094,1.0232,2.6083,0.3219,0.6891
+abilene,Robust LP,0.6094,1.0232,2.6004,0.3254,0.6892
+abilene,Uncertainty-Aware Robust LP,1.0219,0.9544,2.3174,0.3191,0.6973
+abilene,Linear AR,0.5613,0.9949,2.5285,0.321,0.6893
+abilene,Moving Average,1.1474,1.0621,2.6859,0.3221,0.6888
+abilene,LSTM,1.0219,0.9104,2.2115,0.321,0.6908
+abilene,Transformer,0.6768,0.9039,2.2329,0.3214,0.6908
+nsfnet,Current-Demand LP,0.5836,1.1255,1.5696,0.2521,0.7428
+nsfnet,Robust LP,0.5836,1.1255,1.5696,0.2342,0.7584
+nsfnet,Uncertainty-Aware Robust LP,1.0472,1.0231,1.428,0.2362,0.7575
+nsfnet,Linear AR,0.5403,1.1108,1.5442,0.2535,0.7423
+nsfnet,Moving Average,1.1507,1.1619,1.619,0.2528,0.7424
+nsfnet,LSTM,1.0472,0.9775,1.3649,0.2525,0.743
+nsfnet,Transformer,0.7173,0.965,1.3442,0.2535,0.7419
+sample,Current-Demand LP,0.6467,0.4103,0.7795,0.2699,0.7621
+sample,Robust LP,0.6467,0.4103,0.7795,0.2674,0.7692
+sample,Uncertainty-Aware Robust LP,0.7631,0.3869,0.7352,0.2671,0.7741
+sample,Linear AR,0.772,0.4032,0.7644,0.2734,0.7639
+sample,Moving Average,1.1565,0.4255,0.8085,0.2701,0.7633
+sample,LSTM,0.7631,0.374,0.7106,0.2709,0.7641
+sample,Transformer,0.6775,0.3526,0.67,0.2719,0.7622

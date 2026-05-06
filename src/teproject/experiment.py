@@ -25,7 +25,12 @@ from teproject.metrics import (
 )
 from teproject.optimizer import solve_failure_aware_min_max_utilization, solve_min_max_utilization
 from teproject.paths import decompose_commodity_flow_paths
-from teproject.predictors import LSTMPredictor, LinearAutoRegressivePredictor, MovingAveragePredictor
+from teproject.predictors import (
+    LSTMPredictor,
+    LinearAutoRegressivePredictor,
+    MovingAveragePredictor,
+    TransformerPredictor,
+)
 from teproject.topology import load_topology
 from teproject.traffic import generate_dynamic_traffic
 
@@ -49,6 +54,20 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
     ]
     if config.enable_lstm:
         predictors.append(LSTMPredictor(history_window=config.history_window, epochs=100, hidden_size=48))
+    if config.enable_transformer:
+        predictors.append(
+            TransformerPredictor(
+                history_window=config.history_window,
+                epochs=config.transformer_epochs,
+                model_dim=config.transformer_model_dim,
+                num_heads=config.transformer_num_heads,
+                num_layers=config.transformer_num_layers,
+                dropout=config.transformer_dropout,
+                learning_rate=config.transformer_learning_rate,
+                batch_size=config.transformer_batch_size,
+                seed=config.seed,
+            )
+        )
 
     train_data = traffic.matrices[: config.train_steps]
     for predictor in predictors:

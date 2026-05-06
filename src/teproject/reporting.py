@@ -15,6 +15,7 @@ METHOD_ORDER = [
     "linear_autoregressive",
     "moving_average",
     "lstm",
+    "transformer",
 ]
 
 METHOD_LABELS = {
@@ -24,6 +25,7 @@ METHOD_LABELS = {
     "linear_autoregressive": "Linear AR",
     "moving_average": "Moving Average",
     "lstm": "LSTM",
+    "transformer": "Transformer",
 }
 
 
@@ -41,6 +43,32 @@ def _rounded(df: pd.DataFrame, digits: int = 4) -> pd.DataFrame:
 def _prepare_main_results_table(aggregated: pd.DataFrame) -> pd.DataFrame:
     focus = aggregated[aggregated["load_scale"] == 1.0].copy()
     focus["method"] = pd.Categorical(focus["method"], categories=METHOD_ORDER, ordered=True)
+    focus = focus.sort_values(["topology", "method"])
+    table = focus[
+        [
+            "topology",
+            "method",
+            "prediction_rmse_mean",
+            "nominal_max_utilization_mean",
+            "critical_failure_reopt_max_utilization_mean",
+            "critical_failure_fixed_disrupted_fraction_mean",
+            "critical_failure_fixed_fairness_mean",
+        ]
+    ].copy()
+    table["method"] = table["method"].map(_display_method)
+    return _rounded(table)
+
+
+def _prepare_ml_comparison_table(aggregated: pd.DataFrame) -> pd.DataFrame:
+    focus = aggregated[
+        (aggregated["load_scale"] == 1.0)
+        & aggregated["method"].isin(["linear_autoregressive", "moving_average", "lstm", "transformer"])
+    ].copy()
+    focus["method"] = pd.Categorical(
+        focus["method"],
+        categories=["linear_autoregressive", "moving_average", "lstm", "transformer"],
+        ordered=True,
+    )
     focus = focus.sort_values(["topology", "method"])
     table = focus[
         [
@@ -172,6 +200,10 @@ def prepare_report_assets(sweep_dir: Path) -> dict[str, Path]:
     nominal_table_path = tables_dir / "nominal_utilization_pivot.csv"
     nominal_table.to_csv(nominal_table_path, index=False)
 
+    ml_table = _prepare_ml_comparison_table(aggregated)
+    ml_table_path = tables_dir / "ml_comparison_load1p0.csv"
+    ml_table.to_csv(ml_table_path, index=False)
+
     robust_table = _prepare_robust_comparison_table(aggregated)
     robust_table_path = tables_dir / "robust_lp_direct_comparison.csv"
     robust_table.to_csv(robust_table_path, index=False)
@@ -195,6 +227,8 @@ def prepare_report_assets(sweep_dir: Path) -> dict[str, Path]:
         "- `summary_critical_fixed_fairness.png`",
         "- `abilene_lp_family_comparison.png`",
         "- `nsfnet_lp_family_comparison.png`",
+        "- `ml_nominal_comparison.png`",
+        "- `ml_prediction_rmse_comparison.png`",
         "",
         "## Example failure visuals",
         "",
@@ -207,6 +241,7 @@ def prepare_report_assets(sweep_dir: Path) -> dict[str, Path]:
         "",
         "- `tables/main_results_load1p0.csv`",
         "- `tables/nominal_utilization_pivot.csv`",
+        "- `tables/ml_comparison_load1p0.csv`",
         "- `tables/robust_lp_direct_comparison.csv`",
         "- `tables/best_method_by_topology_and_load.csv`",
     ]
@@ -216,6 +251,7 @@ def prepare_report_assets(sweep_dir: Path) -> dict[str, Path]:
         "asset_dir": asset_dir,
         "main_results_table": main_table_path,
         "nominal_pivot_table": nominal_table_path,
+        "ml_comparison_table": ml_table_path,
         "robust_comparison_table": robust_table_path,
         "best_method_table": best_table_path,
         "presentation_manifest": manifest_path,

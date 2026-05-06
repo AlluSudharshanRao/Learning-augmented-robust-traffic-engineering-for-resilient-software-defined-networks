@@ -70,7 +70,7 @@ Generate clean summary plots from an aggregated sweep:
 Prepare report-ready tables and presentation figures from the final sweep:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_advanced
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_ml_compare
 ```
 
 ## Current Advanced Prototype
@@ -81,6 +81,7 @@ The current implementation includes:
 - dynamic traffic matrix generation
 - baseline predictors
 - LSTM traffic prediction
+- Transformer traffic prediction
 - LP-based multi-commodity flow routing
 - scenario-based robust LP routing over nominal and selected failure cases
 - uncertainty-aware robust LP routing using LSTM residual uncertainty
@@ -115,7 +116,7 @@ Sweep runs write aggregate outputs such as:
 - `outputs/sweeps/plots/abilene_lp_family_comparison.png`
 - `outputs/sweeps/plots/nsfnet_lp_family_comparison.png`
 - `outputs/sweeps/plots/robust_lp_comparison.csv`
-- `outputs/sweeps_advanced/report_assets/`
+- `outputs/sweeps_ml_compare/report_assets/`
 
 The result tables now include both:
 
@@ -134,12 +135,13 @@ The experiment also includes:
 
 ## Latest Final Results
 
-The latest advanced evaluation lives under:
+The latest official evaluation lives under:
 
-- `outputs/sweeps_advanced/`
+- `outputs/sweeps_ml_compare/`
 
 The strongest current story is:
 
-- `lstm` is the best pure nominal-routing method
+- `transformer` is now the strongest pure nominal-routing ML method in the latest tuned comparison
+- `lstm` remains a strong baseline and still pairs well with the uncertainty-aware robust extension
 - `robust_current_demand_lp` is a meaningful resilience baseline
 - `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family extension, especially on NSFNET

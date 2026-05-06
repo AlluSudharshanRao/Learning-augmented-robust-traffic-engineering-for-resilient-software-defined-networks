@@ -92,6 +92,43 @@ class _TrafficLSTM(nn.Module):
         return self.head(output[:, -1, :])
 
 
+class _PositionalEncoding(nn.Module):
+    def __init__(self, d_model: int, max_len: int) -> None:
+        super().__init__()
+        position = torch.arange(max_len, dtype=torch.float32).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, d_model, 2, dtype=torch.float32) * (-np.log(10000.0) / d_model))
+        pe = torch.zeros(max_len, d_model, dtype=torch.float32)
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        self.register_buffer("pe", pe.unsqueeze(0))
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return x + self.pe[:, : x.size(1), :]
+
+
+class _TrafficTransformer(nn.Module):
+    def __init__(self, input_size: int, model_dim: int, num_heads: int, num_layers: int, dropout: float, max_len: int) -> None:
+        super().__init__()
+        self.input_proj = nn.Linear(input_size, model_dim)
+        self.positional_encoding = _PositionalEncoding(model_dim, max_len=max_len)
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=model_dim,
+            nhead=num_heads,
+            dim_feedforward=model_dim * 2,
+            dropout=dropout,
+            batch_first=True,
+            activation="gelu",
+        )
+        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        self.head = nn.Linear(model_dim, input_size)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        hidden = self.input_proj(x)
+        hidden = self.positional_encoding(hidden)
+        encoded = self.encoder(hidden)
+        return self.head(encoded[:, -1, :])
+
+
 @dataclass
 class LSTMPredictor(BasePredictor):
     history_window: int = 4
@@ -127,6 +164,88 @@ class LSTMPredictor(BasePredictor):
         loader = DataLoader(dataset, batch_size=self.batch_size, shuffle=True)
 
         self.model = _TrafficLSTM(input_size=input_size, hidden_size=self.hidden_size)
+        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
+        loss_fn = nn.MSELoss()
+        self.model.train()
+
+        for _ in range(self.epochs):
+            for batch_x, batch_y in loader:
+                optimizer.zero_grad()
+                predictions = self.model(batch_x)
+                loss = loss_fn(predictions, batch_y)
+                loss.backward()
+                optimizer.step()
+
+        self.model.eval()
+        with torch.no_grad():
+            training_predictions = self.model(x_tensor).cpu().numpy()
+        residuals = y_tensor.cpu().numpy() - training_predictions
+        residual_scale = residuals.std(axis=0).reshape(self.num_nodes, self.num_nodes)
+        self.residual_scale = np.clip(residual_scale, 0.0, None)
+        np.fill_diagonal(self.residual_scale, 0.0)
+
+    def predict_next(self, history: np.ndarray) -> np.ndarray:
+        if self.model is None or self.num_nodes is None:
+            raise RuntimeError("Predictor must be fit before prediction.")
+
+        usable_history = history[-self.history_window :]
+        x_tensor = torch.tensor(
+            usable_history.reshape(1, self.history_window, self.num_nodes * self.num_nodes),
+            dtype=torch.float32,
+        )
+        self.model.eval()
+        with torch.no_grad():
+            prediction = self.model(x_tensor).cpu().numpy().reshape(self.num_nodes, self.num_nodes)
+        prediction = np.clip(prediction, 0.0, None)
+        np.fill_diagonal(prediction, 0.0)
+        return prediction
+
+
+@dataclass
+class TransformerPredictor(BasePredictor):
+    history_window: int = 4
+    model_dim: int = 64
+    num_heads: int = 4
+    num_layers: int = 2
+    dropout: float = 0.1
+    epochs: int = 90
+    learning_rate: float = 8e-3
+    batch_size: int = 8
+    seed: int = 7
+    name: str = "transformer"
+
+    model: _TrafficTransformer | None = None
+    num_nodes: int | None = None
+
+    def fit(self, matrices: np.ndarray) -> None:
+        if len(matrices) <= self.history_window:
+            raise ValueError("Not enough samples to train the Transformer predictor.")
+
+        torch.manual_seed(self.seed)
+        self.num_nodes = matrices.shape[1]
+        input_size = self.num_nodes * self.num_nodes
+
+        x_samples = []
+        y_samples = []
+        for idx in range(self.history_window, len(matrices)):
+            history = matrices[idx - self.history_window : idx]
+            target = matrices[idx]
+            x_samples.append(history.reshape(self.history_window, input_size))
+            y_samples.append(target.reshape(input_size))
+
+        x_tensor = torch.tensor(np.array(x_samples), dtype=torch.float32)
+        y_tensor = torch.tensor(np.array(y_samples), dtype=torch.float32)
+        dataset = TensorDataset(x_tensor, y_tensor)
+        loader = DataLoader(dataset, batch_size=self.batch_size, shuffle=True)
+
+        self.model = _TrafficTransformer(
+            input_size=input_size,
+            model_dim=self.model_dim,
+            num_heads=self.num_heads,
+            num_layers=self.num_layers,
+            dropout=self.dropout,
+            max_len=self.history_window,
+        )
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
         loss_fn = nn.MSELoss()
         self.model.train()

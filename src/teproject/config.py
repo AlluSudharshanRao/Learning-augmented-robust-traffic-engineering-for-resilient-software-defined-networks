@@ -15,6 +15,14 @@ class ExperimentConfig:
     load_scale: float = 1.0
     output_subdir: str = "default"
     enable_lstm: bool = True
+    enable_transformer: bool = False
+    transformer_model_dim: int = 64
+    transformer_num_heads: int = 4
+    transformer_num_layers: int = 2
+    transformer_dropout: float = 0.1
+    transformer_epochs: int = 100
+    transformer_learning_rate: float = 8e-3
+    transformer_batch_size: int = 8
     enable_robust_baseline: bool = True
     enable_uncertainty_aware_method: bool = False
     robust_max_scenarios: int = 3

@@ -2,9 +2,9 @@
 
 ## Scope
 
-The latest advanced evaluation is stored under:
+The latest official evaluation is stored under:
 
-- `outputs/sweeps_advanced/`
+- `outputs/sweeps_ml_compare/`
 
 The sweep covers:
 
@@ -22,180 +22,189 @@ The sweep covers:
 
 Key aggregate files:
 
-- `outputs/sweeps_advanced/all_run_summaries.csv`
-- `outputs/sweeps_advanced/aggregated_summary.csv`
-- `outputs/sweeps_advanced/run_index.csv`
+- `outputs/sweeps_ml_compare/all_run_summaries.csv`
+- `outputs/sweeps_ml_compare/aggregated_summary.csv`
+- `outputs/sweeps_ml_compare/run_index.csv`
 
-Advanced report assets:
+Latest report assets:
 
-- `outputs/sweeps_advanced/report_assets/figures/summary_nominal_utilization.png`
-- `outputs/sweeps_advanced/report_assets/figures/summary_critical_fixed_disruption.png`
-- `outputs/sweeps_advanced/report_assets/figures/summary_critical_fixed_fairness.png`
-- `outputs/sweeps_advanced/report_assets/figures/abilene_lp_family_comparison.png`
-- `outputs/sweeps_advanced/report_assets/figures/nsfnet_lp_family_comparison.png`
-- `outputs/sweeps_advanced/report_assets/tables/main_results_load1p0.csv`
-- `outputs/sweeps_advanced/report_assets/tables/robust_lp_direct_comparison.csv`
+- `outputs/sweeps_ml_compare/report_assets/figures/summary_nominal_utilization.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/summary_critical_fixed_disruption.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/summary_critical_fixed_fairness.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/abilene_lp_family_comparison.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/nsfnet_lp_family_comparison.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/ml_nominal_comparison.png`
+- `outputs/sweeps_ml_compare/report_assets/figures/ml_prediction_rmse_comparison.png`
+- `outputs/sweeps_ml_compare/report_assets/tables/main_results_load1p0.csv`
+- `outputs/sweeps_ml_compare/report_assets/tables/ml_comparison_load1p0.csv`
+- `outputs/sweeps_ml_compare/report_assets/tables/robust_lp_direct_comparison.csv`
+- `outputs/sweeps_ml_compare/report_assets/tables/best_method_by_topology_and_load.csv`
 
 ## Important Limitation
 
 `GEANT2012` is still supported by the topology loader, but it is not part of
-the advanced sweep because the current LP formulation remains too expensive on
-that graph for the chosen time budget.
+the latest sweep because the current LP formulation remains too expensive for
+the chosen time budget.
 
 ## Methods Compared
 
-The advanced sweep compares:
+The latest sweep compares:
 
 - `moving_average`
 - `linear_autoregressive`
 - `lstm`
+- `transformer`
 - `current_demand_lp`
 - `robust_current_demand_lp`
 - `uncertainty_aware_lstm_robust_lp`
 
 ## Main Findings
 
-### 1. LSTM remains the best pure nominal-routing method
+### 1. The tuned Transformer is now the strongest pure nominal-routing ML method
 
-Across all three topologies and all load levels, `lstm` is still the best
-method for `nominal_max_utilization`.
+After the aggressive tuning round, `transformer` becomes the strongest pure
+ML-routing method in the latest sweep. It wins
+`nominal_max_utilization` in 6 of the 9 topology/load combinations in
+`best_method_by_topology_and_load.csv`, including all three topologies at
+load `1.0`.
 
-That means the advanced uncertainty-aware extension does not replace the
-original LSTM result. Instead, it adds a stronger resilience-oriented method to
-the project.
+### 2. The ML comparison is now stronger, not weaker
 
-### 2. Prediction RMSE and routing quality are still not the same thing
+The updated ML-comparison sweep still supports the key modeling lesson:
 
-The advanced results preserve the earlier core finding:
+- lower prediction RMSE does not automatically imply better traffic engineering
 
-- `lstm` does not have the best forecasting RMSE
-- but it remains the strongest nominal-routing model
+But the tuned Transformer now improves the practical story:
 
-That is still one of the most important conclusions in the project.
+- `Linear AR` often has the best RMSE
+- `Transformer` now has the best pure nominal routing quality at load `1.0`
+- `LSTM` remains competitive and still powers the uncertainty-aware robust
+  method
 
-### 3. The uncertainty-aware LP is a meaningful advanced addition
+### 3. The Transformer is now a headline ML result
 
-The new uncertainty-aware method uses:
+The Transformer is no longer just a modern baseline:
 
-- the LSTM forecast
-- a residual-based uncertainty estimate
-- and a conservative demand inflation step before robust routing
+- it trains correctly
+- it predicts valid traffic matrices
+- it integrates cleanly with routing and failure evaluation
+- it now outperforms `LSTM` on nominal routing in the latest tuned sweep
 
-This method gives a stronger LP-family comparison than before:
+That gives the final report a stronger ML section because we can now compare:
 
-- on `sample`, it improves resilience-side metrics substantially
-- on `abilene`, it improves nominal LP-family behavior and fairness, while
-  remaining mixed on disruption
-- on `nsfnet`, it improves nominal LP-family behavior, re-optimization
-  behavior, and fairness, while staying close to the robust LP on disruption
+- classical predictors
+- recurrent deep learning
+- Transformer-based sequence modeling
 
-## Topology-Specific Findings
+and show that tuning the newer model can matter.
 
-### Sample
-
-Main pattern:
-
-- `lstm` is still best nominally
-- uncertainty-aware robust routing becomes the best LP-family resilience method
-- it also improves fairness relative to both standard LP and robust LP
-
-Interpretation:
-
-- even on the synthetic network, uncertainty-aware routing is not just adding
-  complexity
-- it produces a real resilience-side gain
+## ML Comparison at Load 1.0
 
 ### Abilene
 
-Main pattern:
+- `Linear AR` RMSE: `0.5613`
+- `Transformer` RMSE: `0.6768`
+- `LSTM` RMSE: `1.0219`
 
-- `lstm` remains the best nominal method overall
-- uncertainty-aware robust LP is better than both LP baselines on nominal
-  utilization
-- uncertainty-aware robust LP improves LP-family fairness clearly
-- disruption remains mixed
-
-At load `1.0`:
-
-- `current_demand_lp` nominal utilization: `1.0232`
-- `robust_current_demand_lp` nominal utilization: `1.0232`
-- `uncertainty_aware_lstm_robust_lp` nominal utilization: `0.9999`
-
-- `current_demand_lp` critical fixed disruption: `0.3219`
-- `robust_current_demand_lp` critical fixed disruption: `0.3254`
-- `uncertainty_aware_lstm_robust_lp` critical fixed disruption: `0.3233`
-
-- `current_demand_lp` critical fixed fairness: `0.6891`
-- `robust_current_demand_lp` critical fixed fairness: `0.6892`
-- `uncertainty_aware_lstm_robust_lp` critical fixed fairness: `0.6927`
+- `Transformer` nominal utilization: `0.9039`
+- `LSTM` nominal utilization: `0.9104`
+- `Linear AR` nominal utilization: `0.9949`
 
 Interpretation:
 
-- on Abilene, the uncertainty-aware method gives a more convincing advanced
-  result than the older robust LP alone
-- but LSTM is still the strongest single method if the goal is pure nominal
-  congestion minimization
+- `Linear AR` is still the best forecaster by RMSE
+- `Transformer` is now the best pure ML routing model
+- `LSTM` remains very close, which keeps the comparison credible
 
 ### NSFNET
 
-Main pattern:
+- `Linear AR` RMSE: `0.5403`
+- `Transformer` RMSE: `0.7173`
+- `LSTM` RMSE: `1.0472`
 
-- `lstm` remains the best nominal method overall
-- uncertainty-aware robust LP becomes the strongest advanced LP-family method
-- it improves over both LP baselines on nominal utilization, re-optimization,
-  and fairness
+- `Transformer` nominal utilization: `0.9650`
+- `LSTM` nominal utilization: `0.9775`
+- `Linear AR` nominal utilization: `1.1108`
 
-At load `1.0`:
-
-- `current_demand_lp` nominal utilization: `1.1255`
-- `robust_current_demand_lp` nominal utilization: `1.1255`
-- `uncertainty_aware_lstm_robust_lp` nominal utilization: `1.0976`
-
-- `current_demand_lp` critical failure reopt utilization: `1.5696`
-- `robust_current_demand_lp` critical failure reopt utilization: `1.5696`
-- `uncertainty_aware_lstm_robust_lp` critical failure reopt utilization: `1.5304`
-
-- `current_demand_lp` critical fixed disruption: `0.2521`
-- `robust_current_demand_lp` critical fixed disruption: `0.2342`
-- `uncertainty_aware_lstm_robust_lp` critical fixed disruption: `0.2351`
-
-- `current_demand_lp` critical fixed fairness: `0.7428`
-- `robust_current_demand_lp` critical fixed fairness: `0.7584`
-- `uncertainty_aware_lstm_robust_lp` critical fixed fairness: `0.7587`
+- `Transformer` critical reopt utilization: `1.3442`
+- `LSTM` critical reopt utilization: `1.3649`
 
 Interpretation:
 
-- on NSFNET, the uncertainty-aware method is strong enough to keep in the final
-  project
-- it is the best advanced LP-family tradeoff overall
+- `Linear AR` is again the best forecaster by RMSE
+- the tuned `Transformer` gives the strongest pure ML congestion result
+- on NSFNET it also slightly beats `LSTM` on critical-failure re-optimization
+
+### Sample
+
+- `Transformer` RMSE: `0.6775`
+- `LSTM` RMSE: `0.7631`
+
+- `Transformer` nominal utilization: `0.3526`
+- `LSTM` nominal utilization: `0.3740`
+
+- `Transformer` critical reopt utilization: `0.6700`
+- `LSTM` critical reopt utilization: `0.7106`
+
+Interpretation:
+
+- the tuned Transformer also leads the synthetic sample topology at load `1.0`
+- the advantage is not limited to one benchmark network
+
+## Robust / Uncertainty-Aware Findings
+
+The LP-family story remains strong:
+
+- `robust_current_demand_lp` is a useful resilience baseline
+- `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family method
+
+On NSFNET at load `1.0`:
+
+- `current_demand_lp` nominal utilization: `1.1255`
+- `robust_current_demand_lp` nominal utilization: `1.1255`
+- `uncertainty_aware_lstm_robust_lp` nominal utilization: `1.0231`
+
+- `current_demand_lp` critical reopt utilization: `1.5696`
+- `uncertainty_aware_lstm_robust_lp` critical reopt utilization: `1.4280`
+
+- `current_demand_lp` critical fixed fairness: `0.7428`
+- `robust_current_demand_lp` critical fixed fairness: `0.7584`
+- `uncertainty_aware_lstm_robust_lp` critical fixed fairness: `0.7575`
+
+Interpretation:
+
+- the uncertainty-aware method remains worth keeping in the final project
+- the improved Transformer result does not weaken the robust-optimization story
 
 ## Best Final Narrative
 
 The strongest final storyline is now:
 
-1. `lstm` is the best method for nominal traffic engineering.
-2. Prediction RMSE alone does not explain routing performance.
-3. `robust_current_demand_lp` improves resilience on some topologies, but is not
-   always enough.
-4. `uncertainty_aware_lstm_robust_lp` is a meaningful advanced extension that
-   improves the LP-family tradeoff, especially on NSFNET and partially on
-   Abilene.
+1. The tuned `Transformer` is the strongest pure nominal-routing ML method in
+   the latest sweep.
+2. `LSTM` remains important because it is competitive on routing and is the
+   predictor used by the uncertainty-aware robust method.
+3. Prediction RMSE alone still does not explain traffic-engineering quality.
+4. `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family
+   extension and improves the project's novelty and depth.
 
 ## Suggested Final Figures
 
 Use these as the main report figures:
 
+- `report_assets/figures/ml_nominal_comparison.png`
+- `report_assets/figures/ml_prediction_rmse_comparison.png`
 - `report_assets/figures/summary_nominal_utilization.png`
 - `report_assets/figures/summary_critical_fixed_disruption.png`
 - `report_assets/figures/summary_critical_fixed_fairness.png`
 - `report_assets/figures/nsfnet_lp_family_comparison.png`
 - `report_assets/figures/abilene_lp_family_comparison.png`
-- one representative `worst_failure_case.png`
 
 ## Suggested Final Tables
 
 Use these as the main report tables:
 
+- `report_assets/tables/ml_comparison_load1p0.csv`
 - `report_assets/tables/main_results_load1p0.csv`
 - `report_assets/tables/nominal_utilization_pivot.csv`
 - `report_assets/tables/robust_lp_direct_comparison.csv`

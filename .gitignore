@@ -4,3 +4,5 @@ __pycache__/
 outputs/*
 !outputs/sweeps_advanced/
 !outputs/sweeps_advanced/**
+!outputs/sweeps_ml_compare/
+!outputs/sweeps_ml_compare/**

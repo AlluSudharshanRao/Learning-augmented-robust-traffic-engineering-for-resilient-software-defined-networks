@@ -13,6 +13,7 @@ METHOD_LABELS = {
     "linear_autoregressive": "Linear AR",
     "moving_average": "Moving Average",
     "lstm": "LSTM",
+    "transformer": "Transformer",
 }
 
 METHOD_COLORS = {
@@ -22,6 +23,7 @@ METHOD_COLORS = {
     "linear_autoregressive": "#2ca02c",
     "moving_average": "#ff7f0e",
     "lstm": "#6f42c1",
+    "transformer": "#17becf",
 }
 
 
@@ -201,6 +203,7 @@ def generate_summary_plots(aggregated_summary_path: Path, output_dir: Path) -> d
         "linear_autoregressive",
         "moving_average",
         "lstm",
+        "transformer",
     ]
 
     nominal_plot = output_dir / "summary_nominal_utilization.png"
@@ -245,5 +248,28 @@ def generate_summary_plots(aggregated_summary_path: Path, output_dir: Path) -> d
     comparison_path = output_dir / "robust_lp_comparison.csv"
     comparison.to_csv(comparison_path, index=False)
     created["robust_lp_comparison_csv"] = comparison_path
+
+    ml_methods = ["linear_autoregressive", "moving_average", "lstm", "transformer"]
+    ml_nominal_plot = output_dir / "ml_nominal_comparison.png"
+    _plot_metric_by_topology(
+        df,
+        metric="nominal_max_utilization_mean",
+        ylabel="Mean Maximum Link Utilization",
+        title="ML Predictor Comparison: Nominal Routing Quality",
+        output_path=ml_nominal_plot,
+        methods=ml_methods,
+    )
+    created["ml_nominal_comparison"] = ml_nominal_plot
+
+    ml_rmse_plot = output_dir / "ml_prediction_rmse_comparison.png"
+    _plot_metric_by_topology(
+        df,
+        metric="prediction_rmse_mean",
+        ylabel="Mean Prediction RMSE",
+        title="ML Predictor Comparison: Forecasting Error",
+        output_path=ml_rmse_plot,
+        methods=ml_methods,
+    )
+    created["ml_prediction_rmse_comparison"] = ml_rmse_plot
 
     return created

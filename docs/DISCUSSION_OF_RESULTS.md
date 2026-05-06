@@ -1,94 +1,96 @@
 # Discussion of Results
 
-## Why the Advanced Extension Matters
+## The Final Project Now Has Three Strong Stories
 
-The uncertainty-aware routing upgrade is the first step that clearly moves the
-project beyond a standard course-project baseline and into a more research-like
-direction.
+The latest tuned results make the project stronger because it now supports
+three distinct but connected conclusions:
 
-Instead of treating the LSTM prediction as a single exact demand estimate, the
-advanced method acknowledges that prediction error exists and uses a residual-
-based uncertainty estimate to inflate the routing demand conservatively before
-robust optimization.
+1. a meaningful ML comparison
+2. a meaningful robust-routing comparison
+3. a meaningful uncertainty-aware optimization extension
 
-That makes the final project story stronger because it combines:
+This is better than relying on only one novelty angle.
 
-- predictive modeling
-- uncertainty handling
-- robust optimization
-- and failure-aware evaluation
+## Story 1: The ML Comparison Now Has a Real Winner
 
-## What Stayed the Same
+The project now compares:
 
-The advanced results do not overturn the earlier core finding:
+- `Linear AR`
+- `Moving Average`
+- `LSTM`
+- `Transformer`
 
-- `lstm` is still the best pure nominal-routing method
+The most important ML takeaway is still:
 
-This is important because it means the project now has two complementary
-messages rather than one:
+- the best forecasting model is not automatically the best routing model
 
-- `lstm` is best for nominal traffic engineering
-- uncertainty-aware robust LP is best when we want a more resilience-oriented
-  LP-family controller
+But the tuned sweep now gives a stronger result:
 
-## Why the Uncertainty-Aware Method Is Worth Keeping
+- `Linear AR` often has the lowest RMSE
+- `Transformer` is now the strongest pure ML model for nominal routing
+- `LSTM` remains competitive and still contributes to the uncertainty-aware
+  robust method
 
-The uncertainty-aware method is not just an inflated-demand version of the
-robust LP. In the advanced sweep, it produces meaningful improvements:
+This is a better final-project story than the earlier untuned version because
+the newer model now matters in the downstream network objective, not only in
+the forecasting comparison.
 
-- better LP-family nominal utilization on Abilene and NSFNET
-- better LP-family re-optimization behavior on Abilene and NSFNET
-- better LP-family fairness on Abilene and NSFNET
-- stronger resilience-side behavior than standard LP across all three
-  topologies
+## Story 2: Why the Transformer Now Matters
 
-It does not dominate every metric in every topology, but it improves the
-overall tradeoff enough to justify its inclusion in the final project.
+The tuned Transformer does not just improve prediction error. In the latest
+results it also improves downstream congestion performance:
 
-## Why Abilene and NSFNET Behave Differently
+- on Abilene at load `1.0`, `Transformer` beats `LSTM` on nominal utilization
+- on NSFNET at load `1.0`, `Transformer` beats `LSTM` on both nominal
+  utilization and critical-failure re-optimization
+- on the sample topology at load `1.0`, `Transformer` also beats `LSTM` on
+  both metrics
 
-The advanced results still show topology dependence.
+That means the aggressive tuning round was worthwhile. It changed the project
+from "Transformer is only a baseline" to "Transformer is the strongest pure ML
+method in the latest sweep."
 
-On Abilene:
+## Story 3: Why the Uncertainty-Aware Method Still Matters
 
-- the uncertainty-aware method improves the LP-family nominal tradeoff
-- it improves fairness
-- but disruption improvements are small and mixed
+The uncertainty-aware method remains important because it adds something the ML
+comparison alone cannot provide:
 
-On NSFNET:
+- a decision layer that accounts for prediction uncertainty before optimization
 
-- the uncertainty-aware method improves nominal LP-family behavior
-- it improves critical-failure re-optimization behavior
-- it stays very close to the robust LP on disruption
-- it slightly improves fairness over the robust LP
+This is still the project's strongest optimization-side contribution.
 
-This suggests that NSFNET offers richer structure for uncertainty-aware routing
-to exploit, while Abilene remains a more constrained benchmark where the gains
-are narrower.
+The final role split is now clearer:
 
-## Why This Is Better Than Only Adding Another ML Model
+- `Transformer` is the strongest pure nominal-routing ML method
+- `LSTM` is still a strong recurrent baseline and supports the uncertainty-aware
+  routing extension
+- `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family method
 
-A newer predictor such as a Transformer or GNN could still be interesting, but
-the uncertainty-aware extension is more valuable at this stage because it
-improves the actual end-to-end control logic rather than only changing the
-forecasting component.
+## What the Results Now Say Academically
 
-The project now demonstrates that:
+The project can now support a more mature claim:
 
-- the LSTM forecast can be used not only directly
-- but also through an uncertainty-aware decision layer
+- newer sequence models can matter for downstream traffic engineering
+- tuning choices are important
+- prediction quality and routing quality are related, but not identical
+- robustness still needs an explicit optimization layer even with better ML
 
-That is a stronger integration of ML and optimization than a simple model swap.
+That gives the report a stronger methodological arc:
+
+- compare classical forecasting
+- compare deep recurrent forecasting
+- compare Transformer-based forecasting
+- then show why robust optimization is still necessary after prediction
 
 ## Final Interpretation
 
-The final project now has a layered conclusion:
+The clearest final interpretation is:
 
-1. `lstm` is the best nominal-routing method.
-2. `robust_current_demand_lp` is a meaningful resilience baseline.
-3. `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family
-   extension and makes the final project more novel and more complete.
-
-That gives the project a cleaner final message than before, because we can now
-argue that the advanced extension adds real value rather than just extra
-implementation complexity.
+1. The tuned `Transformer` is the strongest pure ML-routing method in the
+   latest sweep.
+2. `LSTM` remains a credible baseline and is still central to the
+   uncertainty-aware robust extension.
+3. `uncertainty_aware_lstm_robust_lp` remains the strongest optimization-side
+   contribution.
+4. Therefore, the project now contributes both a stronger ML-comparison story
+   and a strong optimization/robustness story.

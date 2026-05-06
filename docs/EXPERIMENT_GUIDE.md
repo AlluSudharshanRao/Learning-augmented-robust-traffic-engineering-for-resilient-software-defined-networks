@@ -21,6 +21,7 @@ Or run commands directly:
 - `configs/nsfnet.json`
 - `configs/nsfnet_uncertainty_0p25.json`
 - `configs/abilene_uncertainty_0p25.json`
+- `configs/nsfnet_transformer.json`
 
 ## Example Commands
 
@@ -46,6 +47,15 @@ Or run commands directly:
 
 ```powershell
 .\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet_uncertainty_0p25.json
+```
+
+### Transformer-enabled NSFNET benchmark
+
+This config now uses the best tuned Transformer settings found in the focused
+NSFNET tuning round.
+
+```powershell
+.\.venv\Scripts\python.exe .\run_experiment.py --config .\configs\nsfnet_transformer.json
 ```
 
 ### Multi-run sweep
@@ -103,7 +113,7 @@ The sweep runner creates:
 Generate clean summary figures from a completed sweep with:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_advanced\aggregated_summary.csv --output-dir .\outputs\sweeps_advanced\plots
+.\.venv\Scripts\python.exe .\run_plot_summary.py --input .\outputs\sweeps_ml_compare\aggregated_summary.csv --output-dir .\outputs\sweeps_ml_compare\plots
 ```
 
 This produces:
@@ -113,6 +123,8 @@ This produces:
 - `summary_critical_fixed_fairness.png`
 - `abilene_lp_family_comparison.png`
 - `nsfnet_lp_family_comparison.png`
+- `ml_nominal_comparison.png`
+- `ml_prediction_rmse_comparison.png`
 - `robust_lp_comparison.csv`
 
 ## Preparing Report Assets
@@ -121,7 +133,7 @@ After the final sweep is complete, prepare a clean set of tables and
 presentation figures with:
 
 ```powershell
-.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_advanced
+.\.venv\Scripts\python.exe .\run_prepare_report_assets.py --sweep-dir .\outputs\sweeps_ml_compare
 ```
 
 This writes:
