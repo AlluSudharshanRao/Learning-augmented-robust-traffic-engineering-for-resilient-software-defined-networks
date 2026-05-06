@@ -139,9 +139,17 @@ The latest official evaluation lives under:
 
 - `outputs/sweeps_ml_compare/`
 
+The focused technical-strengthening ablation study lives under:
+
+- `outputs/ablations_final/`
+
 The strongest current story is:
 
 - `transformer` is now the strongest pure nominal-routing ML method in the latest tuned comparison
 - `lstm` remains a strong baseline and still pairs well with the uncertainty-aware robust extension
 - `robust_current_demand_lp` is a meaningful resilience baseline
 - `uncertainty_aware_lstm_robust_lp` is the strongest advanced LP-family extension, especially on NSFNET
+
+For the focused ablation outputs and takeaways, see:
+
+- [docs/ABLATION_STUDY.md](C:/Users/sudha/OneDrive/Desktop/networks/docs/ABLATION_STUDY.md)

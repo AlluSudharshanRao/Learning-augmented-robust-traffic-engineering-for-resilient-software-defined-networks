@@ -23,6 +23,34 @@ Or run commands directly:
 - `configs/abilene_uncertainty_0p25.json`
 - `configs/nsfnet_transformer.json`
 
+## Focused Ablation Workflow
+
+Run the final focused ablation suite on Abilene and NSFNET with extra seeds:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_ablation_suite.py --topologies abilene nsfnet --seeds 7 11 13 --families transformer uncertainty robust --output-dir .\outputs\ablations_final
+```
+
+Prepare the presentation-ready ablation tables and figures:
+
+```powershell
+.\.venv\Scripts\python.exe .\run_prepare_ablation_assets.py --sweep-dir .\outputs\ablations_final
+```
+
+This produces:
+
+- `report_assets/tables/best_method_by_topology_load.csv`
+- `report_assets/tables/ml_vs_routing_tradeoff.csv`
+- `report_assets/tables/robustness_tradeoff_summary.csv`
+- `report_assets/tables/uncertainty_multiplier_sensitivity.csv`
+- `report_assets/figures/transformer_ablation_nominal.png`
+- `report_assets/figures/transformer_ablation_tradeoff.png`
+- `report_assets/figures/uncertainty_multiplier_sensitivity.png`
+- `report_assets/figures/robustness_tradeoff.png`
+
+Each run folder now also includes a compact `experiment_manifest.json` with the
+config and artifact paths for easier handoff and debugging.
+
 ## Example Commands
 
 ### Synthetic sample network

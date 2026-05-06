@@ -1,0 +1,9 @@
+topology,ablation_variant,uncertainty_multiplier_config,nominal_max_utilization_mean,critical_failure_reopt_max_utilization_mean,critical_failure_fixed_disrupted_fraction_mean,critical_failure_fixed_fairness_mean
+abilene,mult_0p1,0.1,0.9257,2.1209,0.319,0.6895
+abilene,mult_0p25,0.25,0.9519,2.3866,0.3157,0.6954
+abilene,mult_0p4,0.4,0.9782,2.452,0.319,0.6925
+abilene,mult_0p5,0.5,0.9957,2.4956,0.3192,0.6911
+nsfnet,mult_0p1,0.1,1.0018,1.4163,0.2354,0.7612
+nsfnet,mult_0p25,0.25,1.0294,1.4552,0.2356,0.7609
+nsfnet,mult_0p4,0.4,1.0571,1.4941,0.2359,0.7606
+nsfnet,mult_0p5,0.5,1.0755,1.5201,0.236,0.7604

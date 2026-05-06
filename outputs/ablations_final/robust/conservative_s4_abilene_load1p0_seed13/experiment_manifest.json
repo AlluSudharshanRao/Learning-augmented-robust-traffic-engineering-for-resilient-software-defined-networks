@@ -1,0 +1,49 @@
+{
+  "experiment_label": "robust:conservative_s4",
+  "ablation_family": "robust",
+  "ablation_variant": "conservative_s4",
+  "method_profile": "lp_only",
+  "config": {
+    "topology": "abilene",
+    "num_steps": 36,
+    "history_window": 8,
+    "train_steps": 22,
+    "seed": 13,
+    "load_scale": 1.0,
+    "output_subdir": "conservative_s4_abilene_load1p0_seed13",
+    "method_profile": "lp_only",
+    "experiment_label": "robust:conservative_s4",
+    "ablation_family": "robust",
+    "ablation_variant": "conservative_s4",
+    "enable_lstm": true,
+    "enable_transformer": false,
+    "transformer_model_dim": 128,
+    "transformer_num_heads": 8,
+    "transformer_num_layers": 2,
+    "transformer_dropout": 0.1,
+    "transformer_epochs": 160,
+    "transformer_learning_rate": 0.001,
+    "transformer_batch_size": 8,
+    "enable_robust_baseline": true,
+    "enable_uncertainty_aware_method": true,
+    "robust_max_scenarios": 4,
+    "robust_num_central_scenarios": 2,
+    "robust_include_random_scenario": true,
+    "robust_nominal_weight": 0.35,
+    "robust_worst_case_weight": 0.65,
+    "uncertainty_multiplier": 0.25,
+    "uncertainty_predictor_name": "lstm"
+  },
+  "topology": {
+    "name": "abilene",
+    "source": "topozoo/Abilene",
+    "node_count": 11,
+    "edge_count": 28
+  },
+  "artifacts": {
+    "experiment_results": "experiment_results.csv",
+    "summary_results": "summary_results.csv",
+    "failure_disruptions": "failure_disruptions.csv",
+    "failure_paths": "failure_paths.csv"
+  }
+}

@@ -6,3 +6,5 @@ outputs/*
 !outputs/sweeps_advanced/**
 !outputs/sweeps_ml_compare/
 !outputs/sweeps_ml_compare/**
+!outputs/ablations_final/
+!outputs/ablations_final/**

@@ -1,0 +1,9 @@
+topology,ablation_variant,critical_failure_reopt_max_utilization_mean__lstm,critical_failure_reopt_max_utilization_mean__transformer,nominal_max_utilization_mean__lstm,nominal_max_utilization_mean__transformer,prediction_rmse_mean__lstm,prediction_rmse_mean__transformer,transformer_rmse_delta_vs_lstm,transformer_nominal_delta_vs_lstm,transformer_reopt_delta_vs_lstm
+abilene,base,2.2023,2.1778,0.9491,0.973,1.0048,1.0002,-0.0047,0.024,-0.0245
+abilene,tuned_a,1.8768,2.0942,0.8926,0.9024,1.0497,0.6349,-0.4147,0.0098,0.2174
+abilene,tuned_b,2.1037,2.1202,0.9082,0.9064,1.039,0.6724,-0.3666,-0.0017,0.0165
+abilene,tuned_c,1.8768,1.909,0.8926,0.9086,1.0497,1.038,-0.0117,0.016,0.0322
+nsfnet,base,1.4876,1.5424,1.0527,1.0921,1.0035,0.994,-0.0095,0.0394,0.0548
+nsfnet,tuned_a,1.3884,1.459,0.9826,1.0318,1.0547,0.8121,-0.2426,0.0493,0.0706
+nsfnet,tuned_b,1.3904,1.3835,0.9834,0.9796,1.0542,0.6978,-0.3564,-0.0037,-0.0069
+nsfnet,tuned_c,1.3884,1.4333,0.9826,1.0139,1.0547,1.0307,-0.0239,0.0314,0.0449

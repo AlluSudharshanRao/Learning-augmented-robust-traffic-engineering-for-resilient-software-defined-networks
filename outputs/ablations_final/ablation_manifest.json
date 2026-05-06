@@ -1,0 +1,37 @@
+{
+  "suite": "focused_ablation",
+  "topologies": [
+    "abilene",
+    "nsfnet"
+  ],
+  "seeds": [
+    7,
+    11,
+    13
+  ],
+  "load_scale": 1.0,
+  "families": [
+    "transformer",
+    "uncertainty",
+    "robust"
+  ],
+  "variant_catalog": {
+    "transformer": [
+      "base",
+      "tuned_a",
+      "tuned_b",
+      "tuned_c"
+    ],
+    "uncertainty": [
+      "mult_0p1",
+      "mult_0p25",
+      "mult_0p4",
+      "mult_0p5"
+    ],
+    "robust": [
+      "nominal_s2",
+      "balanced_s3",
+      "conservative_s4"
+    ]
+  }
+}

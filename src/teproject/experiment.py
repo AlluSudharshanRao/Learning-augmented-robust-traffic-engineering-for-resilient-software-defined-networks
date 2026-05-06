@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -48,26 +49,7 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
     node_order = list(topology.graph.nodes())
     node_to_index = {node: idx for idx, node in enumerate(node_order)}
 
-    predictors = [
-        MovingAveragePredictor(),
-        LinearAutoRegressivePredictor(),
-    ]
-    if config.enable_lstm:
-        predictors.append(LSTMPredictor(history_window=config.history_window, epochs=100, hidden_size=48))
-    if config.enable_transformer:
-        predictors.append(
-            TransformerPredictor(
-                history_window=config.history_window,
-                epochs=config.transformer_epochs,
-                model_dim=config.transformer_model_dim,
-                num_heads=config.transformer_num_heads,
-                num_layers=config.transformer_num_layers,
-                dropout=config.transformer_dropout,
-                learning_rate=config.transformer_learning_rate,
-                batch_size=config.transformer_batch_size,
-                seed=config.seed,
-            )
-        )
+    predictors = _build_predictors(config)
 
     train_data = traffic.matrices[: config.train_steps]
     for predictor in predictors:
@@ -82,11 +64,18 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
         current_matrix = traffic.matrices[t]
         actual_next = traffic.matrices[t + 1]
 
-        baselines = [("current_demand_lp", current_matrix, current_matrix, None)]
+        baselines = []
+        if _profile_includes_lp_methods(config):
+            baselines.append(("current_demand_lp", current_matrix, current_matrix, None))
         for predictor in predictors:
             predicted, uncertainty = predictor.predict_with_uncertainty(history)
-            baselines.append((predictor.name, predicted, predicted, None))
-            if config.enable_uncertainty_aware_method and predictor.name == config.uncertainty_predictor_name:
+            if _profile_includes_ml_methods(config):
+                baselines.append((predictor.name, predicted, predicted, None))
+            if (
+                config.enable_uncertainty_aware_method
+                and _profile_includes_lp_methods(config)
+                and predictor.name == config.uncertainty_predictor_name
+            ):
                 inflated_demand = _inflate_demand_with_uncertainty(
                     predicted,
                     uncertainty,
@@ -202,6 +191,28 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
     summary_path = output_dir / "summary_results.csv"
     summary.to_csv(summary_path)
 
+    manifest = {
+        "experiment_label": config.experiment_label or config.output_subdir,
+        "ablation_family": config.ablation_family,
+        "ablation_variant": config.ablation_variant,
+        "method_profile": config.method_profile,
+        "config": config.to_dict(),
+        "topology": {
+            "name": topology.name,
+            "source": topology.source,
+            "node_count": topology.graph.number_of_nodes(),
+            "edge_count": topology.graph.number_of_edges(),
+        },
+        "artifacts": {
+            "experiment_results": str(csv_path.name),
+            "summary_results": str(summary_path.name),
+            "failure_disruptions": str(disruption_path.name),
+            "failure_paths": str(path_path.name),
+        },
+    }
+    manifest_path = output_dir / "experiment_manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+
     plot_path = output_dir / "nominal_utilization_by_method.png"
     _plot_summary(df, plot_path, topology.name)
     failure_case_plot_path = output_dir / "worst_failure_case.png"
@@ -211,6 +222,7 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
     print("Saved disruption details to:", disruption_path)
     print("Saved path details to:", path_path)
     print("Saved summary results to:", summary_path)
+    print("Saved manifest to:", manifest_path)
     print("Saved plot to:", plot_path)
     print("Saved failure-case plot to:", failure_case_plot_path)
     print("Topology:", topology.name, f"({topology.source})")
@@ -222,7 +234,48 @@ def run_default_experiment(output_dir: Path, config: ExperimentConfig | None = N
         "paths": path_df,
         "summary": summary.reset_index(),
         "output_dir": output_dir,
+        "manifest_path": manifest_path,
     }
+
+
+def _build_predictors(config: ExperimentConfig) -> list[Any]:
+    predictors: list[Any] = []
+    needs_moving_average = _profile_includes_ml_methods(config) or config.uncertainty_predictor_name == "moving_average"
+    needs_linear_ar = _profile_includes_ml_methods(config) or config.uncertainty_predictor_name == "linear_autoregressive"
+    needs_lstm = (config.enable_lstm and _profile_includes_ml_methods(config)) or config.uncertainty_predictor_name == "lstm"
+    needs_transformer = (config.enable_transformer and _profile_includes_ml_methods(config)) or (
+        config.enable_transformer and config.uncertainty_predictor_name == "transformer"
+    )
+
+    if needs_moving_average:
+        predictors.append(MovingAveragePredictor())
+    if needs_linear_ar:
+        predictors.append(LinearAutoRegressivePredictor())
+    if needs_lstm and config.enable_lstm:
+        predictors.append(LSTMPredictor(history_window=config.history_window, epochs=100, hidden_size=48))
+    if needs_transformer and config.enable_transformer:
+        predictors.append(
+            TransformerPredictor(
+                history_window=config.history_window,
+                epochs=config.transformer_epochs,
+                model_dim=config.transformer_model_dim,
+                num_heads=config.transformer_num_heads,
+                num_layers=config.transformer_num_layers,
+                dropout=config.transformer_dropout,
+                learning_rate=config.transformer_learning_rate,
+                batch_size=config.transformer_batch_size,
+                seed=config.seed,
+            )
+        )
+    return predictors
+
+
+def _profile_includes_ml_methods(config: ExperimentConfig) -> bool:
+    return config.method_profile in {"all", "ml_only"}
+
+
+def _profile_includes_lp_methods(config: ExperimentConfig) -> bool:
+    return config.method_profile in {"all", "lp_only"}
 
 
 def _record_method_result(
@@ -284,8 +337,25 @@ def _record_method_result(
             "topology_source": topology.source,
             "seed": config.seed,
             "load_scale": config.load_scale,
+            "method_profile": config.method_profile,
+            "experiment_label": config.experiment_label,
+            "ablation_family": config.ablation_family,
+            "ablation_variant": config.ablation_variant,
             "method": method_name,
             "solver_status": routing.status,
+            "history_window": config.history_window,
+            "transformer_model_dim": config.transformer_model_dim if config.enable_transformer else None,
+            "transformer_num_heads": config.transformer_num_heads if config.enable_transformer else None,
+            "transformer_num_layers": config.transformer_num_layers if config.enable_transformer else None,
+            "transformer_dropout": config.transformer_dropout if config.enable_transformer else None,
+            "transformer_epochs": config.transformer_epochs if config.enable_transformer else None,
+            "transformer_learning_rate": config.transformer_learning_rate if config.enable_transformer else None,
+            "robust_max_scenarios": config.robust_max_scenarios,
+            "robust_num_central_scenarios": config.robust_num_central_scenarios,
+            "robust_include_random_scenario": int(config.robust_include_random_scenario),
+            "robust_nominal_weight": config.robust_nominal_weight,
+            "robust_worst_case_weight": config.robust_worst_case_weight,
+            "uncertainty_multiplier_config": config.uncertainty_multiplier,
             "prediction_mae": prediction_mae,
             "prediction_rmse": prediction_rmse,
             "nominal_max_utilization": maximum_link_utilization(topology.graph, routing),

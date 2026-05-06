@@ -1,0 +1,49 @@
+{
+  "experiment_label": "transformer:tuned_b",
+  "ablation_family": "transformer",
+  "ablation_variant": "tuned_b",
+  "method_profile": "ml_only",
+  "config": {
+    "topology": "abilene",
+    "num_steps": 36,
+    "history_window": 8,
+    "train_steps": 22,
+    "seed": 11,
+    "load_scale": 1.0,
+    "output_subdir": "tuned_b_abilene_load1p0_seed11",
+    "method_profile": "ml_only",
+    "experiment_label": "transformer:tuned_b",
+    "ablation_family": "transformer",
+    "ablation_variant": "tuned_b",
+    "enable_lstm": true,
+    "enable_transformer": true,
+    "transformer_model_dim": 128,
+    "transformer_num_heads": 8,
+    "transformer_num_layers": 2,
+    "transformer_dropout": 0.1,
+    "transformer_epochs": 160,
+    "transformer_learning_rate": 0.001,
+    "transformer_batch_size": 8,
+    "enable_robust_baseline": false,
+    "enable_uncertainty_aware_method": false,
+    "robust_max_scenarios": 3,
+    "robust_num_central_scenarios": 1,
+    "robust_include_random_scenario": false,
+    "robust_nominal_weight": 0.5,
+    "robust_worst_case_weight": 0.5,
+    "uncertainty_multiplier": 0.25,
+    "uncertainty_predictor_name": "lstm"
+  },
+  "topology": {
+    "name": "abilene",
+    "source": "topozoo/Abilene",
+    "node_count": 11,
+    "edge_count": 28
+  },
+  "artifacts": {
+    "experiment_results": "experiment_results.csv",
+    "summary_results": "summary_results.csv",
+    "failure_disruptions": "failure_disruptions.csv",
+    "failure_paths": "failure_paths.csv"
+  }
+}

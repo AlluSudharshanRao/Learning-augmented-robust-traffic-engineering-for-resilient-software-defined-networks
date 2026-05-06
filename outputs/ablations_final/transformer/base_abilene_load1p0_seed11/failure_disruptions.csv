@@ -1,0 +1,521 @@
+time_step,topology,seed,load_scale,method,scenario,failed_link,commodity_rank,source,destination,disrupted_amount,demand_value,commodity_disruption_ratio
+22,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,4.729442,4.729441960237003,1.000000008407545
+22,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,4.5804063,4.580406291853288,1.0000000017786002
+22,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Sunnyvale,Indianapolis,4.5282716,4.528271603871198,0.9999999991451048
+22,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,4.4619019,4.461901932555693,0.9999999927036287
+22,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Kansas City,New York,4.4341788,4.434178767868045,1.0000000072464275
+22,abilene,11,1.0,moving_average,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,1,Kansas City,Los Angeles,4.6655461,4.66554605430235,1.0000000097947057
+22,abilene,11,1.0,moving_average,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,2,Washington DC,Denver,4.5239798,4.523979842419946,0.9999999906233124
+22,abilene,11,1.0,moving_average,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,3,Houston,Seattle,4.4039617,4.403961744100175,0.9999999899862493
+22,abilene,11,1.0,moving_average,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,4,Indianapolis,Houston,4.0848717,4.084871662655354,1.0000000091421832
+22,abilene,11,1.0,moving_average,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,5,Houston,Denver,4.0172659,4.017265881483575,1.0000000046092108
+22,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Washington DC,Denver,4.4794863,4.479486290260473,1.0000000021742508
+22,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Indianapolis,Seattle,4.3915651,4.391565084384504,1.000000003555793
+22,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,4.3668283,4.366828347076658,0.9999999892194851
+22,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Atlanta,Sunnyvale,4.3267785,4.326778496095179,1.0000000009024776
+22,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Kansas City,Sunnyvale,4.2836867,4.283686695105323,1.0000000011426318
+22,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,1,Washington DC,Denver,4.4794863,4.479486290260473,1.0000000021742508
+22,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,2,Kansas City,Los Angeles,4.2226802,4.2226802081635215,0.9999999980667441
+22,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,3,Houston,Seattle,4.0552266,4.055226599205854,1.0000000001958327
+22,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,4,Denver,Atlanta,3.9876757,3.987675746117024,0.9999999884351118
+22,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,5,Houston,Kansas City,3.7820753,3.7820753229510093,0.9999999939316361
+22,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+22,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+22,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+22,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+22,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+22,abilene,11,1.0,lstm,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,1,Kansas City,Los Angeles,5.1786737,5.17867374420166,0.9999999914646757
+22,abilene,11,1.0,lstm,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,2,Houston,Seattle,5.0083675,5.008367538452148,0.9999999923224189
+22,abilene,11,1.0,lstm,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,3,Washington DC,Denver,4.9993463,4.9993462562561035,1.0000000087499235
+22,abilene,11,1.0,lstm,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,4,Houston,Kansas City,4.5623703,4.562370300292969,0.9999999999357859
+22,abilene,11,1.0,lstm,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,5,Denver,Atlanta,4.5365515,4.536551475524902,1.0000000053950886
+22,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0998106,5.099810600280762,0.9999999999449466
+22,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0769734,5.0769734382629395,0.9999999924634352
+22,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0629025,5.062902450561523,1.0000000097648487
+22,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0179596,5.0179595947265625,1.0000000010509127
+22,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9388571,4.938857078552246,1.0000000043426553
+22,abilene,11,1.0,transformer,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,1,Kansas City,Los Angeles,5.1614861,5.1614861488342285,0.9999999905387272
+22,abilene,11,1.0,transformer,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,2,Washington DC,Denver,4.9311419,4.9311418533325195,1.0000000094638284
+22,abilene,11,1.0,transformer,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,3,Houston,Seattle,4.8453369,4.8453369140625,0.9999999970977251
+22,abilene,11,1.0,transformer,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,4,Houston,Kansas City,4.4417667,4.441766738891602,0.9999999912441143
+22,abilene,11,1.0,transformer,random_failure_fixed,Kansas City -> Houston & Houston -> Kansas City,5,Houston,Denver,4.4344268,4.434426784515381,1.0000000034919099
+23,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,4.8209838,4.820983779018449,1.0000000043521304
+23,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Denver,Washington DC,4.7602643,4.760264310980819,0.9999999976932333
+23,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Sunnyvale,Indianapolis,4.619913,4.619912958257485,1.0000000090353467
+23,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Seattle,New York,4.6169165,4.616916463654347,1.0000000078722788
+23,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.6055392,4.605539196421084,1.0000000007770895
+23,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,4.6169165,4.616916463654347,1.0000000078722788
+23,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,4.5778191,4.5778190927273705,1.000000001588667
+23,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,3.589221,3.589221019310161,0.9999999946199578
+23,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Washington DC,Chicago,3.5363691,3.53636914616114,0.9999999869467416
+23,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,New York,Chicago,3.5278711,3.5278710750321665,1.000000007077309
+23,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,5.8109273,5.810927279697957,1.00000000349377
+23,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,5.402347,5.402347016437809,0.9999999969572837
+23,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Seattle,New York,5.2660355,5.266035488106201,1.0000000022585869
+23,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Atlanta,Sunnyvale,5.2583329,5.2583329422087015,0.9999999919729881
+23,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.1387999,5.138799857601352,1.0000000082506908
+23,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.2660355,5.266035488106201,1.0000000022585869
+23,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,5.0406575,5.040657548464946,0.9999999903851937
+23,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,4.0884641,4.088464149915478,0.9999999877911421
+23,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,New York,Chicago,3.9245342,3.924534221275169,0.9999999945789315
+23,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,New York,Indianapolis,3.7099728,3.7099727879589692,1.0000000032455847
+23,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+23,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+23,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+23,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+23,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+23,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+23,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,5.0051084,5.00510835647583,1.0000000086959495
+23,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,3.8389361,3.8389360904693604,1.0000000024826252
+23,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,New York,Chicago,3.8356683,3.8356683254241943,0.999999993371639
+23,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Washington DC,Chicago,3.8296134,3.829613447189331,0.9999999876777822
+23,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0998592,5.099859237670898,0.9999999926133455
+23,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0770769,5.0770769119262695,0.9999999976509575
+23,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0630097,5.063009738922119,0.9999999923124543
+23,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0181193,5.0181193351745605,0.9999999929904895
+23,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9390044,4.939004421234131,0.9999999957007265
+23,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.0770769,5.0770769119262695,0.9999999976509575
+23,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,4.8949404,4.894940376281738,1.000000004845465
+23,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,New York,Chicago,3.839314,3.8393139839172363,1.000000004188968
+23,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Washington DC,Chicago,3.75841,3.7584099769592285,1.0000000061304573
+23,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Chicago,New York,3.7538173,3.753817319869995,0.999999994706723
+24,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.3448929,5.344892895991466,1.0000000007499745
+24,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Denver,Washington DC,5.1819151,5.181915129070984,0.999999994389915
+24,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Indianapolis,Seattle,5.0760799,5.076079916095808,0.9999999968290869
+24,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Seattle,New York,5.0010384,5.001038440159694,0.999999991969729
+24,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Sunnyvale,Indianapolis,4.9820708,4.982070811955991,0.9999999976001965
+24,abilene,11,1.0,moving_average,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,1,Indianapolis,Seattle,5.0760799,5.076079916095808,0.9999999968290869
+24,abilene,11,1.0,moving_average,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,2,Seattle,New York,5.0010384,5.001038440159694,0.999999991969729
+24,abilene,11,1.0,moving_average,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,3,Houston,Seattle,4.9125318,4.912531818330425,0.9999999962686399
+24,abilene,11,1.0,moving_average,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,4,Atlanta,Seattle,4.904283,4.904282990327388,1.0000000019722786
+24,abilene,11,1.0,moving_average,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,5,Seattle,Chicago,3.7744351,3.7744351403238174,0.9999999893165954
+24,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.9643163,5.964316285697678,1.0000000023979818
+24,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Denver,Washington DC,5.9417484,5.941748432910033,0.9999999944612208
+24,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Indianapolis,Seattle,5.8943019,5.89430193195543,0.9999999945785897
+24,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.8927877,5.892787715857357,0.999999997309023
+24,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Sunnyvale,5.892242,5.892242020545097,0.9999999965131955
+24,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,1,Indianapolis,Seattle,5.8943019,5.89430193195543,0.9999999945785897
+24,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,2,Seattle,New York,5.8927877,5.892787715857357,0.999999997309023
+24,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,3,Houston,Seattle,5.88242,5.88241996441688,1.0000000060490615
+24,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,4,Atlanta,Seattle,5.4818717,5.481871702204633,0.999999999597832
+24,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,5,Seattle,Indianapolis,4.5433342,4.543334162032308,1.0000000083567906
+24,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+24,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+24,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+24,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+24,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+24,abilene,11,1.0,lstm,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,1,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+24,abilene,11,1.0,lstm,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,2,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+24,abilene,11,1.0,lstm,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,3,Houston,Seattle,5.0083675,5.008367538452148,0.9999999923224189
+24,abilene,11,1.0,lstm,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,4,Atlanta,Seattle,4.7559996,4.755999565124512,1.000000007332946
+24,abilene,11,1.0,lstm,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,5,Seattle,Indianapolis,3.7722301,3.7722301483154297,0.9999999871918128
+24,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0998449,5.099844932556152,0.9999999936162466
+24,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0771408,5.077140808105469,0.9999999984035367
+24,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0630665,5.063066482543945,1.0000000034477237
+24,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0182228,5.018222808837891,0.9999999982388406
+24,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9391017,4.939101696014404,1.0000000008069476
+24,abilene,11,1.0,transformer,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,1,Seattle,New York,5.0771408,5.077140808105469,0.9999999984035367
+24,abilene,11,1.0,transformer,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,2,Indianapolis,Seattle,4.9391017,4.939101696014404,1.0000000008069476
+24,abilene,11,1.0,transformer,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,3,Houston,Seattle,4.8457789,4.845778942108154,0.9999999913103436
+24,abilene,11,1.0,transformer,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,4,Atlanta,Seattle,4.6876631,4.6876630783081055,1.000000004627443
+24,abilene,11,1.0,transformer,random_failure_fixed,Seattle -> Denver & Denver -> Seattle,5,Seattle,Indianapolis,3.8259957,3.825995683670044,1.0000000042681585
+25,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.8718447,5.871844688707679,1.00000000192313
+25,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Indianapolis,Seattle,5.7755139,5.775513928947074,0.9999999949879657
+25,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Sunnyvale,Indianapolis,5.7063859,5.7063859391667355,0.9999999931363325
+25,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Denver,Washington DC,5.6963024,5.696302404282879,0.99999999924813
+25,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Sunnyvale,5.6584521,5.783155290114802,0.9784368249063001
+25,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,5.8718447,5.871844688707679,1.00000000192313
+25,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Sunnyvale,Indianapolis,5.7063859,5.7063859391667355,0.9999999931363325
+25,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Atlanta,Sunnyvale,5.6584521,5.783155290114802,0.9784368249063001
+25,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Los Angeles,Denver,5.5871185,5.587118451390396,1.0000000087002994
+25,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Denver,Sunnyvale,5.2905542,5.29055422481524,0.9999999953095197
+25,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Atlanta,Sunnyvale,6.5563946,6.55639460320607,0.999999999511001
+25,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Seattle,New York,6.5455909,6.545590896895481,1.0000000004742915
+25,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Kansas City,Sunnyvale,6.5400398,6.540039754363508,1.0000000069780144
+25,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Washington DC,Denver,6.4011457,6.4011457343250315,0.9999999946376738
+25,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Denver,Washington DC,6.3564809,6.3564808970651345,1.0000000004617124
+25,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Atlanta,Sunnyvale,6.5563946,6.55639460320607,0.999999999511001
+25,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Kansas City,Sunnyvale,6.5400398,6.540039754363508,1.0000000069780144
+25,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Sunnyvale,Indianapolis,6.2289484,6.228948371212089,1.0000000046216326
+25,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Los Angeles,Denver,6.1655583,6.165558327172524,0.9999999955928527
+25,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Denver,Sunnyvale,5.9283067,5.928306671808846,1.0000000047553468
+25,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+25,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+25,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+25,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+25,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+25,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+25,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+25,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Chicago,Sunnyvale,5.0301957,5.030195713043213,0.9999999974070168
+25,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Sunnyvale,Indianapolis,4.9474792,4.947479248046875,0.9999999902886152
+25,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,4.8437867,4.843786716461182,0.9999999966015882
+25,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0998197,5.099819660186768,1.0000000078067923
+25,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0771689,5.077168941497803,0.9999999918265863
+25,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0630822,5.063082218170166,0.9999999964112442
+25,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0182567,5.018256664276123,1.0000000071187825
+25,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9391465,4.939146518707275,0.9999999962124477
+25,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,5.1942749,5.19427490234375,0.999999999548782
+25,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,5.0998197,5.099819660186768,1.0000000078067923
+25,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Chicago,Sunnyvale,5.0630822,5.063082218170166,0.9999999964112442
+25,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Sunnyvale,Indianapolis,4.8204422,4.820442199707031,1.0000000000607763
+25,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,4.7145581,4.714558124542236,0.9999999947943718
+26,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,6.7180949,6.71809489938125,1.0000000000921019
+26,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,6.4987133,6.516005227059198,0.9973462380006405
+26,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Indianapolis,Seattle,6.4123989,6.412398918033245,0.9999999971877538
+26,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Denver,Washington DC,6.3665472,6.366547157871599,1.0000000066171506
+26,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Seattle,6.2713863,6.271386260921677,1.0000000062312098
+26,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Houston,6.5057001,6.5057001225206,0.999999996538328
+26,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,Houston,Atlanta,6.4822152,6.482215167910013,1.000000004950466
+26,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Sunnyvale,New York,6.4545432,6.454543219145933,0.9999999970337277
+26,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,New York,Los Angeles,6.3419227,6.341922719430414,0.999999996936195
+26,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Washington DC,Denver,6.2326856,6.232685633315766,0.9999999946546693
+26,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Seattle,New York,7.29591,7.295909950199463,1.0000000068258157
+26,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Chicago,Sunnyvale,7.225144,7.225143990563947,1.000000001306002
+26,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,7.1854672,7.185467228046489,0.9999999960967758
+26,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Kansas City,Sunnyvale,7.0950963,7.09509634594754,0.9999999935240428
+26,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Sunnyvale,6.9987344,6.998734421757704,0.9999999968911945
+26,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Houston,7.495331,7.495330995625082,1.0000000005836858
+26,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,Washington DC,Los Angeles,7.4075816,7.407581578890924,1.0000000028496583
+26,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Sunnyvale,New York,7.2426028,7.242602766583433,1.0000000046138893
+26,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,New York,Los Angeles,7.1689031,7.168903110887543,0.9999999984812818
+26,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Houston,Atlanta,7.1225337,7.122533742240904,0.9999999940693992
+26,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+26,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+26,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+26,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+26,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+26,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Los Angeles,5.321012,5.321012020111084,0.99999999622044
+26,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Houston,5.3028536,5.302853584289551,1.0000000029626406
+26,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Houston,Atlanta,5.2172937,5.217293739318848,0.9999999924637466
+26,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Sunnyvale,New York,5.126802,5.12680196762085,1.0000000063156622
+26,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Washington DC,Denver,4.9993463,4.9993462562561035,1.0000000087499235
+26,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.099812,5.099812030792236,0.999999993962084
+26,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0771327,5.077132701873779,0.9999999996309374
+26,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0630455,5.063045501708984,0.9999999996624592
+26,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0181966,5.0181965827941895,1.000000003428684
+26,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9390965,4.939096450805664,1.0000000099601893
+26,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Houston,5.1384215,5.138421535491943,0.9999999930928315
+26,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Los Angeles,5.137414,5.13741397857666,1.000000004170063
+26,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Sunnyvale,New York,5.0721407,5.072140693664551,1.0000000012490682
+26,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Washington DC,Los Angeles,5.0648198,5.064819812774658,0.9999999974777666
+26,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Houston,Atlanta,5.0564275,5.056427478790283,1.000000004194605
+27,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Chicago,Sunnyvale,7.8120108,7.812010813541763,0.9999999982665458
+27,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Atlanta,Sunnyvale,6.9141301,6.914130118207663,0.9999999973666011
+27,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Indianapolis,Seattle,6.8943086,6.894308619334147,0.9999999971956365
+27,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,6.848535,6.848534966837789,1.0000000048422342
+27,abilene,11,1.0,moving_average,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Seattle,New York,6.7443469,6.744346923308364,0.9999999965440146
+27,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,6.7443469,6.744346923308364,0.9999999965440146
+27,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,6.6924398,6.692439751166965,1.0000000072967463
+27,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,5.1255985,5.125598493178483,1.0000000013308723
+27,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,New York,Chicago,5.0935566,5.093556599352939,1.0000000001270353
+27,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Washington DC,Chicago,4.8962413,4.8962412529541535,1.0000000096085637
+27,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,8.1658004,8.165800392065702,1.0000000009716499
+27,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Houston,Seattle,7.8301516,7.830151567040907,1.0000000042092534
+27,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Indianapolis,Seattle,7.7921381,7.792138116729593,0.9999999978530164
+27,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Sunnyvale,Indianapolis,7.7449957,7.744995701692696,0.9999999997814464
+27,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Sunnyvale,7.6654196,7.665419565211774,1.0000000045383328
+27,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,7.5042944,7.504294371487617,1.0000000037994754
+27,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,7.4266027,7.426602739793592,0.9999999946417504
+27,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Washington DC,Chicago,6.056519,6.056519044973746,0.9999999925743243
+27,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Chicago,New York,6.0058094,6.0058094166237,0.9999999972320633
+27,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,New York,Indianapolis,5.6222467,5.622246749295732,0.9999999912320227
+27,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+27,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+27,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+27,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+27,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+27,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+27,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,5.0051084,5.00510835647583,1.0000000086959495
+27,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,3.8389361,3.8389360904693604,1.0000000024826252
+27,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,New York,Chicago,3.8356683,3.8356683254241943,0.999999993371639
+27,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Washington DC,Chicago,3.8296134,3.829613447189331,0.9999999876777822
+27,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0998101,5.0998101234436035,0.9999999954030439
+27,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0770645,5.077064514160156,0.9999999972109559
+27,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0629911,5.062991142272949,0.9999999916505977
+27,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0181036,5.01810359954834,1.0000000000900062
+27,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9390159,4.939015865325928,1.0000000070204416
+27,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.0770645,5.077064514160156,0.9999999972109559
+27,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,4.8948851,4.894885063171387,1.0000000075238975
+27,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,New York,Chicago,3.8392923,3.839292287826538,1.0000000031707568
+27,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Washington DC,Chicago,3.7583609,3.7583608627319336,1.0000000099160427
+27,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Chicago,New York,3.7537656,3.75376558303833,1.0000000045185746
+28,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,8.1159434,8.115943447331597,0.9999999941680722
+28,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,7.4849733,7.484973284317672,1.000000002095175
+28,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,7.1156133,7.115613323899008,0.9999999966413284
+28,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,7.0834364,7.083436434355359,0.9999999951499023
+28,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Washington DC,Denver,7.0049,7.0049000087226645,0.9999999987547767
+28,abilene,11,1.0,moving_average,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,8.1159434,8.115943447331597,0.9999999941680722
+28,abilene,11,1.0,moving_average,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,7.4849733,7.484973284317672,1.000000002095175
+28,abilene,11,1.0,moving_average,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,7.1156133,7.115613323899008,0.9999999966413284
+28,abilene,11,1.0,moving_average,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,7.0834364,7.083436434355359,0.9999999951499023
+28,abilene,11,1.0,moving_average,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Washington DC,Denver,7.0049,7.0049000087226645,0.9999999987547767
+28,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,6.4564507,6.4564506558968935,1.0000000068308594
+28,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,6.4113977,6.411397667098339,1.0000000051317455
+28,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Denver,Washington DC,6.3268198,6.326819833535054,0.9999999946995403
+28,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Kansas City,New York,6.3181649,6.3181648894973375,1.0000000016622963
+28,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,6.3095391,6.309539103057832,0.9999999995153638
+28,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,6.648617,6.648616972264155,1.0000000041716712
+28,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,6.4564507,6.4564506558968935,1.0000000068308594
+28,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Seattle,New York,6.4113977,6.411397667098339,1.0000000051317455
+28,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Denver,Washington DC,6.3268198,6.326819833535054,0.9999999946995403
+28,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Washington DC,Denver,6.3156816,6.315681634132188,0.9999999945956445
+28,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+28,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+28,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+28,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+28,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+28,abilene,11,1.0,lstm,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+28,abilene,11,1.0,lstm,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+28,abilene,11,1.0,lstm,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+28,abilene,11,1.0,lstm,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+28,abilene,11,1.0,lstm,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+28,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0997324,5.099732398986816,1.0000000001986737
+28,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0769281,5.07692813873291,0.9999999923707981
+28,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0628519,5.062851905822754,0.9999999988499063
+28,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.017899,5.017899036407471,0.9999999927444791
+28,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9388251,4.9388251304626465,0.9999999938320054
+28,abilene,11,1.0,transformer,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.1940813,5.1940813064575195,0.9999999987567542
+28,abilene,11,1.0,transformer,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.0997324,5.099732398986816,1.0000000001986737
+28,abilene,11,1.0,transformer,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Seattle,New York,5.0769281,5.07692813873291,0.9999999923707981
+28,abilene,11,1.0,transformer,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Chicago,Sunnyvale,5.0628519,5.062851905822754,0.9999999988499063
+28,abilene,11,1.0,transformer,random_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Denver,Washington DC,5.017899,5.017899036407471,0.9999999927444791
+29,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,8.049053,8.049052979502532,1.000000002546569
+29,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,7.3267667,7.326766686329661,1.000000001865808
+29,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,7.0586162,7.058616152383127,1.0000000067459218
+29,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,6.8618463,6.861846291381242,1.0000000012560406
+29,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Washington DC,Denver,6.8327333,6.832733274208309,1.0000000037747254
+29,abilene,11,1.0,moving_average,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,1,Chicago,Atlanta,7.2132555,7.213255474509719,1.000000003533811
+29,abilene,11,1.0,moving_average,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,2,Atlanta,Sunnyvale,7.0586162,7.058616152383127,1.0000000067459218
+29,abilene,11,1.0,moving_average,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,3,Denver,Washington DC,6.8116779,6.811677863424858,1.0000000053694762
+29,abilene,11,1.0,moving_average,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,4,Kansas City,Atlanta,6.5064049,6.506404883418714,1.000000002548456
+29,abilene,11,1.0,moving_average,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,5,Atlanta,Seattle,6.4741589,6.474158879840088,1.0000000031139045
+29,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,6.4978725,6.497872482930962,1.0000000026268656
+29,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Denver,Washington DC,6.2597013,6.259701261129108,1.0000000062097039
+29,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,6.2226421,6.222642083066233,1.0000000027213147
+29,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,6.1660491,6.166049058173401,1.0000000067833712
+29,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,6.0670314,6.067031437428743,0.999999993830798
+29,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,1,Chicago,Atlanta,6.5453327,6.545332708966227,0.9999999986301343
+29,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,2,Denver,Washington DC,6.2597013,6.259701261129108,1.0000000062097039
+29,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,3,Atlanta,Sunnyvale,6.2226421,6.222642083066233,1.0000000027213147
+29,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,4,Kansas City,Atlanta,5.7021197,5.702119732968555,0.9999999942181932
+29,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,5,Atlanta,Seattle,5.6706933,5.6706932578315925,1.0000000074361997
+29,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+29,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+29,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+29,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+29,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+29,abilene,11,1.0,lstm,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,1,Chicago,Atlanta,5.3676887,5.3676886558532715,1.0000000082245324
+29,abilene,11,1.0,lstm,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+29,abilene,11,1.0,lstm,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+29,abilene,11,1.0,lstm,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,4,Kansas City,Atlanta,4.7623863,4.762386322021484,0.999999995375956
+29,abilene,11,1.0,lstm,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,5,Atlanta,Seattle,4.7559996,4.755999565124512,1.000000007332946
+29,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0995636,5.0995635986328125,1.0000000002680989
+29,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0768399,5.076839923858643,0.9999999953004935
+29,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.062748,5.062747955322266,1.0000000088247993
+29,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0177794,5.017779350280762,1.000000009908614
+29,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9387598,4.938759803771973,0.9999999992362509
+29,abilene,11,1.0,transformer,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,1,Chicago,Atlanta,5.2502828,5.2502827644348145,1.0000000067739563
+29,abilene,11,1.0,transformer,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,2,Atlanta,Sunnyvale,5.0995636,5.0995635986328125,1.0000000002680989
+29,abilene,11,1.0,transformer,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,3,Denver,Washington DC,5.0177794,5.017779350280762,1.000000009908614
+29,abilene,11,1.0,transformer,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,4,Atlanta,Seattle,4.6874533,4.687453269958496,1.000000006408918
+29,abilene,11,1.0,transformer,random_failure_fixed,Atlanta -> Indianapolis & Indianapolis -> Atlanta,5,Kansas City,Atlanta,4.6436887,4.643688678741455,1.0000000045779436
+30,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,7.6190902,7.619090218792618,0.9999999975334827
+30,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,6.7488316,6.748831555746184,1.0000000065572558
+30,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,6.4872592,6.487259179315811,1.0000000031884326
+30,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Denver,Washington DC,6.3627793,6.362779312256674,0.9999999980736918
+30,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,6.3272451,6.327245145119651,0.9999999928689896
+30,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,1,New York,Los Angeles,6.6301803,6.6301803259630585,0.9999999960841097
+30,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,2,Sunnyvale,New York,6.4427964,6.4427964075226285,0.999999998832397
+30,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,3,New York,Houston,6.3487332,6.348733224879867,0.9999999960811289
+30,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,4,New York,Washington DC,5.3545446,5.3545445904480795,1.0000000017838904
+30,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,5,New York,Atlanta,5.2819032,5.281903209633899,0.9999999981760553
+30,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.2233625,5.2233625267996695,0.9999999948692688
+30,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Denver,Washington DC,5.1966997,5.19669969049816,1.0000000018284374
+30,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Seattle,New York,5.1851109,5.185110897033373,1.0000000005721434
+30,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Indianapolis,Seattle,5.1341181,5.134118050400469,1.0000000096607695
+30,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Chicago,Sunnyvale,5.0824733,5.082473273834744,1.0000000051481346
+30,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,1,New York,Los Angeles,5.3697526,5.369752571592165,1.0000000052903435
+30,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,2,Sunnyvale,New York,5.3020756,5.3020755591990865,1.000000007695272
+30,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,3,New York,Houston,5.2485865,5.248586531659948,0.9999999939679097
+30,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,4,Los Angeles,New York,4.4052011,4.405201110886318,0.9999999975287581
+30,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,5,Atlanta,New York,4.3435558,4.343555768991805,1.0000000071388966
+30,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+30,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+30,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+30,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+30,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+30,abilene,11,1.0,lstm,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,1,New York,Los Angeles,5.321012,5.321012020111084,0.99999999622044
+30,abilene,11,1.0,lstm,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,2,New York,Houston,5.3028536,5.302853584289551,1.0000000029626406
+30,abilene,11,1.0,lstm,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,3,Sunnyvale,New York,5.126802,5.12680196762085,1.0000000063156622
+30,abilene,11,1.0,lstm,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,4,Atlanta,New York,4.291626,4.2916259765625,1.0000000054612168
+30,abilene,11,1.0,lstm,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,5,New York,Washington DC,4.2883449,4.288344860076904,1.0000000093096748
+30,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.099381,5.099380970001221,1.0000000058828276
+30,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.076766,5.076766014099121,0.9999999972228145
+30,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0626593,5.06265926361084,1.0000000071877562
+30,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0177016,5.017701625823975,0.9999999948534255
+30,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9387178,4.938717842102051,0.9999999914751051
+30,abilene,11,1.0,transformer,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,1,New York,Houston,5.1380444,5.138044357299805,1.0000000083105929
+30,abilene,11,1.0,transformer,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,2,New York,Los Angeles,5.1368208,5.1368207931518555,1.0000000013331485
+30,abilene,11,1.0,transformer,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,3,Sunnyvale,New York,5.0717912,5.071791172027588,1.0000000055152924
+30,abilene,11,1.0,transformer,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,4,Atlanta,New York,4.271018,4.271018028259277,0.9999999933834797
+30,abilene,11,1.0,transformer,random_failure_fixed,New York -> Washington DC & Washington DC -> New York,5,New York,Washington DC,4.2299395,4.2299394607543945,1.0000000092780539
+31,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,6.0525765,6.052576524188805,0.9999999960035523
+31,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Washington DC,Denver,5.7414041,5.741404098889753,1.0000000001933755
+31,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,5.7163689,5.716368868738786,1.0000000054687188
+31,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Denver,Washington DC,5.6079722,5.607972193058651,1.0000000012377646
+31,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Houston,Seattle,5.5889076,5.588907631641843,0.9999999943384567
+31,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,6.0525765,6.052576524188805,0.9999999960035523
+31,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,5.7163689,5.716368868738786,1.0000000054687188
+31,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Sunnyvale,Indianapolis,5.5436531,5.5436531172621315,0.9999999968861452
+31,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Chicago,Sunnyvale,5.3660053,5.366005344167632,0.9999999917689923
+31,abilene,11,1.0,moving_average,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,5.2525337,5.252533739845965,0.9999999924139535
+31,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,4.4413358,4.4413358163321774,0.999999996322688
+31,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Seattle,New York,4.2600139,4.260013949796967,0.9999999883106093
+31,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,4.1919739,4.191973899884091,1.0000000000276503
+31,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Kansas City,Sunnyvale,4.152927,4.152926983368075,1.0000000040048682
+31,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Washington DC,Denver,4.0832722,4.083272247893405,0.9999999882708273
+31,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Chicago,Sunnyvale,4.4413358,4.4413358163321774,0.999999996322688
+31,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,4.1919739,4.191973899884091,1.0000000000276503
+31,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Kansas City,Sunnyvale,4.152927,4.152926983368075,1.0000000040048682
+31,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Sunnyvale,Indianapolis,3.9403554,3.9403553773318567,1.000000005752817
+31,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,3.8354223,3.8354223142486754,0.9999999962849787
+31,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+31,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+31,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+31,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+31,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+31,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+31,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+31,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Chicago,Sunnyvale,5.0301957,5.030195713043213,0.9999999974070168
+31,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Sunnyvale,Indianapolis,4.9474792,4.947479248046875,0.9999999902886152
+31,abilene,11,1.0,lstm,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,4.8437867,4.843786716461182,0.9999999966015882
+31,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.099268,5.099267959594727,1.00000000792374
+31,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0767179,5.076717853546143,1.0000000091503722
+31,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0626135,5.062613487243652,1.000000002519716
+31,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.017652,5.0176520347595215,0.9999999930725524
+31,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9386821,4.9386820793151855,1.0000000041883268
+31,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,1,Kansas City,Sunnyvale,5.1938009,5.193800926208496,0.999999994953889
+31,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,2,Atlanta,Sunnyvale,5.099268,5.099267959594727,1.00000000792374
+31,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,3,Chicago,Sunnyvale,5.0626135,5.062613487243652,1.000000002519716
+31,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,4,Sunnyvale,Indianapolis,4.820015,4.820014953613281,1.0000000096237707
+31,abilene,11,1.0,transformer,random_failure_fixed,Sunnyvale -> Denver & Denver -> Sunnyvale,5,Los Angeles,Denver,4.7140193,4.714019298553467,1.0000000003068579
+32,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.1711198,5.171119835946937,0.9999999930485198
+32,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Denver,Washington DC,4.9997476,4.999747595748244,1.0000000008503942
+32,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Washington DC,Denver,4.9230332,4.923033215763816,0.9999999967979465
+32,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,4.888313,4.888312951655943,1.0000000098897222
+32,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Houston,Seattle,4.8823012,4.8823011935182175,1.000000001327608
+32,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,Houston,Atlanta,5.1423673,5.1423673341618805,0.9999999933567795
+32,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,Sunnyvale,New York,5.0248262,5.02482615870788,1.0000000082176217
+32,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,New York,Los Angeles,4.9927317,4.9927316816175,1.0000000036818522
+32,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Washington DC,Denver,4.9230332,4.923033215763816,0.9999999967979465
+32,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,New York,Houston,4.849818,4.849818013246287,0.9999999972687044
+32,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,4.163744,4.163744009467519,0.9999999977262006
+32,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Kansas City,Sunnyvale,3.8869492,3.8869492113610438,0.9999999970771309
+32,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Atlanta,Sunnyvale,3.6393474,3.63934738856622,1.0000000031417116
+32,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,3.6331948,3.6331948379651555,0.9999999895504763
+32,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Denver,Washington DC,3.6024562,3.6024562119395807,0.9999999966857112
+32,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,Washington DC,Los Angeles,4.1961019,4.19610192614826,0.9999999937684403
+32,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Houston,3.7246418,3.72464184093388,0.9999999890099823
+32,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Houston,Atlanta,3.7125709,3.712570889652104,1.0000000027872589
+32,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Sunnyvale,New York,3.6786535,3.678653455744768,1.0000000120302803
+32,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,New York,Los Angeles,3.6442808,3.6442807976291016,1.0000000006505807
+32,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+32,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+32,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+32,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+32,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+32,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Los Angeles,5.321012,5.321012020111084,0.99999999622044
+32,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Houston,5.3028536,5.302853584289551,1.0000000029626406
+32,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Houston,Atlanta,5.2172937,5.217293739318848,0.9999999924637466
+32,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Sunnyvale,New York,5.126802,5.12680196762085,1.0000000063156622
+32,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Washington DC,Denver,4.9993463,4.9993462562561035,1.0000000087499235
+32,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0992222,5.099222183227539,1.0000000032892193
+32,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0766864,5.076686382293701,1.000000003487767
+32,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0625911,5.062591075897217,1.0000000047609579
+32,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0176325,5.017632484436035,1.0000000031018543
+32,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9386716,4.938671588897705,1.0000000022480326
+32,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Houston,5.137888,5.137887954711914,1.0000000088145335
+32,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Los Angeles,5.1366978,5.136697769165039,1.0000000060028762
+32,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Sunnyvale,New York,5.0717101,5.071710109710693,0.9999999980853217
+32,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Washington DC,Los Angeles,5.0644069,5.064406871795654,1.000000005569131
+32,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Houston,Atlanta,5.0558424,5.055842399597168,1.0000000000796767
+33,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,4.5598774,4.559877409645032,0.9999999978848046
+33,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Washington DC,Denver,4.4714636,4.4714636020701,0.9999999995370419
+33,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,4.3447914,4.344791383528628,1.0000000037910617
+33,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,4.2590872,4.25908719741358,1.000000000607271
+33,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Sunnyvale,Indianapolis,4.2409554,4.240955430426965,0.9999999928254457
+33,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,Sunnyvale,New York,4.4958235,4.4958235371471345,0.9999999917374127
+33,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,Washington DC,Denver,4.4714636,4.4714636020701,0.9999999995370419
+33,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Houston,Atlanta,4.3535181,4.353518126276344,0.9999999939643425
+33,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,New York,Los Angeles,4.2577736,4.257773576689813,1.0000000054747362
+33,abilene,11,1.0,moving_average,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,New York,Houston,4.2121399,4.212139854680221,1.0000000107593243
+33,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Chicago,Sunnyvale,3.3382415,3.3382415333512103,0.9999999900093478
+33,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Houston,Seattle,3.1845125,3.184512531457598,0.9999999901216912
+33,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,3.181248,3.1812479789744033,1.0000000066092292
+33,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,3.1478089,3.1478088870706302,1.0000000041074188
+33,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Atlanta,Sunnyvale,3.1396038,3.13960376938017,1.000000009752769
+33,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,Washington DC,Los Angeles,3.3374012,3.337401192857415,1.0000000021401636
+33,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,Houston,Atlanta,3.255258,3.255257967349139,1.0000000100301916
+33,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,New York,Houston,3.2007258,3.2007258425389264,0.9999999867096
+33,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Sunnyvale,New York,3.1947757,3.1947757081940527,0.9999999974351713
+33,abilene,11,1.0,linear_autoregressive,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,New York,Los Angeles,3.1458707,3.145870729216468,0.9999999907127564
+33,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+33,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+33,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+33,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+33,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+33,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Los Angeles,5.321012,5.321012020111084,0.99999999622044
+33,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Houston,5.3028536,5.302853584289551,1.0000000029626406
+33,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Houston,Atlanta,5.2172937,5.217293739318848,0.9999999924637466
+33,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Sunnyvale,New York,5.126802,5.12680196762085,1.0000000063156622
+33,abilene,11,1.0,lstm,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Washington DC,Denver,4.9993463,4.9993462562561035,1.0000000087499235
+33,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0993395,5.099339485168457,1.0000000029085223
+33,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0767355,5.076735496520996,1.0000000006852836
+33,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0626488,5.062648773193359,1.0000000052949833
+33,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0176959,5.017695903778076,0.9999999992470495
+33,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9386945,4.938694477081299,1.0000000046406397
+33,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,1,New York,Houston,5.1380119,5.138011932373047,0.9999999936993049
+33,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,2,New York,Los Angeles,5.1368036,5.13680362701416,0.9999999947410565
+33,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,3,Sunnyvale,New York,5.0717912,5.071791172027588,1.0000000055152924
+33,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,4,Washington DC,Los Angeles,5.0644717,5.06447172164917,0.9999999957252858
+33,abilene,11,1.0,transformer,random_failure_fixed,Houston -> Atlanta & Atlanta -> Houston,5,Houston,Atlanta,5.0559316,5.055931568145752,1.0000000063003718
+34,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,4.1439486,4.1439485848721,1.0000000036506003
+34,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Washington DC,Denver,3.9045301,3.904530137987094,0.9999999902710205
+34,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,3.8997507,3.8997507059898453,0.999999998464044
+34,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,3.7397557,3.7397557099979943,0.9999999973265649
+34,abilene,11,1.0,moving_average,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Houston,Seattle,3.6987041,3.698704132283956,0.9999999912715495
+34,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Kansas City,New York,3.9505903,3.9505903234509607,0.999999994063935
+34,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Seattle,New York,3.7397557,3.7397557099979943,0.9999999973265649
+34,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Washington DC,Chicago,3.0413553,3.0413553388254635,0.9999999872341575
+34,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Chicago,New York,2.9906173,2.9906173349839635,0.9999999883020929
+34,abilene,11,1.0,moving_average,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,New York,Chicago,2.8472993,2.8472993305849696,0.9999999892582527
+34,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Seattle,New York,3.5741523,3.5741523393693804,0.9999999889849742
+34,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Washington DC,Denver,3.5731839,3.5731838761533123,1.0000000066737924
+34,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Houston,Seattle,3.5722996,3.572299567729791,1.0000000090334555
+34,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Indianapolis,Seattle,3.5566744,3.556674430145536,0.9999999915242351
+34,abilene,11,1.0,linear_autoregressive,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Kansas City,Sunnyvale,3.554005,3.5540049518309687,1.0000000135534508
+34,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Kansas City,New York,3.5913262,3.591326228467397,0.9999999920732913
+34,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Seattle,New York,3.5741523,3.5741523393693804,0.9999999889849742
+34,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Washington DC,Chicago,2.6207065,2.620706505045442,0.9999999980747778
+34,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Chicago,New York,2.583332,2.5833320090021856,0.9999999965152812
+34,abilene,11,1.0,linear_autoregressive,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,New York,Chicago,2.41978,2.4197800234939324,0.9999999902908808
+34,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,1,Kansas City,Sunnyvale,5.3094769,5.309476852416992,1.0000000089619014
+34,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,2,Atlanta,Sunnyvale,5.1736646,5.173664569854736,1.0000000058266754
+34,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,3,Denver,Washington DC,5.1507139,5.150713920593262,0.9999999960018627
+34,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,4,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+34,abilene,11,1.0,lstm,critical_failure_fixed,Denver -> Kansas City & Kansas City -> Denver,5,Indianapolis,Seattle,5.0973215,5.097321510314941,0.9999999979763996
+34,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.149003,5.149003028869629,0.9999999943931615
+34,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,5.0051084,5.00510835647583,1.0000000086959495
+34,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,Chicago,New York,3.8389361,3.8389360904693604,1.0000000024826252
+34,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,New York,Chicago,3.8356683,3.8356683254241943,0.999999993371639
+34,abilene,11,1.0,lstm,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Washington DC,Chicago,3.8296134,3.829613447189331,0.9999999876777822
+34,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,1,Atlanta,Sunnyvale,5.0995846,5.099584579467773,1.0000000040262547
+34,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,2,Seattle,New York,5.0768461,5.076846122741699,0.9999999955205066
+34,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,3,Chicago,Sunnyvale,5.0627747,5.062774658203125,1.000000008255725
+34,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,4,Denver,Washington DC,5.0178132,5.017813205718994,0.9999999988602617
+34,abilene,11,1.0,transformer,critical_failure_fixed,Kansas City -> Indianapolis & Indianapolis -> Kansas City,5,Indianapolis,Seattle,4.9387612,4.938761234283447,0.9999999930582902
+34,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,1,Seattle,New York,5.0768461,5.076846122741699,0.9999999955205066
+34,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,2,Kansas City,New York,4.8946171,4.894617080688477,1.0000000039454615
+34,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,3,New York,Chicago,3.8391085,3.839108467102051,1.0000000085691638
+34,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,4,Washington DC,Chicago,3.7583246,3.75832462310791,0.9999999938515396
+34,abilene,11,1.0,transformer,random_failure_fixed,New York -> Chicago & Chicago -> New York,5,Chicago,New York,3.7536318,3.753631830215454,0.9999999919503416
